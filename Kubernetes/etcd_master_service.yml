@@ -1,0 +1,54 @@
+//@see: https://blog.jetstack.io/blog/k8s-getting-started-part2/
+docker run -d \
+    --net=host \
+    gcr.io/google_containers/etcd:2.0.9 \
+    /usr/local/bin/etcd \
+        --addr=127.0.0.1:4001 \
+        --bind-addr=0.0.0.0:4001 \
+        --data-dir=/var/etcd/data
+
+docker run -d \
+    --net=host \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+    jetstack/hyperkube:v0.20.1 \
+    /hyperkube kubelet \
+        --api_servers=http://116.6.160.59:8080 \
+        --v=2 \
+        --address=0.0.0.0 \
+        --enable_server \
+        --hostname_override=116.6.160.59 \
+        --config=/etc/kubernetes/manifests
+
+docker run -d \
+   --net=host \
+   --privileged \
+   jetstack/hyperkube:v0.20.1 \
+   /hyperkube proxy \
+        --master=http://116.6.160.59:8080 \
+        --v=2
+
+version: '2'
+services:
+  etcd:
+    image: 'gcr.io/google_containers/etcd:2.0.9'
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+    volumes:
+      - 'mariadb_data:/bitnami'
+  phabricator:
+    image: 'bitnami/phabricator:latest'
+    labels:
+      kompose.service.type: nodeport
+    ports:
+      - '80:80'
+      - '443:443'
+    volumes:
+      - 'phabricator_data:/bitnami'
+    depends_on:
+      - mariadb
+volumes:
+  mariadb_data:
+    driver: local
+  phabricator_data:
+    driver: local
+

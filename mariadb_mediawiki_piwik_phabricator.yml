@@ -1,0 +1,53 @@
+version: '2'
+services:
+  mariadb:
+    image: 'bitnami/mariadb:latest'
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+    volumes:
+      - 'mariadb_data:/bitnami'
+    ports:
+      - '3306:3306'
+  mediawiki:
+    image: 'bitnami/mediawiki:latest'
+    labels:
+      kompose.service.type: nodeport
+    ports:
+      - '82:80'
+      - '443:443'
+    volumes:
+      - 'mediawiki_data:/bitnami'
+    depends_on:
+      - mariadb
+  piwik:
+    image: 'bitnami/piwik:latest'
+    ports:
+      - '81:80'
+      - '444:443'
+    volumes:
+      - 'piwik_data:/bitnami'
+    depends_on:
+      - mediawiki
+  phabricator:
+    image: 'bitnami/phabricator:latest'
+    labels:
+      kompose.service.type: nodeport
+    ports:
+      - '86:80'
+      - '445:443'
+    volumes:
+      - 'phabricator_data:/bitnami'
+    environment: 
+     # - PHABRICATOR_HOST=http://docker.toyhouse.cc
+     # - MARIADB_HOST=101.6.160.51
+    depends_on:
+      - piwik
+volumes:
+  mariadb_data:
+    driver: local
+  mediawiki_data:
+    driver: local
+  piwik_data:
+    driver: local
+  phabricator_data:
+    driver: local

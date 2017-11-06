@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<!--
+	ToyhouseGo by SMARTKIT
+	SMARTKIT.info | @smartkit
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>ToyhouseMicroServices</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+
+		<script>
+            function setHref() {
+                document.getElementById('id_btn_wiki').href = window.location.protocol + "//" + window.location.hostname + ":81";
+                 // document.getElementById('id_btn_piwik').href = window.location.protocol + "//" + window.location.hostname + ":82";
+                document.getElementById('id_btn_piwik').href = "http://docker.toyhouse.cc:81";
+                document.getElementById('id_btn_jenkins').href = window.location.protocol + "//" + window.location.hostname + ":83";
+                document.getElementById('id_btn_nexus').href = window.location.protocol + "//" + window.location.hostname + ":84";
+                document.getElementById('id_btn_cadvisor').href = window.location.protocol + "//" + window.location.hostname + ":85";
+                document.getElementById('id_btn_phabricator').href = window.location.protocol + "//" + window.location.hostname + ":86";
+                document.getElementById('id_btn_jupyter').href = window.location.protocol + "//" + window.location.hostname + ":8000";
+                document.getElementById('id_btn_modelica').href = window.location.protocol + "//" + window.location.hostname + ":88";
+                document.getElementById('id_btn_netlogo').href = window.location.protocol + "//" + window.location.hostname + ":89";
+                document.getElementById('id_btn_hyper_ledger').href = window.location.protocol + "//" + window.location.hostname + ":90";
+                document.getElementById('id_btn_gitlab').href = window.location.protocol + "//" + window.location.hostname + ":10080";
+                document.getElementById('id_btn_resource_space').href = "http://101.6.160.62:8080/";
+                // document.getElementById('id_btn_resource_space').href = window.location.protocol + "//" + window.location.hostname + ":91";
+                document.getElementById('id_btn_elk').href = window.location.protocol + "//" + window.location.hostname + ":5601";
+                // document.getElementById('id_btn_netlify').href = window.location.protocol + "//" + window.location.hostname + ":1313";
+            }
+		</script>
+		<style type="text/css">
+				* {
+				  box-sizing: border-box;
+				}
+				main {
+				  max-width: 1000px;
+				  margin: 10px auto;
+				  padding: 0 20px;
+				  width: 100%; 
+				  display: grid;
+				  /* Define Auto Row size */
+				  grid-auto-rows: 100px; 
+				  /*Define our columns */
+				  grid-template-columns: 1fr 1fr 1fr 1fr;
+				  /* you can also write grid-template-columns: repeat(3, 1fr) because we want 3 columns on repeat. */ 
+				  grid-gap: 1em;
+				}
+
+		</style>
+	</head>
+	<body onload="setHref()">
+
+		<!-- Header -->
+			<header id="header">
+				<h1>ToyhouseMicroServices</h1>
+				 Yet Another ToyhouseMicroServices' landing page. 
+			</header>
+
+		<!-- Links -->
+		
+			<main>
+				<p><a id="id_btn_phabricator" target="_blank"><input type="submit" value="Phabricator" /></a></p>
+				<p><a id="id_btn_wiki" target="_blank"><input type="submit" value="Mediawiki" /></a></p>
+				<p><a id="id_btn_resource_space" target="_blank"><input type="submit" value="ResourceSpace" /></a></p>
+				<p><a id="id_btn_piwik"  target="_blank"><input type="submit" value="Piwik" /></a></p>
+				<p><a id="id_btn_netlify" target="_blank"><input type="submit" value="Netlify" /></a></p>
+				<p><a id="id_btn_jupyter" target="_blank"><input type="submit" value="JuypterHub" /></a></p>
+				<p><a id="id_btn_netlogo"  target="_blank"><input type="submit" value="NetLogo" /></a></p>
+				<p><a id="id_btn_modelica"  target="_blank"><input type="submit" value="OpenModelica" /></a></p>
+				<p><a id="id_btn_jenkins" target="_blank"><input type="submit" value="Jenkins" /></a></p>
+				<p><a id="id_btn_cadvisor" target="_blank"><input type="submit" value="cAdvisor" /></a></p>
+				<p><a id="id_btn_nexus" target="_blank"><input type="submit" value="Nexus" /></a></p>
+				<p><a id="id_btn_gitlab" target="_blank"><input type="submit" value="Gitlab" /></a></p>
+				<p><a id="id_btn_hyper_ledger"  target="_blank"><input type="submit" value="HyperLedger" /></a></p>
+				<p><a id="id_btn_elk"  target="_blank"><input type="submit" value="ELK" /></a></p>
+			</main>
+		<!-- Footer -->
+			<footer id="footer">
+				<ul class="icons">
+					<li><a href="https://github.com/yangboz/2017-2018-computing-thinking" class="icon fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+					<li><a href="mailto:z@smartkit.info" class="icon fa-envelope-o" target="_blank"><span class="label">Email</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; Toyhouse.</li><li>Credits: <a href="http://toyhouse.cc" target="_blank">toyhouse.cc</a></li>
+				</ul>
+			</footer>
+
+		<!-- Scripts -->
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
