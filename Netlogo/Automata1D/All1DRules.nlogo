@@ -32,11 +32,15 @@ to do-rule  ;; patch procedure
   set left-pcolor [pcolor] of patch-at -1 0
   set center-pcolor pcolor
   set right-pcolor [pcolor] of patch-at 1 0
+
+  ;; Transform cell colors into 0 or 1 integer values
   ifelse (left-pcolor = yellow) [set p 1] [set p 0]
   ifelse (center-pcolor = yellow) [set q 1] [set q 0]
   ifelse (right-pcolor = yellow) [set r 1] [set r 0]
+
   set c 4 * p + 2 * q + r
   set two2C 2 ^ c
+  ;; One meta rule that covers all 256 rules
   ifelse (0 = ((n - (n mod two2C)) / two2C) mod 2)
     [ ask patch-at 0 -1 [ set pcolor black ] ]
     [ ask patch-at 0 -1 [ set pcolor yellow ] ]
@@ -55,14 +59,16 @@ to setup-continue
 end
 
 
-; Copyright 2002 Uri Wilensky.
+; Original code written by Uri Wilensky.
+; Modified by Ben Koo 2017, November 4
+; Contact info: benkoo@tsinghua.edu.cn
 ; See Info tab for full copyright and license.
 @#$#@#$#@
 GRAPHICS-WINDOW
-147
-51
-637
-302
+146
+64
+636
+315
 -1
 -1
 2.0
@@ -86,10 +92,10 @@ ticks
 30.0
 
 BUTTON
-21
-128
-130
-161
+24
+199
+133
+232
 NIL
 setup
 NIL
@@ -103,10 +109,10 @@ NIL
 1
 
 BUTTON
-19
-268
-128
-301
+24
+120
+133
+153
 NIL
 go
 T
@@ -120,10 +126,10 @@ NIL
 0
 
 BUTTON
-20
-225
-129
-258
+23
+281
+132
+314
 NIL
 setup-continue
 NIL
@@ -137,10 +143,10 @@ NIL
 1
 
 TEXTBOX
-27
-88
-117
-121
+30
+159
+120
+192
 Start from a\nsingle cell
 11
 0.0
@@ -148,39 +154,59 @@ Start from a\nsingle cell
 
 TEXTBOX
 25
-180
+246
 147
-214
+280
 Start from the end\nof the previous run
 11
 0.0
 0
 
 SLIDER
-148
-11
-635
-44
+147
+28
+636
+61
 ruleNumber
 ruleNumber
 0
 255
-164.0
+169.0
 1
 1
 NIL
 HORIZONTAL
 
 INPUTBOX
-30
-12
-135
-72
+28
+54
+133
+114
 ruleNumber
-164.0
+169.0
 1
 0
 Number
+
+TEXTBOX
+15
+12
+165
+54
+Please type in a number between 0-255.\n(Try 30, 110, 179 etc.)
+11
+0.0
+1
+
+TEXTBOX
+149
+10
+650
+38
+You may drag this slider to set the rule number for this 1D automata system while running.
+11
+15.0
+1
 
 @#$#@#$#@
 ## WHAT IS IT?

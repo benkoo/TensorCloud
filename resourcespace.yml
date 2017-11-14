@@ -1,0 +1,16 @@
+version: '2'
+services:
+  resourcespace:
+    image: smartkit/godpaper-da-resourcespace
+    ports:
+      - '80:80'
+      - '3306:3306'
+    #links:
+     # - mariadb:mariadb
+     # - postfix:postfix
+    volumes:
+      - /data/resourcespace/mysql:/var/lib/mysql
+      - ./data/resourcespace/filestore:/app/filestore
+volumes:
+  resourcespace-data:
+    driver: local

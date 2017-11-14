@@ -7,11 +7,11 @@ services:
     volumes:
       - 'mariadb_data:/bitnami'
   phabricator:
-    image: 'bitnami/phabricator:2017-master'
+    image: 'bitnami/phabricator:latest'
     labels:
       kompose.service.type: nodeport
     ports:
-      - '80:80'
+      - '86:80'
       - '443:443'
     volumes:
       - 'phabricator_data:/bitnami'

@@ -1,0 +1,14 @@
+version: '2'
+services:
+  mediawiki:
+    image: 'bitnami/mediawiki:latest'
+    labels:
+      kompose.service.type: nodeport
+    ports:
+      - '82:80'
+      - '443:443'
+    volumes:
+      - 'mediawiki_data:/bitnami'
+volumes:
+  mediawiki_data:
+    driver: local

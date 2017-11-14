@@ -1,0 +1,11 @@
+version: '2'
+services:
+  piwik:
+    image: 'bitnami/piwik:latest'
+    ports:
+      - '81:80'
+    volumes:
+      - 'piwik_data:/bitnami'
+volumes:
+  piwik_data:
+    driver: local

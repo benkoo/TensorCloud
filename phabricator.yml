@@ -1,0 +1,14 @@
+version: '2'
+services:
+  phabricator:
+    image: 'bitnami/phabricator:2017-master'
+    depends_on:
+      - mariadb
+    ports:
+      - '83:80'
+      - '443:443'
+    volumes:
+      - 'phabricator_data:/bitnami'
+volumes:
+  phabricator_data:
+    driver: local
