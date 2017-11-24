@@ -37,9 +37,9 @@
             <div class="row">
                 <!--THIS IS WHERE I HAVE ADDED SECOND LIST FROM 'POSTS1' DIRECTORY **** -->
                 {{ range where .Site.Pages "Section" "category1" }}
-                <div class="col-md-6" style="text-align: center">
-                    <a href="{{.RelPermalink}}">{{ .Title }}</a>
-                    <a href="{{.URL}}" class="db grow">
+                <div class="col-md-6" style="text-align: center;">
+                    <a href="{{.Params.page_link}}">{{  .Title }}</a>
+                    <a href="{{.Params.page_link}}" class="db grow">
                         {{ $featured_image := .Params.featured_image }}
                         {{ if .Params.featured_image }}
                         {{/* Trimming the slash and adding absURL make sure the image works no matter where our site
@@ -63,9 +63,9 @@
                 <!--THIS IS WHERE I HAVE ADDED SECOND LIST FROM 'POSTS1' DIRECTORY **** -->
                 {{ range where .Site.Pages "Section" "category2" }}
                 <div class="col-md-6" style="text-align: center">
-                    <a href="{{.RelPermalink}}">{{ .Title }}</a>
+                    <a href="{{.Params.page_link}}">{{ .Title }}</a>
                     <br><br>
-                    <a href="{{.URL}}" class="db grow">
+                    <a href="{{.Params.page_link}}" class="db grow">
                         {{ $featured_image := .Params.featured_image }}
                         {{ if .Params.featured_image }}
                         {{/* Trimming the slash and adding absURL make sure the image works no matter where our site
@@ -89,9 +89,9 @@
                 <!--THIS IS WHERE I HAVE ADDED SECOND LIST FROM 'POSTS1' DIRECTORY **** -->
                 {{ range where .Site.Pages "Section" "category3" }}
                 <div class="col-md-6" style="text-align: center">
-                    <a href="{{.RelPermalink}}">{{ .Title }}</a>
+                    <a href="{{.Params.page_link}}">{{ .Title }}</a>
                     <br><br>
-                    <a href="{{.URL}}" class="db grow">
+                    <a href="{{.Params.page_link}}" class="db grow">
                         {{ $featured_image := .Params.featured_image }}
                         {{ if .Params.featured_image }}
                         {{/* Trimming the slash and adding absURL make sure the image works no matter where our site
@@ -113,9 +113,9 @@
                 <!--THIS IS WHERE I HAVE ADDED SECOND LIST FROM 'POSTS1' DIRECTORY **** -->
                 {{ range where .Site.Pages "Section" "category4" }}
                 <div class="col-md-6" style="text-align: center">
-                    <a href="{{.RelPermalink}}">{{ .Title }}</a>
+                    <a href="{{.Params.page_link}}">{{ .Title }}</a>
                     <br><br>
-                    <a href="{{.URL}}" class="db grow">
+                    <a href="{{.Params.page_link}}" class="db grow">
                         {{ $featured_image := .Params.featured_image }}
                         {{ if .Params.featured_image }}
                         {{/* Trimming the slash and adding absURL make sure the image works no matter where our site
