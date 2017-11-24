@@ -36,7 +36,8 @@
             <hr>
             <div class="row">
                 <!--THIS IS WHERE I HAVE ADDED SECOND LIST FROM 'POSTS1' DIRECTORY **** -->
-                {{ range where .Site.Pages "Section" "category1" }}
+                {{ $list := (where .Site.Pages.Reverse "Section" "category1") }}
+                {{ range after 1 $list }}
                 <div class="col-md-6" style="text-align: center;">
                     <a href="{{.Params.page_link}}">{{  .Title }}</a>
                     <a href="{{.Params.page_link}}" class="db grow">
@@ -61,7 +62,8 @@
             <hr>
             <div class="row">
                 <!--THIS IS WHERE I HAVE ADDED SECOND LIST FROM 'POSTS1' DIRECTORY **** -->
-                {{ range where .Site.Pages "Section" "category2" }}
+                {{ $list := (where .Site.Pages.Reverse "Section" "category2") }}
+                {{ range after 1 $list }}
                 <div class="col-md-6" style="text-align: center">
                     <a href="{{.Params.page_link}}">{{ .Title }}</a>
                     <br><br>
@@ -87,7 +89,8 @@
             <hr>
             <div class="row">
                 <!--THIS IS WHERE I HAVE ADDED SECOND LIST FROM 'POSTS1' DIRECTORY **** -->
-                {{ range where .Site.Pages "Section" "category3" }}
+                {{ $list := (where .Site.Pages.Reverse "Section" "category3") }}
+                {{ range after 1 $list }}
                 <div class="col-md-6" style="text-align: center">
                     <a href="{{.Params.page_link}}">{{ .Title }}</a>
                     <br><br>
@@ -111,7 +114,8 @@
             <hr>
             <div class="row">
                 <!--THIS IS WHERE I HAVE ADDED SECOND LIST FROM 'POSTS1' DIRECTORY **** -->
-                {{ range where .Site.Pages "Section" "category4" }}
+                {{ $list := (where .Site.Pages.Reverse "Section" "category4") }}
+                {{ range after 1 $list }}
                 <div class="col-md-6" style="text-align: center">
                     <a href="{{.Params.page_link}}">{{ .Title }}</a>
                     <br><br>
