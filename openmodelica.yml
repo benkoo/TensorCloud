@@ -1,0 +1,9 @@
+version: '2'
+services:
+  resourcespace:
+    image: smartkit/omwebbook
+    ports:
+      - '88:80'
+volumes:
+  resourcespace-data:
+    driver: local
