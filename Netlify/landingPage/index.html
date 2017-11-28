@@ -1,24 +1,59 @@
-<!DOCTYPE HTML>
-<!--
-	ToyhouseGo by SMARTKIT
-	SMARTKIT.info | @smartkit
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>ToyhouseMicroServices</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>iCenter  | iCenter</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
 
-		<script>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.31" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    <link href='dist/main.css' rel='stylesheet' type="text/css" />
+    <link href='dist/bootstrap.css' rel='stylesheet' type="text/css" />
+    
+      
+    
+
+    
+      <link href="http://101.6.160.59:1313/index.xml" rel="alternate" type="application/rss+xml" title="iCenter" />
+      <link href="http://101.6.160.59:1313/index.xml" rel="feed" type="application/rss+xml" title="iCenter" />
+    
+
+    <meta property="og:title" content="iCenter" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://101.6.160.59:1313/" />
+
+
+
+<meta property="og:updated_time" content="2017-11-22T19:27:51&#43;05:30"/>
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="iCenter">
+<meta itemprop="description" content="">
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="iCenter"/>
+<meta name="twitter:description" content=""/>
+<script>
             function setHref() {
                 document.getElementById('id_btn_wiki').href = window.location.protocol + "//" + window.location.hostname + ":81";
-                 // document.getElementById('id_btn_piwik').href = window.location.protocol + "//" + window.location.hostname + ":82";
-                document.getElementById('id_btn_piwik').href = "http://docker.toyhouse.cc:81";
+                 document.getElementById('id_btn_piwik').href = window.location.protocol + "//" + window.location.hostname + ":82";
+                // document.getElementById('id_btn_piwik').href = "http://docker.toyhouse.cc:81";
                 document.getElementById('id_btn_jenkins').href = window.location.protocol + "//" + window.location.hostname + ":83";
                 document.getElementById('id_btn_nexus').href = window.location.protocol + "//" + window.location.hostname + ":84";
                 document.getElementById('id_btn_cadvisor').href = window.location.protocol + "//" + window.location.hostname + ":85";
@@ -28,72 +63,624 @@
                 document.getElementById('id_btn_netlogo').href = window.location.protocol + "//" + window.location.hostname + ":89";
                 document.getElementById('id_btn_hyper_ledger').href = window.location.protocol + "//" + window.location.hostname + ":90";
                 document.getElementById('id_btn_gitlab').href = window.location.protocol + "//" + window.location.hostname + ":10080";
-                document.getElementById('id_btn_resource_space').href = "http://101.6.160.62:8080/";
-                // document.getElementById('id_btn_resource_space').href = window.location.protocol + "//" + window.location.hostname + ":91";
+                // document.getElementById('id_btn_resource_space').href = "http://101.6.160.62:8080/";
+                document.getElementById('id_btn_resource_space').href = window.location.protocol + "//" + window.location.hostname + ":91";
                 document.getElementById('id_btn_elk').href = window.location.protocol + "//" + window.location.hostname + ":5601";
                 // document.getElementById('id_btn_netlify').href = window.location.protocol + "//" + window.location.hostname + ":1313";
+                document.getElementById('id_btn_recomp').href = window.location.protocol + "//" + window.location.hostname + ":5001/static/index.html";
             }
 		</script>
-		<style type="text/css">
-				* {
-				  box-sizing: border-box;
-				}
-				main {
-				  max-width: 1000px;
-				  margin: 10px auto;
-				  padding: 0 20px;
-				  width: 100%; 
-				  display: grid;
-				  /* Define Auto Row size */
-				  grid-auto-rows: 100px; 
-				  /*Define our columns */
-				  grid-template-columns: 1fr 1fr 1fr 1fr;
-				  /* you can also write grid-template-columns: repeat(3, 1fr) because we want 3 columns on repeat. */ 
-				  grid-gap: 1em;
-				}
+  </head>
 
-		</style>
-	</head>
-	<body onload="setHref()">
+  <body onload="setHref()" class="ma0 avenir bg-near-white">
 
-		<!-- Header -->
-			<header id="header">
-				<h1>ToyhouseMicroServices</h1>
-				 Yet Another ToyhouseMicroServices' landing page. 
-			</header>
+    
 
-		<!-- Links -->
-		
-			<main>
-				<p><a id="id_btn_phabricator" target="_blank"><input type="submit" value="Phabricator" /></a></p>
-				<p><a id="id_btn_wiki" target="_blank"><input type="submit" value="Mediawiki" /></a></p>
-				<p><a id="id_btn_resource_space" target="_blank"><input type="submit" value="ResourceSpace" /></a></p>
-				<p><a id="id_btn_piwik"  target="_blank"><input type="submit" value="Piwik" /></a></p>
-				<p><a id="id_btn_netlify" target="_blank"><input type="submit" value="Netlify" /></a></p>
-				<p><a id="id_btn_jupyter" target="_blank"><input type="submit" value="JuypterHub" /></a></p>
-				<p><a id="id_btn_netlogo"  target="_blank"><input type="submit" value="NetLogo" /></a></p>
-				<p><a id="id_btn_modelica"  target="_blank"><input type="submit" value="OpenModelica" /></a></p>
-				<p><a id="id_btn_jenkins" target="_blank"><input type="submit" value="Jenkins" /></a></p>
-				<p><a id="id_btn_cadvisor" target="_blank"><input type="submit" value="cAdvisor" /></a></p>
-				<p><a id="id_btn_nexus" target="_blank"><input type="submit" value="Nexus" /></a></p>
-				<p><a id="id_btn_gitlab" target="_blank"><input type="submit" value="Gitlab" /></a></p>
-				<p><a id="id_btn_hyper_ledger"  target="_blank"><input type="submit" value="HyperLedger" /></a></p>
-				<p><a id="id_btn_elk"  target="_blank"><input type="submit" value="ELK" /></a></p>
-			</main>
-		<!-- Footer -->
-			<footer id="footer">
-				<ul class="icons">
-					<li><a href="https://github.com/yangboz/2017-2018-computing-thinking" class="icon fa-github" target="_blank"><span class="label">GitHub</span></a></li>
-					<li><a href="mailto:z@smartkit.info" class="icon fa-envelope-o" target="_blank"><span class="label">Email</span></a></li>
-				</ul>
-				<ul class="copyright">
-					<li>&copy; Toyhouse.</li><li>Credits: <a href="http://toyhouse.cc" target="_blank">toyhouse.cc</a></li>
-				</ul>
-			</footer>
+  
+  
+  <header class="cover bg-top" style="background-image: url('images/gohugo-default-sample-hero-image.jpg');">
+    <div class="bg-black-60">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="http://101.6.160.59:1313/" class="f3 fw2 hover-white no-underline white-90 dib">
+      iCenter
+    </a>
+    <div class="flex-l items-center">
+      
+      
 
-		<!-- Scripts -->
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
 
-	</body>
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv4 pv6-l ph3 ph4-ns">
+        <h1 class="f2 f-subheadline-l fw2 white-90 mb0 lh-title">
+          iCenter
+        </h1>
+        
+      </div>
+    </div>
+  </header>
+
+
+    <main class="pb7" role="main">
+      
+<article class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray">
+    
+</article>
+
+
+
+
+
+
+
+
+
+
+<div class="container">
+    
+        
+            
+        
+        
+            
+        
+        
+            
+        
+        
+            
+        
+    
+    <div class="row" style="max-width: 100%">
+        
+        <div class="col-md-3"
+             style="background-color: white;padding-bottom: 10px;padding-left: 40px;padding-right: 10px;padding-top: 10px;margin-right: 0px;border-right: 6px solid gray;">
+            <h3>Editing</h3>
+            <br>
+            <hr>
+            <div class="row">
+                
+                
+                
+                <div class="col-md-6" style="text-align: center;">
+                    <a >Phabricator</a>
+                    <a id="id_btn_phabricator" target="_blank" class="db grow">
+                        
+                        
+                        
+                        
+                        
+                        <img style="max-width: 80%;" src="images/category1/phabricator.png" class="img"
+                             alt="image">
+                    </a>
+                    <hr>
+                </div>
+                
+                <div class="col-md-6" style="text-align: center;">
+                    <a >Mediawiki</a>
+                    <a id="id_btn_wiki" class="db grow">
+                        
+                        
+                        
+                        
+                        
+                        <img style="max-width: 80%;" src="images/category1/mediawiki.png" class="img"
+                             alt="image">
+                    </a>
+                    <hr>
+                </div>
+                
+                <div class="col-md-6" style="text-align: center;">
+                    <a >Resources Space</a>
+                    <a id="id_btn_resource_space" class="db grow">
+                        
+                        
+                        
+                        
+                        
+                        <img style="max-width: 80%;" src="images/category1/resourcespace.png" class="img"
+                             alt="image">
+                    </a>
+                    <hr>
+                </div>
+                
+                <div class="col-md-6" style="text-align: center;">
+                    <a >Wordpress org</a>
+                    <a href="http://go.toyhouse.cc:90" class="db grow">
+                        
+                        
+                        
+                        
+                        
+                        <img style="max-width: 80%;" src="images/category1/wordpress.png" class="img"
+                             alt="image">
+                    </a>
+                    <hr>
+                </div>
+                
+            </div>
+        </div>
+        <div class="col-md-3"
+             style="background-color: white;margin-right: 0px;padding-top: 10px;border-right: 6px solid gray;">
+            <h3>Modeling</h3>
+            <br>
+            <hr>
+            <div class="row">
+                
+                
+                
+                <div class="col-md-6" style="text-align: center">
+                    <a >Netlify</a>
+                    <br><br>
+                    <a id="id_btn_jupyter" class="db grow">
+                        
+                        
+                        
+                        
+                        
+                        <img style="max-width: 80%;" src="images/category2/netifly.png" class="img"
+                             alt="image">
+                    </a>
+                    <hr>
+                </div>
+                
+                <div class="col-md-6" style="text-align: center">
+                    <a >JuypterHub</a>
+                    <br><br>
+                    <a id="id_btn_jupyter" class="db grow">
+                        
+                        
+                        
+                        
+                        
+                        <img style="max-width: 80%;" src="images/category2/jupyter.png" class="img"
+                             alt="image">
+                    </a>
+                    <hr>
+                </div>
+                
+                <div class="col-md-6" style="text-align: center">
+                    <a >Netlogo</a>
+                    <br><br>
+                    <a id="id_btn_netlogo" class="db grow">
+                        
+                        
+                        
+                        
+                        
+                        <img style="max-width: 80%;" src="images/category2/netlogowebicon.png" class="img"
+                             alt="image">
+                    </a>
+                    <hr>
+                </div>
+                
+                <div class="col-md-6" style="text-align: center">
+                    <a >OpenModelica</a>
+                    <br><br>
+                    <a id="id_btn_modelica" class="db grow">
+                        
+                        
+                        
+                        
+                        
+                        <img style="max-width: 80%;" src="images/category2/omeditor.png" class="img"
+                             alt="image">
+                    </a>
+                    <hr>
+                </div>
+                
+            </div>
+        </div>
+        <div class="col-md-3"
+             style="background-color: white;margin-left: 0px;padding-top: 10px;border-right: 6px solid gray;">
+            <h3>Tools</h3>
+            <br>
+            <hr>
+            <div class="row">
+                
+                
+                
+                <div class="col-md-6" style="text-align: center">
+                    <a>CAdvisor</a>
+                    <br><br>
+                    <a id="id_btn_cadvisor" class="db grow">
+                        
+                        
+                        
+                        
+                        
+                        <img style="max-width: 80%;" src="images/category3/cadvisor.png" class="img"
+                             alt="image">
+                    </a>
+                    <hr>
+                </div>
+                
+                <div class="col-md-6" style="text-align: center">
+                    <a >RICOMP</a>
+                    <br><br>
+                    <a href="id_btn_ricomp" class="db grow">
+                        
+                        
+                        
+                        
+                        
+                        <img style="max-width: 80%;" src="images/category3/ricomp.jpg" class="img"
+                             alt="image">
+                    </a>
+                    <hr>
+                </div>
+
+                <div class="col-md-6" style="text-align: center">
+                    <a >RICOMP</a>
+                    <br><br>
+                    <a href="id_btn_nexus" class="db grow">
+                        
+                        
+                        
+                        
+                        
+                        <img style="max-width: 80%;" src="images/category3/sonatype-nexus.jpg" class="img"
+                             alt="image">
+                    </a>
+                    <hr>
+                </div>
+                
+                <div class="col-md-6" style="text-align: center">
+                    <a >Jenkins</a>
+                    <br><br>
+                    <a id="id_btn_jenkins" class="db grow">
+                        
+                        
+                        
+                        
+                        
+                        <img style="max-width: 80%;" src="images/category3/jenkins.png" class="img"
+                             alt="image">
+                    </a>
+                    <hr>
+                </div>
+                
+                <div class="col-md-6" style="text-align: center">
+                    <a >Gitlab</a>
+                    <br><br>
+                    <a id="id_btn_gitlab" class="db grow">
+                        
+                        
+                        
+                        
+                        
+                        <img style="max-width: 80%;" src="images/category3/gitlab.png" class="img"
+                             alt="image">
+                    </a>
+                    <hr>
+                </div>
+                
+            </div>
+        </div>
+        <div class="col-md-3" style="background-color: white;margin-left: 0px;padding-top: 10px;">
+            <h3>Monitoring & Analytics</h3>
+            <hr>
+            <div class="row">
+                
+                
+                
+                <div class="col-md-6" style="text-align: center">
+                    <a >Elastic</a>
+                    <br><br>
+                    <a d="id_btn_elk"  class="db grow">
+                        
+                        
+                        
+                        
+                        
+                        <img style="max-width: 80%;" src="images/category4/elastic-logo-200.png" class="img"
+                             alt="image">
+                    </a>
+                    <hr>
+                </div>
+                
+                <div class="col-md-6" style="text-align: center">
+                    <a >Hyperledger</a>
+                    <br><br>
+                    <a d="id_btn_hyper_ledger"  class="db grow">
+                        
+                        
+                        
+                        
+                        
+                        <img style="max-width: 80%;" src="images/category4/hyperledger.png" class="img"
+                             alt="image">
+                    </a>
+                    <hr>
+                </div>
+                
+                <div class="col-md-6" style="text-align: center">
+                    <a >Kibana</a>
+                    <br><br>
+                    <a id="id_btn_elk" class="db grow">
+                        
+                        
+                        
+                        
+                        
+                        <img style="max-width: 80%;" src="images/category4/kibana.png" class="img"
+                             alt="image">
+                    </a>
+                    <hr>
+                </div>
+                
+                <div class="col-md-6" style="text-align: center">
+                    <a>Logstash</a>
+                    <br><br>
+                    <a id="id_btn_elk" class="db grow">
+                        
+                        
+                        
+                        
+                        
+                        <img style="max-width: 80%;" src="images/category4/logstash.png" class="img"
+                             alt="image">
+                    </a>
+                    <hr>
+                </div>
+                
+                <div class="col-md-6" style="text-align: center">
+                    <a >Piwik</a>
+                    <br><br>
+                    <a id="id_btn_piwik" class="db grow">
+                        
+                        
+                        
+                        
+                        
+                        <img style="max-width: 80%;" src="images/category4/piwik.png" class="img"
+                             alt="image">
+                    </a>
+                    <hr>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </main>
+    <footer class="bg-near-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://101.6.160.59:1313/" >
+    &copy; 2017 iCenter
+  </a>
+  
+
+
+
+
+
+
+
+
+  </div>
+</footer>
+
+    <script src="dist/app.bundle.js" async></script>
+
+  <script data-no-instant>document.write('<script src="/livereload.js?port=1313&mindelay=10"></' + 'script>')</script></body>
 </html>

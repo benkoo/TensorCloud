@@ -1,14 +1,18 @@
 version: '2'
 services:
   mariadb:
+    restart: always
     image: 'bitnami/mariadb:latest'
     environment:
+      - MARIADB_ROOT_USER=root
+      - MARIADB_ROOT_PASSWORD=''
       - ALLOW_EMPTY_PASSWORD=yes
     volumes:
       - 'mariadb_data:/bitnami'
     ports:
       - '3307:3306'
   mediawiki:
+    restart: always
     image: 'bitnami/mediawiki:latest'
     labels:
       kompose.service.type: nodeport
@@ -20,6 +24,7 @@ services:
     depends_on:
       - mariadb
   piwik:
+    restart: always
     image: 'bitnami/piwik:latest'
     ports:
       - '82:80'
@@ -29,10 +34,12 @@ services:
     depends_on:
       - mediawiki   
   netlify:
+    restart: always
     image: smartkit/godpaper-da-netlify:latest
     ports:
       - "80:80"
   jenkins:
+    restart: always
     image: jenkins
     ports:
       - "83:8080"
@@ -40,6 +47,7 @@ services:
     volumes:
       - 'jenkins_data:/var/jenkins_home'
   nexus:
+    restart: always
     image: sonatype/nexus3:latest
     ports:
       - "84:8081"
@@ -47,6 +55,7 @@ services:
     volumes:
         - nexus_data:/nexus-data
   cadvisor:
+    restart: always
     image: google/cadvisor:latest
     ports:
       - "85:8080"
@@ -57,6 +66,7 @@ services:
         - /var/lib/docker/:/var/lib/docker:ro
         # - /dev/disk/:/dev/disk:ro
   phabricator:
+    restart: always
     image: 'bitnami/phabricator:latest'
     labels:
       kompose.service.type: nodeport
@@ -67,11 +77,24 @@ services:
       - 'phabricator_data:/bitnami'
     depends_on:
       - mariadb
-  jupyterhub:
-    image: jupyterhub/jupyterhub
+  # jupyterhub:
+  #   image: jupyterhub/jupyterhub
+  #   ports:
+  #     - "8000:8000"
+  jupyter-openmodelica:
+    restart: always
+    image: 'smartkit/jupyter-openmodelica'
     ports:
-      - "8000:8000"
-  # modelica:
+      - '8000:8888'
+  jupyter-openmodelica:
+    restart: always
+    image: 'smartkit/omwebbook'
+    ports:
+      - '88:80'
+  resourcespace:
+    image: smartkit/godpaper-da-resourcespace
+    ports:
+      - '91:80'
   # netlogo:
   #   image: sonatype/nexus3:latest
   #   ports:
