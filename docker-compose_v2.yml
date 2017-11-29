@@ -4,11 +4,7 @@ services:
     restart: always
     image: 'bitnami/mariadb:latest'
     environment:
-      #- MARIADB_ROOT_USER=root
-      #- MARIADB_ROOT_PASSWORD=''
       - ALLOW_EMPTY_PASSWORD=yes
-      - MARIADB_USER=bn_mediawiki
-      - MARIADB_DATABASE=bitnami_mediawiki
     volumes:
       - 'mariadb_data:/bitnami'
     ports:
@@ -21,12 +17,6 @@ services:
     ports:
       - '81:80'
       - '443:443'
-    environment:
-      - MARIADB_HOST=mariadb
-      - MARIADB_PORT_NUMBER=3306
-      - MEDIAWIKI_DATABASE_USER=bn_mediawiki
-      - MEDIAWIKI_DATABASE_NAME=bitnami_mediawiki
-      - ALLOW_EMPTY_PASSWORD=yes
     volumes:
       - 'mediawiki_data:/bitnami'
     depends_on:
@@ -85,24 +75,21 @@ services:
       - 'phabricator_data:/bitnami'
     depends_on:
       - mariadb
-  # jupyterhub:
-  #   image: jupyterhub/jupyterhub
-  #   ports:
-  #     - "8000:8000"
+  jupyterhub:
+    restart: always
+    image: jupyterhub/jupyterhub
+    ports:
+      - "8000:8000"
   jupyter-openmodelica:
     restart: always
     image: 'smartkit/jupyter-openmodelica'
     ports:
       - '8888:8888'
-  jupyter-openmodelica:
+  openmodelica-webbook:
     restart: always
     image: 'smartkit/omwebbook'
     ports:
       - '88:80'
-  resourcespace:
-    image: smartkit/godpaper-da-resourcespace
-    ports:
-      - '91:80'
   # netlogo:
   #   image: sonatype/nexus3:latest
   #   ports:

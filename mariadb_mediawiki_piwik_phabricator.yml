@@ -37,7 +37,7 @@ services:
       - '445:443'
     volumes:
       - 'phabricator_data:/bitnami'
-    environment: 
+     #environment: 
      # - PHABRICATOR_HOST=http://docker.toyhouse.cc
      # - MARIADB_HOST=101.6.160.51
     depends_on:
