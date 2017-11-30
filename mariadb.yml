@@ -6,10 +6,12 @@ services:
       - MARIADB_ROOT_USER=root
       - MARIADB_ROOT_PASSWORD=''
       - ALLOW_EMPTY_PASSWORD=yes
+      - MARIADB_USER=bn_mediawiki
+      - MARIADB_DATABASE=bitnami_mediawiki
     volumes:
-      - 'mariadb_data:/bitnami'
+      - 'data_mariadb:/bitnami'
     ports:
       - '3306:3306'
 volumes:
-  mariadb_data:
+  data_mariadb:
     driver: local
