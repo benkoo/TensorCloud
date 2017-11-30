@@ -2,17 +2,17 @@ version: '2'
 services:
   mediawiki:
     image: 'bitnami/mediawiki:latest'
+    environment:
+      - MARIADB_HOST=mariadb
+      - MARIADB_PORT_NUMBER=3306
+      - MEDIAWIKI_DATABASE_USER=bn_mediawiki
+      - MEDIAWIKI_DATABASE_NAME=bitnami_mediawiki
+      - ALLOW_EMPTY_PASSWORD=yes
     ports:
-      - '82:80'
+      - '81:80'
       - '443:443'
     volumes:
       - 'data_mediawiki:/bitnami'
-    environment:
-      # - MARIADB_HOST=mariadb
-      # - MARIADB_PORT_NUMBER=3306
-      # - MEDIAWIKI_DATABASE_USER=bn_mediawiki
-      # - MEDIAWIKI_DATABASE_NAME=bitnami_mediawiki
-      - ALLOW_EMPTY_PASSWORD=yes
     depends_on:
       - mariadb
 volumes:

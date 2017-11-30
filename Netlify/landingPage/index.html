@@ -51,9 +51,10 @@
 <meta name="twitter:description" content=""/>
 <script>
             function setHref() {
-                document.getElementById('id_btn_wiki').href = window.location.protocol + "//" + window.location.hostname + ":81";
-                 document.getElementById('id_btn_piwik').href = window.location.protocol + "//" + window.location.hostname + ":82";
-                // document.getElementById('id_btn_piwik').href = "http://docker.toyhouse.cc:81";
+                //document.getElementById('id_btn_wiki').href = window.location.protocol + "//" + window.location.hostname + ":81";
+		document.getElementById('id_btn_wiki').href = "http://toyhouse.cc";
+                //document.getElementById('id_btn_piwik').href = window.location.protocol + "//" + window.location.hostname + ":82";
+                document.getElementById('id_btn_piwik').href = "http://docker.toyhouse.cc:81";
                 document.getElementById('id_btn_jenkins').href = window.location.protocol + "//" + window.location.hostname + ":83";
                 document.getElementById('id_btn_nexus').href = window.location.protocol + "//" + window.location.hostname + ":84";
                 document.getElementById('id_btn_cadvisor').href = window.location.protocol + "//" + window.location.hostname + ":85";
@@ -61,12 +62,13 @@
                 document.getElementById('id_btn_jupyter').href = window.location.protocol + "//" + window.location.hostname + ":8000";
                 document.getElementById('id_btn_modelica').href = window.location.protocol + "//" + window.location.hostname + ":88";
                 document.getElementById('id_btn_netlogo').href = window.location.protocol + "//" + window.location.hostname + ":89";
-                document.getElementById('id_btn_hyper_ledger').href = window.location.protocol + "//" + window.location.hostname + ":90";
+                // document.getElementById('id_btn_hyper_ledger').href = window.location.protocol + "//" + window.location.hostname + ":90";
+		document.getElementById('id_btn_hyper_ledger').href = "http://go.toyhouse.cc:9090";
                 document.getElementById('id_btn_gitlab').href = window.location.protocol + "//" + window.location.hostname + ":10080";
                 // document.getElementById('id_btn_resource_space').href = "http://101.6.160.62:8080/";
-                document.getElementById('id_btn_resource_space').href = window.location.protocol + "//" + window.location.hostname + ":91";
+                document.getElementById('id_btn_resource_space').href = window.location.protocol + "//" + window.location.hostname + ":8080";
                 document.getElementById('id_btn_elk').href = window.location.protocol + "//" + window.location.hostname + ":5601";
-                // document.getElementById('id_btn_netlify').href = window.location.protocol + "//" + window.location.hostname + ":1313";
+                document.getElementById('id_btn_netlify').href = "#";
                 document.getElementById('id_btn_ricomp').href = window.location.protocol + "//" + window.location.hostname + ":5001/static/index.html";
             }
 		</script>
@@ -227,7 +229,7 @@
                 <div class="col-md-6" style="text-align: center">
                     <a >Netlify</a>
                     <br><br>
-                    <a id="id_btn_jupyter" class="db grow">
+                    <a id="id_btn_netlify" class="db grow">
                         
                         
                         

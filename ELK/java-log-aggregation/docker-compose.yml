@@ -43,7 +43,7 @@ services:
   volumes:
    - ./src/main/logstash/config:/etc/logstash/conf.d
   ports:
-   - "5000:5000"
+   - "5002:5000"
   links:
    - elasticsearch
   networks:
