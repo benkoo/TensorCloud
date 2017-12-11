@@ -1,6 +1,6 @@
 version: '2'
 services:
-  resourcespace:
-    image: smartkit/jupyter-openmodelica
+  jupyter-openmodelica:
+    image: smartkit/jupyter-openmodelica:latest
     ports:
       - '8888:8888'
