@@ -1,0 +1,7 @@
+version: '2'
+services:
+  netlify:
+    restart: always
+    image: smartkit/godpaper-da-netlify:latest
+    ports:
+      - "80:80"
