@@ -1,9 +1,10 @@
 version: '2'
 services:
-  resourcespace:
+  container_name: openmodelica-webbook
+  omwebbook:
     image: smartkit/omwebbook
     ports:
       - '88:80'
 volumes:
-  resourcespace-data:
+  omwebbook-data:
     driver: local
