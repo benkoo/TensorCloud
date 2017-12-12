@@ -2,6 +2,7 @@ version: '2'
 services:
   mariadb:
     image: 'bitnami/mariadb:latest'
+    container_name: mariadb
     environment:
       #- MARIADB_ROOT_USER=root
       #- MARIADB_ROOT_PASSWORD=''
