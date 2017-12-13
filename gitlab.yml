@@ -151,3 +151,5 @@ services:
     - OAUTH_AZURE_API_KEY=
     - OAUTH_AZURE_API_SECRET=
     - OAUTH_AZURE_TENANT_ID=
+    - PIWIK_URL=localhost:81
+    - PIWIK_SITE_ID=3
