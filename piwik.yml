@@ -6,6 +6,8 @@ services:
       - '81:80'
     volumes:
       - 'piwik_data:/bitnami'
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
 volumes:
   piwik_data:
     driver: local
