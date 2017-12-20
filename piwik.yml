@@ -2,6 +2,7 @@ version: '2'
 services:
   piwik:
     image: 'bitnami/piwik:latest'
+    container_name: piwik
     ports:
       - '81:80'
     volumes:
