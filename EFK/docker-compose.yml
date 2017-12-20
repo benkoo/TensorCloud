@@ -1,18 +1,33 @@
 version: '2'
 services:
-  web:
-    image: httpd
-    ports:
-      - "80:80"
-    links:
-      - fluentd
-    logging:
-      driver: "fluentd"
-      options:
-        fluentd-address: localhost:24224
-        tag: httpd.access
+#modified the elasticsearch ENVs
+ elasticsearch:
+  image: docker.elastic.co/elasticsearch/elasticsearch:5.6.3
+  container_name: elasticsearch
+  environment:
+    - cluster.name=docker-cluster
+    - bootstrap.memory_lock=true
+    - xpack.security.enabled=false
+    - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+  ulimits:
+    memlock:
+      soft: -1
+      hard: -1
+    nofile:
+      soft: 65536
+      hard: 65536
+  mem_limit: 2g
+  cap_add:
+    - IPC_LOCK
+  volumes:
+    - esdata1:/usr/share/elasticsearch/data
+  ports:
+    - "9200:9200"
+    - "9300:9300"
+  networks:
+   - back-tier
 
-  fluentd:
+ fluentd:
     build: ./fluentd
     volumes:
       - ./fluentd/conf:/fluentd/etc
@@ -21,17 +36,34 @@ services:
     ports:
       - "24224:24224"
       - "24224:24224/udp"
+    logging:
+        driver: "json-file"
+        options:
+            max-size: 100m
+            max-file: "5"
+    networks:
+     - front-tier
+     - back-tier
 
-  elasticsearch:
-    image: elasticsearch
-    expose:
-      - 9200
-    ports:
-      - "9200:9200"
+ kibana:
+  image: kibana
+  container_name: kibana
+  environment:
+   - ELASTICSEARCH_URL=http://elasticsearch:9200
+  ports:
+   - "5601:5601"
+  links:
+   - elasticsearch
+  networks:
+   - back-tier
 
-  kibana:
-    image: kibana
-    links:
-      - "elasticsearch"
-    ports:
-      - "5601:5601"
+
+volumes:
+  esdata1:
+    driver: local
+
+networks:
+  front-tier:
+  back-tier:
+   driver: bridge
+

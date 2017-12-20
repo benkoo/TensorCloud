@@ -8,8 +8,6 @@ services:
       - 'mariadb_data:/bitnami'
   phabricator:
     image: 'bitnami/phabricator:latest'
-    labels:
-      kompose.service.type: nodeport
     ports:
       - '80:80'
       - '443:443'
@@ -17,6 +15,12 @@ services:
       - 'phabricator_data:/bitnami'
     depends_on:
       - mariadb
+    environment:
+      - PHABRICATOR_HOST=127.0.0.1
+      - SMTP_HOST=smtp.gmail.com
+      - SMTP_PORT=587
+      - SMTP_USER=your_email@gmail.com
+      - SMTP_PASSWORD=your_password
 volumes:
   mariadb_data:
     driver: local
