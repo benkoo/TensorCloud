@@ -5,9 +5,15 @@ services:
     image: 'bitnami/mariadb:latest'
     container_name: mariadb
     environment:
+      #- MARIADB_ROOT_USER=root
+      #- MARIADB_ROOT_PASSWORD=123456
       - ALLOW_EMPTY_PASSWORD=yes
+      #- MARIADB_USER=bitnami
+      #- MARIADB_DATABASE=123456
     volumes:
       - 'mariadb_data:/bitnami'
+    ports:
+      - "127.0.0.1:3306:3306"
  piwik:
   image: 'bitnami/piwik:latest'
   container_name: piwik

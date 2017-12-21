@@ -18,3 +18,8 @@ After you are done, just run:
 
 And all services will be reclaimed.
 
+
+Reference
+=========
+
+https://github.com/fluent/fluent-plugin-sql
