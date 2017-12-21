@@ -4,10 +4,12 @@ services:
  mariadb:
     image: 'bitnami/mariadb:latest'
     container_name: mariadb
+    ports:
+      - "3316:3306"
     environment:
       - MARIADB_ROOT_USER=root
-      - MARIADB_ROOT_PASSWORD=''
-      #- ALLOW_EMPTY_PASSWORD=yes
+      - MARIADB_ROOT_PASSWORD=123456
+      - ALLOW_EMPTY_PASSWORD=yes
       #- MARIADB_USER=bn_mediawiki
       #- MARIADB_DATABASE=bitnami_mediawiki
     volumes:
