@@ -15,6 +15,10 @@ public class PiwikLogVisitResponse implements Serializable {
     @ApiModelProperty(value = "Unique PiwikLogVisit identifier", required = true)
     private String idvisit;
 
+
+    @ApiModelProperty(value = "Unique PiwikLogVisit idsite", required = true)
+    private String idsite;
+
     @ApiModelProperty(value = "Unique PiwikLogVisit identifier", required = true)
     private String idvisitor;
 
@@ -27,8 +31,9 @@ public class PiwikLogVisitResponse implements Serializable {
     @ApiModelProperty(value = "Site where PiwikLogVisit's location_ip", required = true)
     private String location_ip;
 
-    public PiwikLogVisitResponse(String idvisit, String idvisitor, String user_id, String visit_last_action_time, String location_ip) {
+    public PiwikLogVisitResponse(String idvisit, String idsite, String idvisitor, String user_id, String visit_last_action_time, String location_ip) {
         this.idvisit = idvisit;
+        this.idsite = idsite;
         this.idvisitor = idvisitor;
         this.user_id = user_id;
         this.visit_last_action_time = visit_last_action_time;

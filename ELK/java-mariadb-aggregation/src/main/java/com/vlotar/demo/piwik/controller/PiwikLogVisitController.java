@@ -1,25 +1,24 @@
 package com.vlotar.demo.piwik.controller;
 
 import com.google.gson.Gson;
-import com.vlotar.demo.domain.PiwikLogVisit;
 import com.vlotar.demo.piwik.response.PiwikLogVisitResponse;
 import com.vlotar.demo.service.PiwikLogVisitService;
-import com.vlotar.demo.service.UserService;
 import com.vlotar.demo.service.converter.PiwikLogVisitConverter;
-import com.vlotar.demo.service.converter.UserResourceConverter;
-import com.vlotar.demo.web.request.UserResourceRequest;
-import com.vlotar.demo.web.response.ResourceIdResponse;
-import com.vlotar.demo.web.response.SuccessResponse;
-import com.vlotar.demo.web.response.UserResourceResponse;
+
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
+import net.logstash.logback.marker.Markers;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.sql.SQLException;
 import java.util.stream.Collectors;
+
+import static net.logstash.logback.marker.Markers.append;
+import static net.logstash.logback.marker.Markers.appendRaw;
 
 
 @Api(value = "/users", description = "API manages 'users' allowing to perform basic CRUD operations")
@@ -54,12 +53,15 @@ import java.util.stream.Collectors;
     )
     @RequestMapping(method = RequestMethod.GET, produces = "application/json")
     @ResponseBody
-    public String getAllPiwikLogVisits() {
+    public String getAllPiwikLogVisits() throws SQLException {
         LOGGER.debug("Trying to retrieve all PiwikLogVisits");
 //
+        String rawString = piwikLogVisitService.getAllPiwikLogVisitsRaw();
         String jsonString = toJson(
                 piwikLogVisitService.getAllPiwikLogVisits().stream()
                         .map(user -> this.converter.convert(user)).collect(Collectors.toSet()));
+//        LOGGER.info(append("HeartbeatPiwik[]", "HeartbeatPiwik"), "HeartbeatPiwik details []", "HeartbeatPiwik[]");
+        LOGGER.info(String.valueOf(appendRaw("PiwikJson", jsonString)));
         return jsonString;
     }
 

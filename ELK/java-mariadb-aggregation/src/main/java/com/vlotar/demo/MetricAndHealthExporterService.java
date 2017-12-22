@@ -30,19 +30,27 @@ class MetricAndHealthExporterService {
     /**
      * Exposes all metrics each 10 minutes after an initial delay of a minute
      */
-    @Scheduled(initialDelay = 60000, fixedDelay = 600000)
-    void exportMetrics() {
-        this.metricsEndpoint.invoke().forEach(this::log);
-    }
+//    @Scheduled(initialDelay = 60000, fixedDelay = 600000)
+//    void exportMetrics() {
+//        this.metricsEndpoint.invoke().forEach(this::log);
+//    }
 
     /**
      * Pushes heart beats every 100 seconds
      */
-    @Scheduled(initialDelay = 100000, fixedDelay = 10000)
-    void pushHeartbeat() {
-        Health health = this.healthEndpoint.invoke();
-        LOGGER.info(append("Heartbeat", health.getStatus()), "Heartbeat details {}", health.getDetails());
-    }
+//    @Scheduled(initialDelay = 100000, fixedDelay = 10000)
+//    void pushHeartbeat() {
+//        Health health = this.healthEndpoint.invoke();
+//        LOGGER.info(append("Heartbeat", health.getStatus()), "Heartbeat details {}", health.getDetails());
+//    }
+
+//    @Scheduled(initialDelay = 100000, fixedDelay = 10000)
+//    void pushHeartbeatPiwik() {
+//        Health health = this.healthEndpoint.invoke();
+//        LOGGER.info(append("HeartbeatPiwik", health.getStatus()), "HeartbeatPiwik details {}", health.getDetails());
+//    }
+
+
 
     private void log(String metricName, Object metricValue) {
         LOGGER.info(append("metric", metricName), "Reporting metric {}={}", metricName, metricValue);

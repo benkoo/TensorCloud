@@ -1,8 +1,6 @@
 package com.vlotar.demo.piwik.request;
 
 import io.swagger.annotations.ApiModelProperty;
-import lombok.Getter;
-import lombok.Setter;
 import lombok.ToString;
 
 import java.io.Serializable;
@@ -21,11 +19,11 @@ public class PiwikLogVisitRequest implements Serializable {
         this.idvisit = idvisit;
     }
 
-    public String getIdvisitor() {
+    public byte[] getIdvisitor() {
         return idvisitor;
     }
 
-    public void setIdvisitor(String idvisitor) {
+    public void setIdvisitor(byte[] idvisitor) {
         this.idvisitor = idvisitor;
     }
 
@@ -45,26 +43,37 @@ public class PiwikLogVisitRequest implements Serializable {
         this.visit_last_action_time = visit_last_action_time;
     }
 
-    public String getLocation_ip() {
+    public byte[] getLocation_ip() {
         return location_ip;
     }
 
-    public void setLocation_ip(String location_ip) {
+    public void setLocation_ip(byte[] location_ip) {
         this.location_ip = location_ip;
     }
 
     @ApiModelProperty(value = "Unique PiwikLogVisit identifier", required = true)
     private String idvisit;
 
-    @ApiModelProperty(value = "Unique PiwikLogVisit identifier", required = true)
-    private String idvisitor;
+    public String getIdvisite() {
+        return idvisite;
+    }
 
-    @ApiModelProperty(value = "PiwikLogVisit's idvisitor", required = true)
+    public void setIdvisite(String idvisite) {
+        this.idvisite = idvisite;
+    }
+
+    @ApiModelProperty(value = "Unique PiwikLogVisit identifier site", required = true)
+    private String idvisite;
+
+    @ApiModelProperty(value = "Unique PiwikLogVisit identifier visitor", required = true)
+    private byte[] idvisitor;
+
+    @ApiModelProperty(value = "PiwikLogVisit's user id", required = true)
     private String user_id;
 
     @ApiModelProperty(value = "PiwikLogVisit's visit_last_action_time", required = true)
     private String visit_last_action_time;
 
     @ApiModelProperty(value = "Site where PiwikLogVisit's location_ip", required = true)
-    private String location_ip;
+    private byte[] location_ip;
 }

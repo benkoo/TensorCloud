@@ -6,8 +6,10 @@ import lombok.ToString;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.io.UnsupportedEncodingException;
 import java.util.Date;
 
+//@see： https://developer.piwik.org/2.x/guides/persistence-and-the-mysql-backend#log-data-persistence
 @Entity
 @Table(name = "piwik_log_visit")
 //@Getter
@@ -38,10 +40,10 @@ public class PiwikLogVisit implements Serializable{
     }
 
     public String getIdvisitor() {
-        return idvisitor;
+        return new String(idvisitor);
     }
 
-    public void setIdvisitor(String idvisitor) {
+    public void setIdvisitor(byte[] idvisitor) {
         this.idvisitor = idvisitor;
     }
 
@@ -62,18 +64,34 @@ public class PiwikLogVisit implements Serializable{
     }
 
     public String getLocation_ip() {
-        return location_ip;
+        String result  = "";
+        try {
+            result = new  String(location_ip, "UTF-16LE");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        return result;
     }
 
-    public void setLocation_ip(String location_ip) {
+    public void setLocation_ip(byte[] location_ip) {
         this.location_ip = location_ip;
     }
 
     private String idvisit;
+
+    public String getIdsite() {
+        return idsite;
+    }
+
+    public void setIdsite(String idsite) {
+        this.idsite = idsite;
+    }
+
+    private String idsite;
 //    @Column(name = "first_name", nullable = false)
-    private String idvisitor;
+    private byte[] idvisitor;
     private String visit_last_action_time;
     private String user_id;
-    private String location_ip;
+    private byte[] location_ip;
 
 }

@@ -21,6 +21,8 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
     <dependencies>
@@ -125,6 +127,27 @@
         <finalName>java-log-aggregation</finalName>
         <plugins>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.7.0</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <fork>true</fork>
+                    <compilerargs>
+                        <arg>-J--add-opens=-Jjdk.compiler/com.sun.tools.javac.code=ALL-UNNAMED</arg>
+                        <arg>-J--add-opens=-Jjdk.compiler/com.sun.tools.javac.comp=ALL-UNNAMED</arg>
+                        <arg>-J--add-opens=-Jjdk.compiler/com.sun.tools.javac.file=ALL-UNNAMED</arg>
+                        <arg>-J--add-opens=-Jjdk.compiler/com.sun.tools.javac.main=ALL-UNNAMED</arg>
+                        <arg>-J--add-opens=-Jjdk.compiler/com.sun.tools.javac.model=ALL-UNNAMED</arg>
+                        <arg>-J--add-opens=-Jjdk.compiler/com.sun.tools.javac.parser=ALL-UNNAMED</arg>
+                        <arg>-J--add-opens=-Jjdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED</arg>
+                        <arg>-J--add-opens=-Jjdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED</arg>
+                        <arg>-J--add-opens=-Jjdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED</arg>
+                    </compilerargs>
+                </configuration>
+            </plugin>
+            <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
@@ -167,11 +190,11 @@
                                 <title>Demo project for Spring Boot, Logstash, ElasticSearch, Kibana using Docker</title>
                                 <version>0.0.1</version>
                                 <termsOfService>
-                                    https://github.com/vlotar/spring-boot-elk
+                                    https://github.com/yangboz/spring-boot-elk
                                 </termsOfService>
                                 <contact>
-                                    <email>vadim.lot@gmail.com</email>
-                                    <name>Vadym Lotar</name>
+                                    <email>z@smartkit.info</email>
+                                    <name>yangboz</name>
                                 </contact>
                                 <license>
                                     <url>http://www.apache.org/licenses/LICENSE-2.0.html</url>
