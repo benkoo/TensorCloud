@@ -7,6 +7,8 @@ services:
       - ALLOW_EMPTY_PASSWORD=yes
     volumes:
       - 'mariadb_data:/bitnami'
+    ports:
+      - "127.0.0.1:3306:3306"
   piwik:
     image: 'bitnami/piwik:latest'
     ports:
