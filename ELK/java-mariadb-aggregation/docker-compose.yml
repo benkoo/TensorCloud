@@ -10,6 +10,27 @@ services:
 #    - logstash
 #   networks:
 #    - front-tier
+ piwik:
+    image: 'bitnami/piwik:latest'
+    ports:
+      - '80:80'
+      - '443:443'
+    volumes:
+      - 'piwik_data:/bitnami'
+    depends_on:
+      - mariadb
+ mariadb:
+    image: 'bitnami/mariadb:latest'
+    ports:
+      - '127.0.0.0.1:3306:3306'
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+#      - MARIADB_DATABASE=bitnami_piwik
+    volumes:
+      - 'mariadb_data:/bitnami'
+#    volumes:
+#        - ./database:/tmp/database
+#    command: mysqld --init-file="/tmp/database/bitnami_piwik_20171222.sql"
 
  elasticsearch:
   image: docker.elastic.co/elasticsearch/elasticsearch:5.6.3
@@ -66,6 +87,10 @@ services:
 
 volumes:
   esdata1:
+    driver: local
+  mariadb_data:
+    driver: local
+  piwik_data:
     driver: local
 
 networks:
