@@ -27,13 +27,59 @@ public class PiwikLogVisitService {
     private static final Logger LOGGER = LoggerFactory.getLogger(PiwikLogVisitService.class);
 
 
+    private  static final String SQL_piwik_log_visit = "select idsite,idvisit,\n" +
+            "visitor_localtime,\n" +
+            "visitor_returning,\n" +
+            "visitor_count_visits,\n" +
+            "visitor_days_since_last,\n" +
+            "visitor_days_since_order,\n" +
+            "visitor_days_since_first,\n" +
+            "visit_first_action_time,\n" +
+            "visit_last_action_time,\n" +
+            "visit_exit_idaction_url,\n" +
+            "visit_exit_idaction_name,\n" +
+            "visit_entry_idaction_url,\n" +
+            "visit_entry_idaction_name,\n" +
+            "visit_total_actions,\n" +
+            "visit_total_searches,\n" +
+            "visit_total_events,\n" +
+            "visit_total_time,\n" +
+            "visit_goal_converted,\n" +
+            "visit_goal_buyer,\n" +
+            "referer_type,\n" +
+            "referer_name,\n" +
+            "referer_url,\n" +
+            "referer_keyword,\n" +
+            "config_id,\n" +
+            "config_os,\n" +
+            "config_browser_name,\n" +
+            "config_browser_version,\n" +
+            "config_resolution,\n" +
+            "config_pdf,\n" +
+            "config_flash,\n" +
+            "config_java,\n" +
+            "config_director,\n" +
+            "config_quicktime,\n" +
+            "config_realplayer,\n" +
+            "config_windowsmedia,\n" +
+            "config_gears,\n" +
+            "config_silverlight,\n" +
+            "config_cookie,\n" +
+            "inet_ntoa(conv(hex(location_ip), 16, 10)) as location_ip, \n" +
+            "location_browser_lang,\n" +
+            "location_country,\n" +
+            "location_region,\n" +
+            "location_city,\n" +
+            "location_latitude,\n" +
+            "location_longitude,\n" +
+            "conv(hex(idvisitor), 16, 10) as idvisitor from piwik_log_visit;";
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
     public JSONArray getAllPiwikLogVisitsRaw() throws SQLException {
         //@see:https://piwik.org/faq/how-to/#faq_158
-        String sql = "select idsite,idvisit,visit_last_action_time,user_id,inet_ntoa(conv(hex(location_ip), 16, 10)) as location_ip, conv(hex(idvisitor), 16, 10) as idvisitor from piwik_log_visit";
-        SqlRowSet rows = jdbcTemplate.queryForRowSet(sql);
+//        String sql = "select idsite,idvisit,visit_last_action_time,user_id,inet_ntoa(conv(hex(location_ip), 16, 10)) as location_ip, conv(hex(idvisitor), 16, 10) as idvisitor from piwik_log_visit";
+        SqlRowSet rows = jdbcTemplate.queryForRowSet(SQL_piwik_log_visit);
 //        List<Object> ObjlistAll = new ArrayList<Object>();
         //
         JSONArray jsonArray = new JSONArray();
@@ -83,4 +129,8 @@ public class PiwikLogVisitService {
         }
         return piwikLogVisit;
     }
+    //Others,@see:https://developer.piwik.org/guides/persistence-and-the-mysql-backend
+
+
+
 }
