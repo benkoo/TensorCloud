@@ -1,30 +1,23 @@
 package info.smartkit.elk.piwik.controller;
 
 import com.google.gson.Gson;
-import com.google.gson.JsonArray;
 import info.smartkit.elk.piwik.response.PiwikLogVisitResponse;
-import info.smartkit.elk.service.PiwikLogVisitService;
-import info.smartkit.elk.service.converter.PiwikLogVisitConverter;
+import info.smartkit.elk.piwik.service.PiwikLogVisitService;
+import info.smartkit.elk.piwik.service.converter.PiwikLogVisitConverter;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
-import net.logstash.logback.marker.Markers;
 import org.json.simple.JSONArray;
-import org.omg.CORBA.OBJ_ADAPTER;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.sql.SQLException;
-import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
-import java.util.stream.Collectors;
 
-import static net.logstash.logback.marker.Markers.append;
 import static net.logstash.logback.marker.Markers.appendRaw;
-import static net.logstash.logback.marker.Markers.appendArray;
 
 
 @Api(value = "/users", description = "API manages 'users' allowing to perform basic CRUD operations")

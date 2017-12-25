@@ -1,8 +1,8 @@
 package info.smartkit.elk.web.controller;
 
-import info.smartkit.elk.domain.User;
-import info.smartkit.elk.service.UserService;
-import info.smartkit.elk.service.converter.UserResourceConverter;
+import info.smartkit.elk.web.domain.User;
+import info.smartkit.elk.web.service.UserService;
+import info.smartkit.elk.web.converter.UserResourceConverter;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;

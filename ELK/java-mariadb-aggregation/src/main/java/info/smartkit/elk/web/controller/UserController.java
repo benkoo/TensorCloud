@@ -1,8 +1,8 @@
 package info.smartkit.elk.web.controller;
 
 import com.google.gson.Gson;
-import info.smartkit.elk.service.UserService;
-import info.smartkit.elk.service.converter.UserResourceConverter;
+import info.smartkit.elk.web.service.UserService;
+import info.smartkit.elk.web.converter.UserResourceConverter;
 import info.smartkit.elk.web.request.UserResourceRequest;
 import info.smartkit.elk.web.response.ResourceIdResponse;
 import info.smartkit.elk.web.response.SuccessResponse;

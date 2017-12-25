@@ -1,6 +1,6 @@
 package info.smartkit.elk.web.response;
 
-import info.smartkit.elk.domain.User;
+import info.smartkit.elk.web.domain.User;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
