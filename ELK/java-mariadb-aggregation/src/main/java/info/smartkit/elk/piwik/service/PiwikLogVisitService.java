@@ -5,10 +5,12 @@ import com.google.common.collect.Lists;
 import info.smartkit.elk.piwik.dao.PiwikLogVisitDAO;
 import info.smartkit.elk.piwik.domain.PiwikLogVisit;
 import info.smartkit.elk.exception.ResourceNotFoundException;
+import net.logstash.logback.marker.Markers;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.slf4j.Marker;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
@@ -16,7 +18,11 @@ import org.springframework.stereotype.Service;
 
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
+
+import static net.logstash.logback.marker.Markers.appendRaw;
 
 @Service
 public class PiwikLogVisitService {
@@ -77,27 +83,38 @@ public class PiwikLogVisitService {
     private JdbcTemplate jdbcTemplate;
 
     public JSONArray getAllPiwikLogVisitsRaw() throws SQLException {
+//    public List<Object> getAllPiwikLogVisitsRaw() throws SQLException {
         //@see:https://piwik.org/faq/how-to/#faq_158
 //        String sql = "select idsite,idvisit,visit_last_action_time,user_id,inet_ntoa(conv(hex(location_ip), 16, 10)) as location_ip, conv(hex(idvisitor), 16, 10) as idvisitor from piwik_log_visit";
         SqlRowSet rows = jdbcTemplate.queryForRowSet(SQL_piwik_log_visit);
-//        List<Object> ObjlistAll = new ArrayList<Object>();
+        List<Object> ObjlistAll = new ArrayList<Object>();
         //
         JSONArray jsonArray = new JSONArray();
         while (rows.next()) {
             //
             int colCount = rows.getMetaData().getColumnCount();
-//            List<Object> Objlist = new ArrayList<Object>();
+            List<Object> Objlist = new ArrayList<Object>();
             JSONObject jsonObject = new JSONObject();
             for (int i = 1; i <= colCount; i++) {
 //                Objlist.add(rows.getObject(i));
                 String column_name = rows.getMetaData().getColumnName(i);
-                jsonObject.put(column_name, rows.getObject(column_name));
+                //@see:http://grokdebug.herokuapp.com
+                if(column_name.equals("location_ip")) {
+                    jsonObject.put(column_name, rows.getObject(column_name));
+//                    Objlist.add(rows.getObject(i));
+//                    LOGGER.info(rows.getObject(i).toString());
+                    //https://balamaci.ro/java-app-monitoring-with-elk-logstash/
+                    Marker ipArgument = Markers.append("location_ip", rows.getObject(column_name));
+                    LOGGER.info(ipArgument, "location_ip={}", rows.getObject(column_name));
+                }
             }
-            LOGGER.info(jsonObject.toJSONString());
+//            LOGGER.info(Objlist.toString());
+//            LOGGER.info(jsonObject.toJSONString());
+//            LOGGER.info(String.valueOf(appendRaw("Piwik", jsonObject.toJSONString())));
             jsonArray.add(jsonObject);
 //            ObjlistAll.add(Objlist);
         }
-
+//        return ObjlistAll;
         return jsonArray;
     }
 

@@ -14,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.sql.SQLException;
+import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -56,6 +57,7 @@ import static net.logstash.logback.marker.Markers.appendRaw;
         LOGGER.debug("Trying to retrieve all PiwikLogVisits");
 //
         JSONArray rawListObjects = piwikLogVisitService.getAllPiwikLogVisitsRaw();
+//        List<Object> rawListObjects = piwikLogVisitService.getAllPiwikLogVisitsRaw();
 //        String jsonString = toJson(
 //                piwikLogVisitService.getAllPiwikLogVisits().stream()
 //                        .map(user -> this.converter.convert(user)).collect(Collectors.toSet()));
@@ -73,8 +75,8 @@ import static net.logstash.logback.marker.Markers.appendRaw;
                 // Task here ...
                 String jsonRawString = toJson(rawListObjects.get(0));
 //                System.out.println("Piwik:"+jsonRawString);
-                LOGGER.info(jsonRawString);
-                LOGGER.info(String.valueOf(appendRaw("Piwik", jsonRawString)));
+//                LOGGER.info(jsonRawString);
+//                LOGGER.info(String.valueOf(appendRaw("Piwik", jsonRawString)));
                 rawListObjects.remove(0);
             }
         }, delay, period);

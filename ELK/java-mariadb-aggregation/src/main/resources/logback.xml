@@ -42,5 +42,5 @@
     </root>
 
     <logger name="org.springframework" level="INFO"/>
-    <logger name="com.vlotar.demo" level="DEBUG"/>
+    <logger name="info.smartkit.elk" level="DEBUG"/>
 </configuration>

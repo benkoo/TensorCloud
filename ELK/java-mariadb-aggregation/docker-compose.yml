@@ -10,15 +10,15 @@ services:
 #    - logstash
 #   networks:
 #    - front-tier
- piwik:
-    image: 'bitnami/piwik:latest'
-    ports:
-      - '80:80'
-      - '443:443'
-    volumes:
-      - 'piwik_data:/bitnami'
-    depends_on:
-      - mariadb
+# piwik:
+#    image: 'bitnami/piwik:latest'
+#    ports:
+#      - '80:80'
+#      - '443:443'
+#    volumes:
+#      - 'piwik_data:/bitnami'
+#    depends_on:
+#      - mariadb
  mariadb:
     image: 'bitnami/mariadb:latest'
     ports:
