@@ -10,8 +10,6 @@ services:
       - '3306:3306'
   mediawiki:
     image: 'bitnami/mediawiki:latest'
-    labels:
-      kompose.service.type: nodeport
     ports:
       - '82:80'
       - '443:443'
@@ -30,8 +28,6 @@ services:
       - mediawiki
   phabricator:
     image: 'bitnami/phabricator:latest'
-    labels:
-      kompose.service.type: nodeport
     ports:
       - '86:80'
       - '445:443'
