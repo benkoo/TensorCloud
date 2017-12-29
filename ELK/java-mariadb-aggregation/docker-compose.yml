@@ -1,15 +1,25 @@
 version: '2'
 services:
 
-
-# java-aggregator:
-#   image: smartkit/eip-elk-spring-boot-mariadb
-#   ports:
-#    - "8080:8080"
-#   links:
-#    - logstash
-#   networks:
-#    - front-tier
+ api:
+   image: smartkit/eip-elk-spring-boot-mariadb:latest
+   container_name: api
+   ports:
+    - "8080:8080"
+   links:
+    - mariadb
+    - logstash
+   depends_on:
+    - mariadb
+   networks:
+    - front-tier
+    - back-tier
+   environment:
+    - DATABASE_HOST=${DATABASE_HOST}
+    - DATABASE_USER=${DATABASE_USER}
+    - DATABASE_PASSWORD=${DATABASE_PASSWORD}
+    - DATABASE_NAME=${DATABASE_NAME}
+    - DATABASE_PORT=${DATABASE_PORT}
 # piwik:
 #    image: 'bitnami/piwik:latest'
 #    ports:
@@ -21,8 +31,9 @@ services:
 #      - mariadb
  mariadb:
     image: 'bitnami/mariadb:latest'
+    container_name: mariadb
     ports:
-      - '127.0.0.0.1:3306:3306'
+      - '3306:3306'
     environment:
       - ALLOW_EMPTY_PASSWORD=yes
 #      - MARIADB_DATABASE=bitnami_piwik
@@ -31,6 +42,8 @@ services:
 #    volumes:
 #        - ./database:/tmp/database
 #    command: mysqld --init-file="/tmp/database/bitnami_piwik_20171222.sql"
+    networks:
+      - back-tier
 
  elasticsearch:
   image: docker.elastic.co/elasticsearch/elasticsearch:5.6.3

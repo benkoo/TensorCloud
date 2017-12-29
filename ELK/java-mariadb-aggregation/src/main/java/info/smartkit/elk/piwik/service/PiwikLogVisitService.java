@@ -46,7 +46,7 @@ public class PiwikLogVisitService {
             "visit_exit_idaction_name,\n" +
             "visit_entry_idaction_url,\n" +
             "visit_entry_idaction_name,\n" +
-            "visit_total_actions,\n" +
+            "visit_total_interactions,\n" +
             "visit_total_searches,\n" +
             "visit_total_events,\n" +
             "visit_total_time,\n" +
@@ -56,7 +56,7 @@ public class PiwikLogVisitService {
             "referer_name,\n" +
             "referer_url,\n" +
             "referer_keyword,\n" +
-            "config_id,\n" +
+            "conv(hex(config_id), 16, 10) as config_id,\n" +
             "config_os,\n" +
             "config_browser_name,\n" +
             "config_browser_version,\n" +
@@ -99,21 +99,20 @@ public class PiwikLogVisitService {
 //                Objlist.add(rows.getObject(i));
                 String column_name = rows.getMetaData().getColumnName(i);
                 //@see:http://grokdebug.herokuapp.com
-                if(column_name.equals("location_ip")) {
+//                if(column_name.equals("location_ip")) {
                     jsonObject.put(column_name, rows.getObject(column_name));
 //                    Objlist.add(rows.getObject(i));
-//                    LOGGER.info(rows.getObject(i).toString());
+//                    LOGGER.info(rows.getObject(column_name).toString());
                     //https://balamaci.ro/java-app-monitoring-with-elk-logstash/
-                    Marker ipArgument = Markers.append("location_ip", rows.getObject(column_name));
-                    LOGGER.info(ipArgument, "location_ip={}", rows.getObject(column_name));
+                    Marker ipArgument = Markers.append(column_name, rows.getObject(column_name));
+                    LOGGER.info(ipArgument, column_name+"={}", rows.getObject(column_name));
                 }
+                jsonArray.add(jsonObject);
             }
 //            LOGGER.info(Objlist.toString());
 //            LOGGER.info(jsonObject.toJSONString());
 //            LOGGER.info(String.valueOf(appendRaw("Piwik", jsonObject.toJSONString())));
-            jsonArray.add(jsonObject);
 //            ObjlistAll.add(Objlist);
-        }
 //        return ObjlistAll;
         return jsonArray;
     }
