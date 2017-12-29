@@ -9,6 +9,7 @@ services:
    links:
     - mariadb
     - logstash
+    - piwik
    depends_on:
     - mariadb
    networks:
@@ -20,15 +21,15 @@ services:
     - DATABASE_PASSWORD=${DATABASE_PASSWORD}
     - DATABASE_NAME=${DATABASE_NAME}
     - DATABASE_PORT=${DATABASE_PORT}
-# piwik:
-#    image: 'bitnami/piwik:latest'
-#    ports:
-#      - '80:80'
-#      - '443:443'
-#    volumes:
-#      - 'piwik_data:/bitnami'
-#    depends_on:
-#      - mariadb
+ piwik:
+    image: 'bitnami/piwik:latest'
+    ports:
+      - '80:80'
+      - '443:443'
+    volumes:
+     - 'piwik_data:/bitnami'
+    depends_on:
+     - mariadb
  mariadb:
     image: 'bitnami/mariadb:latest'
     container_name: mariadb

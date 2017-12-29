@@ -9,7 +9,7 @@ services:
     volumes:
       - 'mariadb_data:/bitnami'
     ports:
-      - '3307:3306'
+      - '3306:3306'
   mediawiki:
     image: 'bitnami/mediawiki:latest'
     ports:
@@ -20,10 +20,8 @@ services:
     depends_on:
       - mariadb
     environment:
-      - MARIADB_HOST=mariadb
-      - MARIADB_PORT_NUMBER=3306
-      - MEDIAWIKI_DATABASE_USER=bn_mediawiki
-      - MEDIAWIKI_DATABASE_NAME=bitnami_mediawiki
+      - MEDIAWIKI_DATABASE_USER=root
+      - MEDIAWIKI_DATABASE_NAME=
       - ALLOW_EMPTY_PASSWORD=yes
   piwik:
     image: 'bitnami/piwik:latest'
