@@ -4,6 +4,8 @@ services:
     image: 'bitnami/mariadb:latest'
     environment:
       - ALLOW_EMPTY_PASSWORD=yes
+      - MARIADB_USER=bn_mediawiki
+      - MARIADB_DATABASE=bitnami_mediawiki
     volumes:
       - 'mariadb_data:/bitnami'
     ports:
@@ -11,12 +13,16 @@ services:
   mediawiki:
     image: 'bitnami/mediawiki:latest'
     ports:
-      - '82:80'
+      - '80:80'
       - '443:443'
     volumes:
       - 'mediawiki_data:/bitnami'
     depends_on:
       - mariadb
+    environment:
+      - MEDIAWIKI_DATABASE_USER=root
+      - MEDIAWIKI_DATABASE_NAME=
+      - ALLOW_EMPTY_PASSWORD=yes
   piwik:
     image: 'bitnami/piwik:latest'
     ports:

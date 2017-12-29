@@ -37,7 +37,7 @@ services:
       - '3306:3306'
     environment:
       - ALLOW_EMPTY_PASSWORD=yes
-#      - MARIADB_DATABASE=bitnami_piwik
+      - MARIADB_DATABASE=bitnami_piwik
     volumes:
       - 'mariadb_data:/bitnami'
 #    volumes:
