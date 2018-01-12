@@ -13,8 +13,8 @@ services:
     labels:
       kompose.service.type: nodeport
     ports:
-      - '80:80'
-      - '443:443'
+      - '81:80'
+      - '444:443'
     volumes:
       - 'wordpress_data:/bitnami'
     depends_on:

@@ -16,8 +16,6 @@ services:
   mediawiki:
     restart: always
     image: 'bitnami/mediawiki:latest'
-    labels:
-      kompose.service.type: nodeport
     ports:
       - '81:80'
       - '443:443'

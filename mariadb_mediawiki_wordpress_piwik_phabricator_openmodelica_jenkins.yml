@@ -2,6 +2,7 @@ version: '2'
 services:
   mariadb:
     image: 'bitnami/mariadb:latest'
+    restart: always
     volumes:
       - 'mariadb_data:/bitnami'
     environment:
@@ -10,6 +11,7 @@ services:
       - ALLOW_EMPTY_PASSWORD=yes
   wordpress:
     image: 'bitnami/wordpress:latest'
+    restart: always
     ports:
       - '81:80'
       - '443:443'
@@ -25,6 +27,7 @@ services:
       - ALLOW_EMPTY_PASSWORD=yes
   mediawiki:
     image: 'bitnami/mediawiki:latest'
+    restart: always
     environment:
       - MARIADB_USER=bn_mediawiki
       - MARIADB_DATABASE=bitnami_mediawiki
@@ -38,6 +41,7 @@ services:
       - mariadb
   piwik:
     image: 'bitnami/piwik:latest'
+    restart: always
     ports:
       - '82:80'
       - '445:443'
@@ -47,6 +51,7 @@ services:
       - mediawiki
   phabricator:
     image: 'bitnami/phabricator:latest'
+    restart: always
     ports:
       - '83:80'
       - '446:443'
@@ -62,6 +67,7 @@ services:
       - SMTP_PASSWORD=your_password
   openmodelica-webbook:
     container_name: openmodelica-webbook
+    restart: always
     image: smartkit/omwebbook
     ports:
       - '84:80'
