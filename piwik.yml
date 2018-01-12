@@ -4,7 +4,7 @@ services:
     image: 'bitnami/piwik:latest'
     container_name: piwik
     ports:
-      - '81:80'
+      - '82:80'
     volumes:
       - 'piwik_data:/bitnami'
     environment:
