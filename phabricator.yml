@@ -1,7 +1,7 @@
 version: '2'
 services:
   phabricator:
-    image: 'bitnami/phabricator:2017-master'
+    image: 'bitnami/phabricator:latest'
     depends_on:
       - mariadb
     ports:
