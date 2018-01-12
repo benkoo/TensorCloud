@@ -1,6 +1,5 @@
 version: '2'
 services:
-  container_name: openmodelica-webbook
   omwebbook:
     image: smartkit/omwebbook
     ports:
