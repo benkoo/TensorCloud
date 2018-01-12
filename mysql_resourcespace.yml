@@ -1,0 +1,36 @@
+version: '2'
+services:
+  resourcespace:
+    image: creecros/resourcespace-docker:v8.2
+    stdin_open: true
+    network_mode: bridge
+    tty: true
+    ports:
+      - 80:80/tcp
+    volumes:
+      - include:/include
+      - filestore:/filestore
+  mysql-resourcespace:
+    image: mysql:5.6
+    environment:
+      MYSQL_DATABASE: resourcespace
+      MYSQL_ROOT_PASSWORD: Un1c0rn
+    stdin_open: true
+    network_mode: bridge
+    tty: true
+    ports:
+      - 3306:3306/tcp
+
+volumes:
+  filestore:
+    driver: local
+    driver_opts:
+      type: none
+      device: /mnt/resourcespace/filestore
+      o: bind
+  include:
+    driver: local
+    driver_opts:
+      type: none
+      device: /mnt/resourcespace/include
+      o: bind

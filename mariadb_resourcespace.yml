@@ -1,0 +1,23 @@
+version: '3'
+services:
+  resourcespace:
+    image: creecros/resourcespace-docker:v8.2
+    container_name: resourcespace
+    ports:
+      - '87:80'
+  mariadb:
+    image: 'bitnami/mariadb:latest'
+    container_name: mariadb
+    environment:
+      # - MARIADB_ROOT_USER=root
+      # - MARIADB_ROOT_PASSWORD=
+      - ALLOW_EMPTY_PASSWORD=yes
+      - MARIADB_DATABASE=resourcespace
+    volumes:
+      - 'data_mariadb:/bitnami'
+    ports:
+      - '3306:3306'
+
+volumes:
+  data_mariadb:
+    driver: local
