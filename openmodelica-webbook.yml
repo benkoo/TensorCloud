@@ -3,7 +3,7 @@ services:
   omwebbook:
     image: smartkit/omwebbook
     ports:
-      - '88:80'
+      - '84:80'
 volumes:
   omwebbook-data:
     driver: local
