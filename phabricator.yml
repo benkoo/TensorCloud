@@ -2,8 +2,6 @@ version: '2'
 services:
   phabricator:
     image: 'bitnami/phabricator:latest'
-    depends_on:
-      - mariadb
     ports:
       - '83:80'
       - '446:443'
