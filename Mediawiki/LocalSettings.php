@@ -131,10 +131,7 @@ $wgExceptionDetails=true;
 
 # End of automatically generated settings.
 # Add more configuration options below.
-# GoogleLogin
 require_once "$IP/extensions/GoogleLogin/GoogleLogin.php";
 $wgGLAppId = '633843581077-ucl51u47rrlm2650ptruea92q222aus.apps.googleusercontent.com';
 $wgGLSecret = '7yzVPzxtcoi17vP-mJcEXQy6';
 $wgGroupPermissions['*']['createaccount'] = true;
-# Piwik
-
