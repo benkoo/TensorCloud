@@ -1,0 +1,34 @@
+{
+	"@metadata": {
+		"authors": [
+			"Milicevic01",
+			"Rancher",
+			"Srdjan m",
+			"Macofe"
+		]
+	},
+	"math-visualeditor-mwmathinspector-display-default": "Подразумевано",
+	"math-visualeditor-mwmathinspector-title": "Формула",
+	"math-visualeditor-symbol-group-functions": "Стандардне нумеричке функције",
+	"math-visualeditor-symbol-group-geometry": "Геометрија",
+	"math-visualeditor-symbol-group-logic": "Логика",
+	"math-visualeditor-symbol-group-special": "Посебно",
+	"math_bad_output": "Стварање или писање у одредишној фасцикли за математику није успело",
+	"math_bad_tmpdir": "Стварање или писање у привремену фасциклу за математику није успело",
+	"math_failure": "Рашчлањивање није успело",
+	"math_image_error": "Претварање у формат PNG није успело. Проверите да ли су добро инсталирани latex, dvips, gs и convert",
+	"math_lexing_error": "речничка грешка",
+	"math_notexvc": "Недостаје извршна датотека <code>texvc</code>. Погледајте math/README за подешавање.",
+	"math_sample": "Овде унесите формулу",
+	"math_syntax_error": "грешка у синтакси",
+	"math_tip": "Математичка формула (LaTeX)",
+	"math_unknown_error": "непозната грешка",
+	"math_unknown_function": "непозната функција „$1“",
+	"mw_math_latexml": "LaTeXML (експриментално; користи MathML)",
+	"mw_math_mathjax": "MathJax корисничке стране (споро; побољшава приказ на неким веб-прегледачима и алаткама за приступачност)",
+	"mw_math_mathml": "MathML са ослањањем на SVG или PNG (препоручљиво за најновије веб-прегледаче)",
+	"mw_math_png": "PNG слике",
+	"mw_math_source": "LaTeX (за текстуалне прегледаче)",
+	"prefs-math": "Приказ математичких формула",
+	"mathstatus": "Стање приказа математичких формула"
+}

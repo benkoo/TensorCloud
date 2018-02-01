@@ -1,0 +1,33 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ahmed-Najib-Biabani-Ibrahimkhel"
+		]
+	},
+	"math-visualeditor-mwmathdialog-title": "فورمول",
+	"math-visualeditor-mwmathdialog-card-formula": "فورمول",
+	"math-visualeditor-mwmathdialog-card-options": "خوښنې",
+	"math-visualeditor-mwmathinspector-display": "ښکاره کول",
+	"math-visualeditor-mwmathinspector-display-block": "بنديز لگول",
+	"math-visualeditor-mwmathinspector-display-default": "تلواليز",
+	"math-visualeditor-mwmathinspector-display-inline": "پر ليکه",
+	"math-visualeditor-mwmathinspector-title": "فورمول",
+	"math-visualeditor-symbol-group-accents": "گړدودونه او ليکنښې",
+	"math-visualeditor-symbol-group-arrows": "غشي",
+	"math-visualeditor-symbol-group-geometry": "زمکمېچيز",
+	"math-visualeditor-symbol-group-greek": "يوناني ابېڅې",
+	"math-visualeditor-symbol-group-hebrew": "عبري ابېڅې",
+	"math-visualeditor-symbol-group-logic": "منطق",
+	"math-visualeditor-symbol-group-matrices": "مېټرېکسونه",
+	"math-visualeditor-symbol-group-parentheses": "ليندکيان",
+	"math-visualeditor-symbol-group-relations": "اړيکې",
+	"math-visualeditor-symbol-group-special": "ځانگړی",
+	"math_sample": "فورمول دلته ځای کړی",
+	"math_tip": "شمېرپوهنيز فورمول (LaTeX)",
+	"math_unknown_error": "ناجوته ستونزه",
+	"math_unknown_function": "ناجوته کړنه",
+	"mw_math_png": "PNG انځورونه",
+	"prefs-math": "شمېرپوهنه",
+	"mathstatus": "د شمېرپوهنې دريځ",
+	"datatypes-type-math": "شمېرپوهنه (TeX)"
+}

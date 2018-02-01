@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Lakaoso",
+			"Malafaya"
+		]
+	},
+	"math_bad_output": "Onu ne povas skribar o krear la arkivaro por la matematiko",
+	"math_bad_tmpdir": "Onu ne povas skribar o krear la tempala matematikala arkivaro",
+	"math_sample": "Insertez formulo hike",
+	"math_tip": "Formulo matematika (LaTeX)",
+	"math_unknown_error": "nekonocata eroro",
+	"prefs-math": "Quale montrar la formuli"
+}

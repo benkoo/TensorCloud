@@ -1,0 +1,31 @@
+{
+	"@metadata": {
+		"authors": [
+			"Chhorran",
+			"Lovekhmer",
+			"Thearith",
+			"គីមស៊្រុន",
+			"វ័ណថារិទ្ធ",
+			"Macofe"
+		]
+	},
+	"math-visualeditor-mwmathinspector-display": "បង្ហាញ",
+	"math-visualeditor-mwmathinspector-title": "រូបមន្ត",
+	"math_bad_output": "មិនអាច សរសេរទៅ ឬ បង្កើត ថតឯកសារ គណិត ទិន្នផល",
+	"math_bad_tmpdir": "មិនអាចសរសេរទៅ ឬ បង្កើតថតឯកសារគណិតបណ្តោះអាសន្ន",
+	"math_failure": "បរាជ័យ​ក្នុង​ការ​ញែក​ចេញ​",
+	"math_image_error": "ការបម្លែងជា PNG បានបរាជ័យ។\nសូមពិនិត្យមើលតើ latex និង dvips (ឬ dvips + gs + convert), បានដំឡើងត្រឹមត្រូវឬអត់",
+	"math_lexing_error": "បញ្ហាក្នុងការអានតួអក្សរ",
+	"math_notexvc": "បាត់កម្មវិធី <code>texvc</code>។\n\nសូមមើលក្នុង math/README ដើម្បីធ្វើការកំណត់លំអិត។",
+	"math_sample": "បញ្ចូលរូបមន្ត​នៅទីនេះ",
+	"math_syntax_error": "កំហុសពាក្យសម្ព័ន្ធ",
+	"math_tip": "រូបមន្ត​គណិតវិទ្យា (LaTeX)",
+	"math_unknown_error": "កំហុសមិនស្គាល់",
+	"math_unknown_function": "អនុគមន៍​មិន​ស្គាល់ '$1'",
+	"mw_math_latexml": "LaTeXML (ស្ថិតក្រោមការពិសោធន៍នៅឡើយ។ ប្រើ MathML)",
+	"mw_math_mathml": "MathML បើអាចទៅរួច (ពិសោធ)",
+	"mw_math_png": "រូបភាពPNG",
+	"mw_math_source": "កូដ LaTeX (ចំពោះឧបករណ៍រាវរកអត្ថបទ)",
+	"prefs-math": "គណិត",
+	"mathstatus": "ស្ថានភាពគណិត"
+}

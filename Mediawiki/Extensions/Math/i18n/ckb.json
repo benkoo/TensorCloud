@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Arastein",
+			"Asoxor",
+			"Calak",
+			"Marmzok",
+			"Macofe",
+			"Sarchia"
+		]
+	},
+	"math-visualeditor-mwmathinspector-display-default": "بنچینەیی",
+	"math_sample": "فۆرموول لێرە بنووسە",
+	"math_syntax_error": "ڕستەکار هەڵەیە",
+	"math_tip": "فۆرموولی بیرکاری (LaTeX)",
+	"math_unknown_error": "هەڵەیەکی نەزانراو",
+	"math_unknown_function": "فەرمانێکی نەناسراو",
+	"mw_math_mathjax": "MathJax (بۆ ئەزموون)",
+	"mw_math_png": "ھەموو جارێک وەک PNG نیشان بدە",
+	"mw_math_source": "وەک LaTeX بمێنێتەوە (بۆ وێبگەڕە دەقی‌یەکان)",
+	"prefs-math": "ماتماتیک"
+}

@@ -1,0 +1,28 @@
+{
+	"@metadata": {
+		"authors": [
+			"Edgars2007",
+			"Marozols",
+			"Papuass",
+			"Yyy"
+		]
+	},
+	"math-visualeditor-mwmathdialog-title": "Formula",
+	"math-visualeditor-mwmathdialog-card-formula": "Formula",
+	"math-visualeditor-mwmathinspector-title": "Formula",
+	"math-visualeditor-symbol-group-greek": "Grieķu alfabēts",
+	"math-visualeditor-symbol-group-hebrew": "Ebreju alfabēts",
+	"math_failure": "Parsēšanas kļūda",
+	"math_image_error": "Kļūda konvertējot uz PNG formātu;\npārbaudi vai ir korekti uzinstalēti latex, dvips, gs, un convert",
+	"math_lexing_error": "leksikas kļūda",
+	"math_sample": "Šeit ievieto formulu",
+	"math_syntax_error": "sintakses kļūda",
+	"math_tip": "Matemātikas formula (LaTeX)",
+	"math_unknown_error": "nezināma kļūda",
+	"math_unknown_function": "nezināma funkcija '$1'",
+	"mw_math_mathjax": "MathJax (eksperimentāls)",
+	"mw_math_mathml": "MathML ar SVG alternatīvu (eksperimentāla iespēja)",
+	"mw_math_png": "PNG attēli",
+	"mw_math_source": "LaTeX kods (teksta pārlūkiem)",
+	"prefs-math": "Formulas"
+}
