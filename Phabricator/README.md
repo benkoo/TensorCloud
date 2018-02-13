@@ -4,7 +4,7 @@ https://github.com/bitnami/bitnami-docker-phabricator
 
 ## Configure
 
-phabricator/ $ /opt/bitnami/phabricator/bin/config set phabricator.base-uri 'http://example.com'
+phabricator/ $  /opt/bitnami/phabricator/bin/config set phabricator.base-uri 'http://127.0.0.1:86'
 
 More: http://www.jianshu.com/p/b5514474d079
 
