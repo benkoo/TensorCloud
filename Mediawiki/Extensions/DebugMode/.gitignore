@@ -1,0 +1,4 @@
+## NetBeans
+nbproject*
+project.index
+node_modules/**

@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ike Hecht"
+		]
+	},
+	"debugmode-desc": "Puts the wiki into debug mode"
+}

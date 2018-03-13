@@ -135,3 +135,21 @@ require_once "$IP/extensions/GoogleLogin/GoogleLogin.php";
 $wgGLAppId = '633843581077-ucl51u47rrlm2650ptruea92q222aus.apps.googleusercontent.com';
 $wgGLSecret = '7yzVPzxtcoi17vP-mJcEXQy6';
 $wgGroupPermissions['*']['createaccount'] = true;
+
+#OAuthLogin
+
+require_once "$IP/extensions/OAuthLogin/OAuthLogin.php"; 
+
+# Phabricator OAuth 
+wfLoadExtension( 'MW-OAuth2Client' );
+
+$wgOAuth2Client['client']['id']     = ''; // The client ID assigned to you by the provider
+$wgOAuth2Client['client']['secret'] = ''; // The client secret assigned to you by the provider
+
+$wgOAuth2Client['configuration']['authorize_endpoint']     = 'http://127.0.0.1:86/oauthserver/auth/'; // Authorization URL
+$wgOAuth2Client['configuration']['access_token_endpoint']  = 'http://127.0.0.1:86/oauthserver/token/'; // Token URL
+$wgOAuth2Client['configuration']['api_endpoint']           = 'http://127.0.0.1:86/api/user.whoami?access_token=ktxejl7z5v3bjabc3qbki7zkrgeqq45k'; // URL to fetch user JSON
+$wgOAuth2Client['configuration']['redirect_uri']           = 'http://127.0.0.1/Special:OAuth2Client/callback'; // URL for OAuth2 server to redirect to
+
+$wgOAuth2Client['configuration']['username'] = 'username'; // JSON path to username
+$wgOAuth2Client['configuration']['email'] = 'email'; // JSON path to email
