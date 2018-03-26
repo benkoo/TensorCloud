@@ -1,0 +1,54 @@
+nuxeo:
+  build: nuxeo
+  hostname: nuxeo
+  ports:
+    - 8081:8080
+  links:
+    - redis
+    - es1
+    - es2
+    - db
+  environment:
+    - NUXEO_DB_TYPE=postgresql
+    - NUXEO_DB_HOST=db
+    - NUXEO_ES_CLUSTER_NAME=elasticsearch-nuxeo
+    - NUXEO_ES_HOSTS=es1_1:9300,es2_1:9300    
+    - NUXEO_REDIS_HOST=redis  
+    - NUXEO_CLID=
+    - NUXEO_STUDIO_VERSION=
+
+  volumes:
+    - /data-volume/nuxeo-no-developper/nuxeo:/var/lib/nuxeo/data
+    - ./deploy/nuxeo:/deploy:ro
+
+redis:
+  image: redis:3.0.4
+  hostname: redis
+
+es1:
+  build: elasticsearch
+  hostname: es1
+  links:
+    - es2
+  environment:
+    - ES_NODE_NAME=es1
+    - ES_CLUSTER_NAME=elasticsearch-nuxeo
+  volumes:
+    - /data-volume/nuxeo-no-developper/elastic1:/usr/share/elasticsearch/data
+es2:
+  build: elasticsearch
+  hostname: es2
+  environment:
+    - ES_NODE_NAME=es2
+    - ES_CLUSTER_NAME=elasticsearch-nuxeo
+  volumes:
+    - /data-volume/nuxeo-no-developper/elastic2:/usr/share/elasticsearch/data  
+
+db:
+  build: postgresql
+  hostname: db
+  ports:
+    - 5433:5432
+  volumes:
+    - /data-volume/nuxeo-no-developper/postgres:/var/lib/postgresql/data/
+    - ./deploy/postgres:/deploy:rw

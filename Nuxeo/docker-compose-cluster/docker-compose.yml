@@ -1,0 +1,118 @@
+web:
+  build: apache
+  ports:
+  - 8084:80
+  links:
+  - nuxeo1
+  - nuxeo2
+  environment:
+    - NUXEO_NODES=nuxeo1,nuxeo2
+  volumes:
+    - /data-volume/nuxeo-cluster/logs:/logs:rw
+
+nuxeo1:
+  build: nuxeo
+  hostname: nuxeo1
+  links:
+    - redis
+    - es1
+    - es2
+    - db
+  environment:
+    - NUXEO_CLUSTERING_ENABLED=true
+    - NUXEO_CLUSTER_NODE_ID=1
+    - NUXEO_SERVER_JVM_ROUTE=nxworker1
+    - NUXEO_DB_TYPE=postgresql
+    - NUXEO_DB_HOST=db
+    - NUXEO_DB_VALIDATION_QUERY=SELECT 1
+    - NUXEO_ES_CLUSTER_NAME=elasticsearch-nuxeo-cluster
+    - NUXEO_ES_HOSTS=es1_1:9300,es2_1:9300    
+    - NUXEO_REDIS_HOST=redis  
+    - NUXEO_TRANSIENT_STORE=/share/transientstore
+    - NUXEO_BINARY_STORE=/share/binaries
+    - NUXEO_TEMPLATES=postgresql-quartz-cluster
+    - NUXEO_CLID=
+    - NUXEO_STUDIO_VERSION=
+
+  volumes:
+    - /data-volume/nuxeo-cluster/nuxeo1:/var/lib/nuxeo/data
+    - /data-volume/nuxeo-cluster/shared/binarystore:/share/binaries
+    - /data-volume/nuxeo-cluster/shared/transientstores:/share/transientstore
+    - ./deploy:/deploy:ro
+
+nuxeo2:
+  build: nuxeo
+  hostname: nuxeo2
+  links:
+    - redis
+    - es1
+    - es2
+    - db
+    - nuxeo1
+  environment:
+    - NUXEO_CLUSTERING_ENABLED=true
+    - NUXEO_CLUSTER_NODE_ID=2
+    - NUXEO_SERVER_JVM_ROUTE=nxworker2
+    - NUXEO_CLUSTER_MASTER_HOST=nuxeo1
+    - NUXEO_DB_TYPE=postgresql
+    - NUXEO_DB_HOST=db
+    - NUXEO_DB_VALIDATION_QUERY=SELECT 1
+    - NUXEO_ES_CLUSTER_NAME=elasticsearch-nuxeo-cluster
+    - NUXEO_ES_HOSTS=es1_1:9300,es2_1:9300    
+    - NUXEO_REDIS_HOST=redis  
+    - NUXEO_TRANSIENT_STORE=/share/transientstore
+    - NUXEO_BINARY_STORE=/share/binaries
+    - NUXEO_TEMPLATES=postgresql-quartz-cluster
+    - NUXEO_CLID=
+    - NUXEO_STUDIO_VERSION=
+  volumes:
+    - /data-volume/nuxeo-cluster/nuxeo2:/var/lib/nuxeo/data
+    - /data-volume/nuxeo-cluster/shared/binarystore:/share/binaries
+    - /data-volume/nuxeo-cluster/shared/transientstores:/share/transientstore
+    - ./deploy:/deploy:ro
+
+graphite:
+  image: sitespeedio/graphite:0.9.14
+  hostname: graphite
+  ports:
+    - 8083:8080
+  links:
+    - nuxeo1 
+  volumes:
+    - ./graphite/.htpasswd:/etc/nginx/.htpasswd
+    - /data-volume/nuxeo-cluster/graphite/storage/whisper:/opt/graphite/storage/whisper 
+
+redis:
+  image: redis:3.0.4
+  hostname: redis
+
+es1:
+  build: elasticsearch
+  hostname: es1
+  links:
+    - es2
+  ports:
+    - 9203:9200
+    - 9303:9300
+  environment:
+    - ES_NODE_NAME=es1
+    - ES_CLUSTER_NAME=elasticsearch-nuxeo-cluster
+  volumes:
+    - /data-volume/nuxeo-cluster/elastic1:/usr/share/elasticsearch/data
+es2:
+  build: elasticsearch
+  hostname: es2
+  ports:
+    - 9204:9200
+    - 9304:9300
+  environment:
+    - ES_NODE_NAME=es2
+    - ES_CLUSTER_NAME=elasticsearch-nuxeo-cluster
+  volumes:
+    - /data-volume/nuxeo-cluster/elastic2:/usr/share/elasticsearch/data  
+
+db:
+  build: postgresql
+  hostname: db
+  volumes:
+    - /data-volume/nuxeo-cluster/postgres:/var/lib/postgresql/data/

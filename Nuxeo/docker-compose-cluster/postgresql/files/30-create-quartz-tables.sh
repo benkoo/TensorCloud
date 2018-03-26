@@ -1,0 +1,1 @@
+psql nuxeo nuxeo -f /30-create-quartz-tables.sql

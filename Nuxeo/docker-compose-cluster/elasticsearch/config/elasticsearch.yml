@@ -1,0 +1,4 @@
+cluster:
+  name: ${ES_CLUSTER_NAME}
+node:
+  name: ${ES_NODE_NAME}
