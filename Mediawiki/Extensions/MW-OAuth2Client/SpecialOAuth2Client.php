@@ -50,7 +50,7 @@ class SpecialOAuth2Client extends SpecialPage {
 			'urlAuthorize'            => $wgOAuth2Client['configuration']['authorize_endpoint'],
 			'urlAccessToken'          => $wgOAuth2Client['configuration']['access_token_endpoint'],
 			'urlResourceOwnerDetails' => $wgOAuth2Client['configuration']['api_endpoint'],
-			'scopes'                  => $wgOAuth2Client['configuration']['scopes']
+//			'scopes'                  => $wgOAuth2Client['configuration']['scopes']
 		]);
 	}
 
@@ -142,8 +142,8 @@ class SpecialOAuth2Client extends SpecialPage {
 	protected function _userHandling( $response ) {
 		global $wgOAuth2Client, $wgAuth, $wgRequest;
 
-		$username = $response['user'][$wgOAuth2Client['configuration']['username']];
-		$email = $response['user'][$wgOAuth2Client['configuration']['email']];
+		$username = $response['result'][$wgOAuth2Client['configuration']['username']];
+		$email = $response['result'][$wgOAuth2Client['configuration']['email']];
 
 		$user = User::newFromName($username, 'creatable');
 		if (!$user) {
