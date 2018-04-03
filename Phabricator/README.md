@@ -26,4 +26,6 @@ Client Secret
 
 https://secure.phabricator.com/book/phabcontrib/article/internationalization/
 
+Piwik for Phabricator: https://secure.phabricator.com/T6621
+
 

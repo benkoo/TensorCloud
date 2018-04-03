@@ -19,6 +19,6 @@ services:
       - mariadb
 volumes:
   mariadb_data:
-    driver: local
+    driver: convoy
   mediawiki_data:
-    driver: local
+    driver: convoy
