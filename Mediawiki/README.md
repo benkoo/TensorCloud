@@ -2,6 +2,12 @@
 ```
 CREATE DATABASE IF NOT EXISTS remix_mediawiki DEFAULT CHARSET utf8 COLLATE utf8_general_ci;
 ```
+```
+use remix_mediawiki 
+```
+```
+source toyhousewiki_67.sql
+```
 
 # @see
 
