@@ -1,3 +1,8 @@
+
+```
+CREATE DATABASE IF NOT EXISTS remix_mediawiki DEFAULT CHARSET utf8 COLLATE utf8_general_ci;
+```
+
 # @see
 
 https://github.com/wikimedia/mediawiki-docker
