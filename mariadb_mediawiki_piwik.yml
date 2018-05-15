@@ -8,8 +8,6 @@ services:
       - MARIADB_DATABASE=bitnami_mediawiki
     volumes:
       - 'mariadb_data:/bitnami'
-    ports:
-      - '3306:3306'
   mediawiki:
     image: 'bitnami/mediawiki:latest'
     ports:
