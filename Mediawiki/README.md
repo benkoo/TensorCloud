@@ -1,6 +1,6 @@
 
 ```
-mysqldump -S /opt/lampp/var/mysql/mysql.sock -h toyhouse.cc -u ???? -p ??????? | pv --progress --size 4096m | gzip > toyhousewiki.sql.gz
+mysqldump -S /opt/lampp/var/mysql/mysql.sock -h toyhouse.cc -u ???? -p ??????? toyhouse_wiki  | pv --progress --size 4096m | gzip > toyhousewiki.sql.gz
 ```
 ```
 CREATE DATABASE IF NOT EXISTS remix_mediawiki DEFAULT CHARSET utf8 COLLATE utf8_general_ci;
