@@ -5,6 +5,7 @@ services:
     container_name: piwik
     ports:
       - '82:80'
+      - '2443:443'
     volumes:
       - 'piwik_data:/bitnami'
     environment:

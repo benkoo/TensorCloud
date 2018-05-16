@@ -21,8 +21,23 @@ services:
       - SMTP_PORT=587
       - SMTP_USER=your_email@gmail.com
       - SMTP_PASSWORD=your_password
-    networks:
-     - front-tier
+  fluentd:
+    image: 'smartkit/fluentd:latest'
+    volumes:
+      - ./fluentd/conf:/fluentd/etc
+    links:
+      - "phabricator"
+    ports:
+      - "24224:24224"
+      - "24224:24224/udp"
+    logging:
+        driver: "json-file"
+        options:
+            max-size: 100m
+            max-file: "5"
+    # networks:
+    #  - front-tier
+    #  - back-tier
 volumes:
   mariadb_data:
     driver: local

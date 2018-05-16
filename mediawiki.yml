@@ -6,12 +6,12 @@ services:
     environment:
       - MARIADB_HOST=mariadb
       - MARIADB_PORT_NUMBER=3306
-      - MEDIAWIKI_DATABASE_USER=bn_mediawiki
-      - MEDIAWIKI_DATABASE_NAME=bitnami_mediawiki
+      - MEDIAWIKI_DATABASE_USER=root
+      # - MEDIAWIKI_DATABASE_NAME=bitnami_mediawiki
       - ALLOW_EMPTY_PASSWORD=yes
     ports:
-      - '80:80'
-      - '443:443'
+      - '81:80'
+      - '1443:443'
     volumes:
       - 'data_mediawiki:/bitnami'
 volumes:
