@@ -4,7 +4,7 @@ services:
     image: 'bitnami/phabricator:latest'
     ports:
       - '83:80'
-      - '446:443'
+      - '3443:443'
     volumes:
       - 'phabricator_data:/bitnami'
 volumes:
