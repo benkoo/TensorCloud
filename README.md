@@ -38,4 +38,14 @@ Website: https://matomo.org/
 docker-compose -f mariadb_mediawiki_piwik.yml up 
 ```
 
+### Mariadb+Mediawiki+Wordpress+Piwik features
+
+
+
+### How to run it?
+
+```
+docker-compose -f Wordpress/docker-compose.yml -f mediawiki.yml -f piwik.yml -f phabricator.yml up
+```
+
 And more, http://toyhouse.cc/wiki/index.php/Get_Started_with_Remix#Using_Remix
