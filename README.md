@@ -22,6 +22,12 @@ Website: https://www.mediawiki.org/wiki/MediaWiki
 docker-compose -f mariadb_mediawiki.yml up 
 ```
 
+#### Docker in Docker
+
+```
+docker run --privileged -p 80:80 -p 3306:3306 smartkit/tensor-cloud-dind:mariadb_mediawiki
+```
+
 ## Piwik
 
 
