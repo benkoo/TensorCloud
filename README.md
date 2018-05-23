@@ -25,7 +25,7 @@ docker-compose -f mariadb_mediawiki.yml up
 #### Docker in Docker
 
 ```
-docker run --privileged -p 80:80 -p 3306:3306 smartkit/tensor-cloud-dind:mariadb_mediawiki
+docker run --privileged -p 80:80 -e PORT=80 smartkit/tensor-cloud-dind:mariadb_mediawiki
 ```
 
 ## Piwik
@@ -34,7 +34,7 @@ docker run --privileged -p 80:80 -p 3306:3306 smartkit/tensor-cloud-dind:mariadb
 Website: https://matomo.org/
 
 
-### Mariadb+Mediawiki+Piwik features
+### Mariadb+Mediawiki features
 
 
 
@@ -42,6 +42,11 @@ Website: https://matomo.org/
 
 ```
 docker-compose -f mariadb_mediawiki_piwik.yml up 
+```
+#### Docker in Docker
+
+```
+docker run --privileged -d -p 80:80 -e PORT=80 smartkit/tensor-cloud-dind:mariadb_wordpress
 ```
 
 ### Mariadb+Mediawiki+Wordpress+Piwik features
