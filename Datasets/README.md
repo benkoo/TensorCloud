@@ -4,6 +4,10 @@ Toyhouse.cc SQL data: http://118.190.96.120/toyhousewiki_67.sql.gz
 
 Toyhouse.cc application data: http://118.190.96.120/toyhouseWiki.tar.gz
 
+```
+REATE DATABASE bitnami_mediawiki DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci;
+```
+
 Piwik dataset: http://118.190.96.120/bitnami_piwik_20171222.sql
 
 ## 3 data-layers for Volumerize backup and restore.
