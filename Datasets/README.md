@@ -43,11 +43,11 @@ Piwik dataset: http://118.190.96.120/bitnami_piwik_20171222.sql
 
 ## 3 data-layers for Volumerize backup and restore.
 
-1.Database
+1.Database, for example: mariadb database;
 
-2.Configuration
+2.Configuration, for example: mediawiki configurations;
 
-3.Application
+3.Application, for example: mediawiki images folder;
 
 
 ## Reference
