@@ -11,7 +11,7 @@ DROP DATABASE bitnami_mediawiki;
 REATE DATABASE bitnami_mediawiki DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci;
 ```
 
-2.Download Toyhouse.cc application data: http://118.190.96.120/toyhouseWiki.tar.gz
+2.Download Toyhouse.cc application data: ftp://118.190.3.169/toyhouseWiki.tar.gz
 
 2.1 copy images.zip to Mediawiki docker container:
 ```
