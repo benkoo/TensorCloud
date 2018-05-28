@@ -4,9 +4,10 @@
 
 1.Database, for example: mariadb database;
 
-2.Configuration, for example: mediawiki configurations;
+2.Application, for example: mediawiki images folder;
 
-3.Application, for example: mediawiki images folder;
+3.Configuration, for example: mediawiki configurations;
+
 
 ### Mediawiki example:
 
