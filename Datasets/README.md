@@ -56,8 +56,13 @@ php maintenance/rebuildall.php
 ```
 docker restart MediawikiContainerID
 ```
+3.0.About Configuration data
+3.1.Docker cp toyhouse.png to wiki docker container logo:
+```
+sudo docker cp toyhouse.png WikiDockerContainerID:/opt/bitnami/mediawiki/resources/assets/
+```
 
-Piwik dataset: http://118.190.96.120/bitnami_piwik_20171222.sql
+##  Piwik dataset: http://118.190.96.120/bitnami_piwik_20171222.sql
 
 ## 3 data-layers for Volumerize backup and restore.
 
