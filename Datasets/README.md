@@ -11,8 +11,11 @@ DROP DATABASE bitnami_mediawiki;
 ```
 SELECT SCHEMA_NAME 'database', default_character_set_name 'charset', DEFAULT_COLLATION_NAME 'collation' FROM information_schema.SCHEMATA;
 ```
-
-1.2.Create anew database with same charset:
+1.3.Drop old database:
+```
+DROP DATABASE bitnami_mediawiki;
+```
+1.4.Create anew database with same charset:
 (for utf8)
 ```
 CREATE DATABASE bitnami_mediawiki DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci;
@@ -20,6 +23,10 @@ CREATE DATABASE bitnami_mediawiki DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf
 (for latin1)
 ```
 CREATE DATABASE bitnami_mediawiki DEFAULT CHARACTER SET latin1 DEFAULT COLLATE latin1_swedish_ci;
+```
+1.5.Import database:
+```
+source /fromDockerCPdestination
 ```
 
 2.Download Toyhouse.cc application data: ftp://118.190.3.169/toyhouseWiki.tar.gz
