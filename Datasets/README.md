@@ -1,5 +1,15 @@
 
 
+## 3 data-layers for Volumerize backup and restore.
+
+1.Database, for example: mariadb database;
+
+2.Configuration, for example: mediawiki configurations;
+
+3.Application, for example: mediawiki images folder;
+
+### Mediawiki example:
+
 1.Download Toyhouse.cc SQL data: http://118.190.96.120/toyhousewiki_67.sql.gz
 
 1.1.Drop original database:
@@ -62,15 +72,9 @@ docker restart MediawikiContainerID
 sudo docker cp toyhouse.png WikiDockerContainerID:/opt/bitnami/mediawiki/resources/assets/
 ```
 
-##  Piwik dataset: http://118.190.96.120/bitnami_piwik_20171222.sql
+###  Piwik example
 
-## 3 data-layers for Volumerize backup and restore.
-
-1.Database, for example: mariadb database;
-
-2.Configuration, for example: mediawiki configurations;
-
-3.Application, for example: mediawiki images folder;
+0.1dataset: http://118.190.96.120/bitnami_piwik_20171222.sql
 
 
 ## Reference
