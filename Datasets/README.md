@@ -37,7 +37,10 @@ CREATE DATABASE bitnami_mediawiki DEFAULT CHARACTER SET latin1 DEFAULT COLLATE l
 ```
 1.5.Import database:
 ```
-source /fromDockerCPdestination
+use bitnami_mediawiki;
+```
+```
+source /toyhouseWiki20180528Latin1.sql
 ```
 
 2.Download Toyhouse.cc application data: ftp://118.190.3.169/toyhouseWiki.tar.gz
