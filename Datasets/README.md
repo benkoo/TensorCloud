@@ -11,7 +11,7 @@
 
 ### Mediawiki example:
 
-1.Download Toyhouse.cc SQL data: http://118.190.96.120/toyhousewiki_67.sql.gz
+1.Download Toyhouse.cc **SQL data**: http://118.190.96.120/toyhousewiki_67.sql.gz
 
 1.1.Drop original database:
 ```
@@ -43,7 +43,7 @@ use bitnami_mediawiki;
 source /toyhouseWiki20180528Latin1.sql
 ```
 
-2.Download Toyhouse.cc application data: ftp://118.190.3.169/toyhouseWiki.tar.gz
+2.Download Toyhouse.cc **application data**: ftp://118.190.3.169/toyhouseWiki.tar.gz
 
 2.1 copy images.zip to Mediawiki docker container:
 ```
@@ -70,15 +70,21 @@ php maintenance/rebuildall.php
 ```
 docker restart MediawikiContainerID
 ```
-3.0.About Configuration data
+3.0.About **Configuration data**
+
 3.1.Docker cp toyhouse.png to wiki docker container logo:
 ```
 sudo docker cp toyhouse.png WikiDockerContainerID:/opt/bitnami/mediawiki/resources/assets/
 ```
+3.2.LocalSettings.php
+
+Example: https://github.com/benkoo/TensorCloud/blob/master/Mediawiki/LocalSettings.php
+
+Plugins: https://github.com/benkoo/TensorCloud/tree/master/Mediawiki/Extensions
 
 ###  Piwik example
 
-0.1dataset: http://118.190.96.120/bitnami_piwik_20171222.sql
+0.1.dataset: http://118.190.96.120/bitnami_piwik_20171222.sql
 
 
 ## Reference
