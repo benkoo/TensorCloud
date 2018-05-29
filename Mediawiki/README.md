@@ -12,10 +12,16 @@ use remix_mediawiki
 source toyhousewiki_67.sql
 ```
 
-# @see
+More: https://github.com/benkoo/TensorCloud/tree/master/Datasets
+
+## References
 
 https://github.com/wikimedia/mediawiki-docker
 
 https://www.mediawiki.org/wiki/Manual:Upgrading_MySQL
 
 https://www.mediawiki.org/wiki/Extension:Piwik_Integration
+
+## Troubleshoot
+
+http://jaredmarkell.com/docker-and-locales/
