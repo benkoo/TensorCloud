@@ -98,3 +98,7 @@ http://holors.org:86/T266
 
 https://stackoverflow.com/questions/1002258/exporting-and-importing-images-in-mediawiki
 
+http://jaredmarkell.com/docker-and-locales/
+
+https://theunarchiver.com/command-line
+
