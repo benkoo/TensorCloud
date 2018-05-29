@@ -52,7 +52,10 @@ docker cp images.zip MediawikiDockerContainerID:/opt/bitnami/mediawiki/
 
 2.2 unzip it inside docker container:
 ```
-unzip /opt/bitnami/mediawiki/images.zip
+sudo apt-get install unar
+```
+```
+unar -e gb18030 /opt/bitnami/mediawiki/images.zip
 ```
 
 2.3 Going to run database updates for bitnami_mediawiki-wiki_,Depending on the size of your database this may take a while!
