@@ -58,13 +58,13 @@ unzip /opt/bitnami/mediawiki/images.zip
 2.3 Going to run database updates for bitnami_mediawiki-wiki_,Depending on the size of your database this may take a while!
 
 ```
-php maintenance/update.php
+php /opt/bitnami/mediawiki/maintenance/update.php
 ```
 
 2.4 Rebuilding links tables -- this can take a long time. It should be safe to abort via ctrl+C if you get bored.
 
 ```
-php maintenance/rebuildall.php
+php /opt/bitnami/mediawiki/maintenance/rebuildall.php
 ```
 2.5 RestartMediawiki docker container in case:
 ```
