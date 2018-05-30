@@ -93,9 +93,6 @@ docker restart MediawikiContainerID
 # MySQL specific settings
 $wgDBprefix = "";
 ```
-```
-sudo docker cp toyhouse.png WikiDockerContainerID:/opt/bitnami/mediawiki/resources/assets/wiki.png
-```
 3.2.Docker cp toyhouse.png to wiki docker container logo:
 ```
 sudo docker cp toyhouse.png WikiDockerContainerID:/opt/bitnami/mediawiki/resources/assets/wiki.png
