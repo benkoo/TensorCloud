@@ -54,7 +54,7 @@ docker stop volumerize
     -v cache_volume:/volumerize-cache \
     -e "VOLUMERIZE_SOURCE=/source" \
     -e "VOLUMERIZE_TARGET=file:///backup" \
-    blacklabelops/volumerize
+    blacklabelops/volumerize restore
 ```
 ### 5.start mariadb_mediawiki again to verify
 ```
