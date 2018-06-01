@@ -17,7 +17,7 @@
       <file leaf-file-name="poster.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/poster/poster.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
+            <state relative-caret-position="135">
               <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
             </state>
           </provider>
@@ -26,7 +26,7 @@
       <file leaf-file-name="pay.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/pay/pay.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
+            <state>
               <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
             </state>
           </provider>
@@ -227,11 +227,12 @@
       <workItem from="1527158260055" duration="719000" />
       <workItem from="1527494034759" duration="522000" />
       <workItem from="1527508350552" duration="745000" />
+      <workItem from="1527647015650" duration="7000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3553000" />
+    <option name="totallyTimeSpent" value="3560000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="3" y="23" width="1400" height="785" extended-state="0" />
@@ -240,7 +241,6 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -253,6 +253,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -456,7 +457,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/poster/poster.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
+        <state relative-caret-position="135">
           <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
         </state>
       </provider>
@@ -476,7 +477,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/pay/pay.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
+        <state>
           <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
         </state>
       </provider>

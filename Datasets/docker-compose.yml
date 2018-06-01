@@ -1,7 +1,7 @@
 version: '2'
 services:
   mariadb:
-    image: 'bitnami/mariadb:latest'
+    image: 'smartkit/mariadb:toyhousecc'
     environment:
       - ALLOW_EMPTY_PASSWORD=yes
       - MARIADB_USER=bn_mediawiki
@@ -9,7 +9,7 @@ services:
     volumes:
       - 'mariadb_data:/bitnami'
   mediawiki:
-    image: 'bitnami/mediawiki:latest'
+    image: 'smartkit/mediawiki:locale_toyhousecc'
     environment:
       - MEDIAWIKI_DATABASE_USER=root
       - MEDIAWIKI_DATABASE_NAME=
