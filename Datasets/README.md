@@ -13,18 +13,30 @@
 
 1.Download Toyhouse.cc **SQL data**: http://118.190.96.120/toyhousewiki_67.sql.gz
 
-1.1.Drop original database:
+1.1.Docker-compose up:
+```
+curl -sSL https://raw.githubusercontent.com/benkoo/TensorCloud/master/Mediawiki/docker-compose.yml > docker-compose.yml
+```
+```
+docker-compose up -d
+```
+1.2.Drop original database:
+```
+docker exec -it YourMariadbContainerID /bin/bash 
+```
+```
+mysql -u root
+```
+```
+show databases;
+```
 ```
 DROP DATABASE bitnami_mediawiki;
 ```
-1.2.Find database character set and collate info:
+1.3.Find database character set and collate info:
 
 ```
 SELECT SCHEMA_NAME 'database', default_character_set_name 'charset', DEFAULT_COLLATION_NAME 'collation' FROM information_schema.SCHEMATA;
-```
-1.3.Drop old database:
-```
-DROP DATABASE bitnami_mediawiki;
 ```
 1.4.Create anew database with same charset:
 (for utf8)
@@ -75,9 +87,15 @@ docker restart MediawikiContainerID
 ```
 3.0.About **Configuration data**
 
-3.1.Docker cp toyhouse.png to wiki docker container logo:
+3.1.Mediawiki LocalSettings.php 
+
 ```
-sudo docker cp toyhouse.png WikiDockerContainerID:/opt/bitnami/mediawiki/resources/assets/
+# MySQL specific settings
+$wgDBprefix = "";
+```
+3.2.Docker cp toyhouse.png to wiki docker container logo:
+```
+sudo docker cp toyhouse.png WikiDockerContainerID:/opt/bitnami/mediawiki/resources/assets/wiki.png
 ```
 3.2.LocalSettings.php
 

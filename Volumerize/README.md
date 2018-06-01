@@ -1,5 +1,7 @@
 Docker Volume Backups Multiple Backends
 
+## 1.Mediawiki namespace
+
 ### 0.wget mariadb_mediawiki.yml
 ```
 curl -sSL https://raw.githubusercontent.com/benkoo/TensorCloud/master/mariadb_mediawiki.yml > mariadb_mediawiki.yml
@@ -14,9 +16,9 @@ docker-compose -f mariadb_mediawiki.yml up -d
 ```
     docker run -d \
     --name volumerize \
-    -v mediawiki_data:/source/application_data:ro \
-    -v mariadb_data:/source/application_database_data:ro \
-    -v mediawiki_data:/source/application_configuration:ro \
+    -v mediawiki_mediawiki_data:/source/application_data_mediawiki:ro \
+    -v mediawiki_mariadb_data:/source/application_database_data_mariadb:ro \
+    -v mediawiki_mediawiki_data:/source/application_configuration_mediawiki:ro \
     -v backup_volume:/backup \
     -v cache_volume:/volumerize-cache \
     -e "VOLUMERIZE_SOURCE=/source" \
@@ -45,14 +47,14 @@ docker stop volumerize
  ```
     docker run -d \
     --name volumerize \
-    -v mediawiki_data:/source/application_data:ro \
-    -v mariadb_data:/source/application_database_data:ro \
-    -v mediawiki_data:/source/application_configuration:ro \
+    -v mediawiki_mediawiki_data:/source/application_data_mediawiki:ro \
+    -v mediawiki_mariadb_data:/source/application_database_data_mariadb:ro \
+    -v mediawiki_mediawiki_data:/source/application_configuration_mediawiki:ro \
     -v backup_volume:/backup:ro \
     -v cache_volume:/volumerize-cache \
     -e "VOLUMERIZE_SOURCE=/source" \
     -e "VOLUMERIZE_TARGET=file:///backup" \
-    blacklabelops/volumerize
+    blacklabelops/volumerize restore
 ```
 ### 5.start mariadb_mediawiki again to verify
 ```
@@ -62,6 +64,12 @@ docker-compose -f mariadb_mediawiki.yml up -d
 ```
 docker start volumerize
 ```
+
+
+## 2.Wordpress namespace
+
+## 3.Piwik namespace
+
 ## References
 
 https://github.com/blacklabelops/volumerize
