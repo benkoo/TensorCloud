@@ -14,9 +14,9 @@ docker-compose -f mariadb_mediawiki.yml up -d
 ```
     docker run -d \
     --name volumerize \
-    -v mediawiki_data:/source/application_data:ro \
-    -v mariadb_data:/source/application_database_data:ro \
-    -v mediawiki_data:/source/application_configuration:ro \
+    -v mediawiki_data:/source/application_data_mediawiki:ro \
+    -v mariadb_data:/source/application_database_data_mariadb:ro \
+    -v mediawiki_data:/source/application_configuration_mediawiki:ro \
     -v backup_volume:/backup \
     -v cache_volume:/volumerize-cache \
     -e "VOLUMERIZE_SOURCE=/source" \
@@ -45,9 +45,9 @@ docker stop volumerize
  ```
     docker run -d \
     --name volumerize \
-    -v mediawiki_data:/source/application_data:ro \
-    -v mariadb_data:/source/application_database_data:ro \
-    -v mediawiki_data:/source/application_configuration:ro \
+    -v mediawiki_data:/source/application_data_mediawiki:ro \
+    -v mariadb_data:/source/application_database_data_mariadb:ro \
+    -v mediawiki_data:/source/application_configuration_mediawiki:ro \
     -v backup_volume:/backup:ro \
     -v cache_volume:/volumerize-cache \
     -e "VOLUMERIZE_SOURCE=/source" \
