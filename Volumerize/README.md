@@ -31,15 +31,25 @@ Waiting...Mariadb_Mediawiki service up...
 ```
  docker exec volumerize_backup backup
 ```
-### 3.1 stop volumerize_backup
+### 2.2 stop volumerize_backup
 ```
 docker stop volumerize_backup
 ```
 
-### 3.1.1 Remove volumerize_backup
+### 2.4 Remove volumerize_backup
 ```
 docker rm volumerize_backup
 ```
+### 2.5 save volumerize_backup
+```
+tar -cvf back_volume.tar.gz back_volume
+```
+
+### 3.0 transfer back_volume.tar.gz to another machine
+```
+gunzip back_volume.tar.gz
+```
+### 3.1 repeate step 0,1 in another machine
 
 ### 4.run volumerize restore
  ```
@@ -52,6 +62,10 @@ docker rm volumerize_backup
     -e "VOLUMERIZE_SOURCE=/source" \
     -e "VOLUMERIZE_TARGET=file:///backup" \
     blacklabelops/volumerize 
+```
+### 4.1 stop mariadb_mediawiki
+```
+docker-compose -f mariadb_mediawiki.yml down
 ```
 
 ### 4.2 exec volumerize restore
