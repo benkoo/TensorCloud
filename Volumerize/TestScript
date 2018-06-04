@@ -1,0 +1,43 @@
+docker run --rm \
+    -v jenkins_volume:/source \
+    -v $PWD/backup_volume:/backup:ro \
+    -v cache_volume:/volumerize-cache \
+    -e "VOLUMERIZE_SOURCE=/source" \
+    -e "VOLUMERIZE_TARGET=file:///backup" \
+    blacklabelops/volumerize restore
+
+
+docker run -d \
+    --name volumerize \
+    -v jenkins_volume:/source:ro \
+    -v $PWD/backup_volume:/backup \
+    -v cache_volume:/volumerize-cache \
+    -e "VOLUMERIZE_SOURCE=/source" \
+    -e "VOLUMERIZE_TARGET=file:///backup" \
+    blacklabelops/volumerize
+
+docker run -d \
+    --name volumerize_backup \
+    -v volumerize_mediawiki_data:/source/application_data_mediawiki:ro \
+    -v volumerize_mariadb_data:/source/application_database_data_mariadb:ro \
+    -v $PWD/backup_volume:/backup \
+    -v cache_volume:/volumerize-cache \
+    -e "VOLUMERIZE_SOURCE=/source" \
+    -e "VOLUMERIZE_TARGET=file:///backup" \
+    blacklabelops/volumerize
+
+docker exec volumerize_backup backup
+
+docker run -d \
+    --name volumerize_restore \
+    -v volumerize_mediawiki_data:/source/application_data_mediawiki \
+    -v volumerize_mariadb_data:/source/application_database_data_mariadb \
+    -v $PWD/backup_volume:/backup:ro \
+    -v cache_volume:/volumerize-cache \
+    -e "VOLUMERIZE_SOURCE=/source" \
+    -e "VOLUMERIZE_TARGET=file:///backup" \
+    blacklabelops/volumerize 
+
+docker exec volumerize_restore restore --dry-run
+
+docker exec volumerize_restore verify

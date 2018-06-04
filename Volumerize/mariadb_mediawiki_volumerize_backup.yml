@@ -1,0 +1,18 @@
+version: '2'
+services:
+  mariadb:
+    image: 'blacklabelops/volumerize'
+    container_name: 'volumerize_backup'
+    environment:
+      - VOLUMERIZE_SOURCE=/source
+      - VOLUMERIZE_TARGET=file:///backup
+    volumes:
+      - 'volumerize_mediawiki_data:/source/application_data_mediawiki:ro'
+      - 'volumerize_mariadb_data:/source/application_database_mariadb:ro'
+      - '$PWD/backup_volume:/backup'
+      - 'cache_volume:/volumerize-cache'
+volumes:
+  volumerize_mariadb_data:
+    driver: local
+  volumerize_mediawiki_data:
+    driver: local

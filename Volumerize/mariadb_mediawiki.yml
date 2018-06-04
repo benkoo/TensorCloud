@@ -1,0 +1,28 @@
+version: '2'
+services:
+  mariadb:
+    image: 'bitnami/mariadb:latest'
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+      - MARIADB_USER=bn_mediawiki
+      - MARIADB_DATABASE=bitnami_mediawiki
+    volumes:
+      - 'mariadb_data:/bitnami'
+  mediawiki:
+    image: 'bitnami/mediawiki:latest'
+    environment:
+      - MEDIAWIKI_DATABASE_USER=root
+      - MEDIAWIKI_DATABASE_NAME=
+      - ALLOW_EMPTY_PASSWORD=yes
+    ports:
+      - '80:80'
+      - '443:443'
+    volumes:
+      - 'mediawiki_data:/bitnami'
+    depends_on:
+      - mariadb
+volumes:
+  mariadb_data:
+    driver: local
+  mediawiki_data:
+    driver: local
