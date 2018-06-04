@@ -16,12 +16,11 @@ Waiting...Mariadb_Mediawiki service up...
 
 ### 2.0 run volumerize backup
 ```
-    docker run -d \
+   docker run -d \
     --name volumerize_backup \
-    -v mediawiki_mediawiki_data:/source/application_data_mediawiki:ro \
-    -v mediawiki_mariadb_data:/source/application_database_data_mariadb:ro \
-    -v mediawiki_mediawiki_data:/source/application_configuration_mediawiki:ro \
-    -v backup_volume:/backup \
+    -v volumerize_mediawiki_data:/source/application_data_mediawiki:ro \
+    -v volumerize_mariadb_data:/source/application_database_data_mariadb:ro \
+    -v $PWD/backup_volume:/backup \
     -v cache_volume:/volumerize-cache \
     -e "VOLUMERIZE_SOURCE=/source" \
     -e "VOLUMERIZE_TARGET=file:///backup" \
@@ -44,16 +43,15 @@ docker rm volumerize_backup
 
 ### 4.run volumerize restore
  ```
-    docker run -d \
+   docker run -d \
     --name volumerize_restore \
-    -v mediawiki_mediawiki_data:/source/application_data_mediawiki:ro \
-    -v mediawiki_mariadb_data:/source/application_database_data_mariadb:ro \
-    -v mediawiki_mediawiki_data:/source/application_configuration_mediawiki:ro \
-    -v backup_volume:/backup:ro \
+    -v volumerize_mediawiki_data:/source/application_data_mediawiki \
+    -v volumerize_mariadb_data:/source/application_database_data_mariadb \
+    -v $PWD/backup_volume:/backup:ro \
     -v cache_volume:/volumerize-cache \
     -e "VOLUMERIZE_SOURCE=/source" \
     -e "VOLUMERIZE_TARGET=file:///backup" \
-    blacklabelops/volumerize
+    blacklabelops/volumerize 
 ```
 
 ### 4.2 exec volumerize restore
