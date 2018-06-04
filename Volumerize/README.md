@@ -12,10 +12,12 @@ curl -sSL https://raw.githubusercontent.com/benkoo/TensorCloud/master/mariadb_me
 docker-compose -f mariadb_mediawiki.yml up -d
 ```
 
+Waiting...Mariadb_Mediawiki service up...
+
 ### 2.0 run volumerize backup
 ```
     docker run -d \
-    --name volumerize \
+    --name volumerize_backup \
     -v mediawiki_mediawiki_data:/source/application_data_mediawiki:ro \
     -v mediawiki_mariadb_data:/source/application_database_data_mariadb:ro \
     -v mediawiki_mediawiki_data:/source/application_configuration_mediawiki:ro \
@@ -28,25 +30,22 @@ docker-compose -f mariadb_mediawiki.yml up -d
 
 ### 2.1 exec volumerize backup
 ```
- docker exec volumerize backup
+ docker exec volumerize_backup backup
 ```
-### 3.1 stop volumerize
+### 3.1 stop volumerize_backup
 ```
-docker stop $(docker ps -a -q)
+docker stop volumerize_backup
 ```
 
-### 3.1.1 Remove volumerize
+### 3.1.1 Remove volumerize_backup
 ```
-docker rm volumerize
+docker rm volumerize_backup
 ```
-### 3.2 stop volumerize
-```
-docker stop volumerize
-```
-### 4.volumerize restore
+
+### 4.run volumerize restore
  ```
     docker run -d \
-    --name volumerize \
+    --name volumerize_restore \
     -v mediawiki_mediawiki_data:/source/application_data_mediawiki:ro \
     -v mediawiki_mariadb_data:/source/application_database_data_mariadb:ro \
     -v mediawiki_mediawiki_data:/source/application_configuration_mediawiki:ro \
@@ -54,17 +53,34 @@ docker stop volumerize
     -v cache_volume:/volumerize-cache \
     -e "VOLUMERIZE_SOURCE=/source" \
     -e "VOLUMERIZE_TARGET=file:///backup" \
-    blacklabelops/volumerize restore
+    blacklabelops/volumerize
 ```
+
+### 4.2 exec volumerize restore
+
+```
+ docker exec volumerize_restore restore
+```
+
+### 4.3 stop volumerize_restore
+
+```
+docker stop volumerize_restore
+```
+
+### 4.4 Remove volumerize_restore
+
+```
+docker rm volumerize_restore
+```
+
 ### 5.start mariadb_mediawiki again to verify
+
 ```
 docker-compose -f mariadb_mediawiki.yml up -d
 ```
-### 6.start volumerize again
-```
-docker start volumerize
-```
 
+Waiting...Mariadb_Mediawiki service up and restored...
 
 ## 2.Wordpress namespace
 
