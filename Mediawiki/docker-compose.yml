@@ -9,7 +9,7 @@ services:
     volumes:
       - 'mariadb_data:/bitnami'
   mediawiki:
-    image: 'bitnami/mediawiki:latest'
+    image: 'smartkit/mediawiki:locale'
     environment:
       - MEDIAWIKI_DATABASE_USER=root
       - MEDIAWIKI_DATABASE_NAME=
