@@ -164,9 +164,9 @@ wget http://118.190.96.120/backup_volume_remixZone.zip
     -e "VOLUMERIZE_TARGET=file:///backup" \
     blacklabelops/volumerize 
 ```
-### 4.1 stop mariadb_mediawiki
+### 4.1 stop mariadb_wordpress
 ```
-docker-compose -f mariadb_mediawiki.yml down
+docker-compose -f mariadb_wordpress.yml down
 ```
 
 ### 4.2 exec volumerize restore
@@ -187,13 +187,13 @@ docker stop volumerize_restore
 docker rm volumerize_restore
 ```
 
-### 5.start mariadb_mediawiki again to verify
+### 5.start mariadb_wordpress again to verify
 
 ```
-docker-compose -f mariadb_mediawiki.yml up -d
+docker-compose -f mariadb_wordpress.yml up -d
 ```
 
-Waiting...Mariadb_Mediawiki service up and restored...
+Waiting...Mariadb_Wordpress service up and restored...
 
 ## 3.Piwik namespace
 
@@ -260,7 +260,7 @@ wget http://118.190.96.120/backup_volume_remixReviews.zip
     -e "VOLUMERIZE_TARGET=file:///backup" \
     blacklabelops/volumerize 
 ```
-### 4.1 stop mariadb_mediawiki
+### 4.1 stop mariadb_piwik
 ```
 docker-compose -f mariadb_piwik.yml down
 ```
@@ -283,10 +283,10 @@ docker stop volumerize_restore
 docker rm volumerize_restore
 ```
 
-### 5.start mariadb_mediawiki again to verify
+### 5.start mariadb_piwik again to verify
 
 ```
-docker-compose -f mariadb_mediawiki.yml up -d
+docker-compose -f mariadb_piwik.yml up -d
 ```
 
 Waiting...Mariadb_Piwik service up and restored...
