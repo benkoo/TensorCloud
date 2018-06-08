@@ -5,6 +5,13 @@ Docker in Docker
 ```
 docker run --name tensor-cloud-dind-mariadb-wordpress --privileged -d -p 4444:4444 -e PORT=4444 smartkit/tensor-cloud-dind:mariadb_wordpress
 ```
+or 
+### Docker load
+
+```
+docker load tensor-cloud-dind_mariadb_wordpress.tar.gz
+```
+
 ### 1.2Docker exec in Dind
 
 ```
