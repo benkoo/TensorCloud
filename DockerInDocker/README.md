@@ -30,4 +30,6 @@ iptables -t nat -A PREROUTING -i eth0 -p tcp --dport $srcPortNumber -j REDIRECT 
 
 https://github.com/jpetazzo/dind
 
+https://www.cyberciti.biz/faq/linux-port-redirection-with-iptables/
+
 
