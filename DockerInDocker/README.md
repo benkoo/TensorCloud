@@ -9,7 +9,7 @@ or
 ### Docker load
 
 ```
-docker load tensor-cloud-dind_mariadb_wordpress.tar.gz
+gzcat saved_tensor-cloud-dind_mariadb_wordpress.tar.gz  | docker load
 ```
 
 ### 1.2 Docker exec in Dind
