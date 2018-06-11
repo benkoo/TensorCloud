@@ -1,40 +1,54 @@
 Docker in Docker 
+
+Install Docker: 
+
+1.Ubuntu: https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-16-04
+
+2.Windows: https://docs.docker.com/docker-for-windows/
+
+3.MacOSX: https://docs.docker.com/docker-for-mac/install/
+
 ## 1.Wordpress
-### 1.1 Docker run
-
+### 1.0 Wget
 ```
-docker run --name tensor-cloud-dind-mariadb-wordpress -e DOCKER_DAEMON_ARGS="-D" --privileged -d -p 4444:4444 -e PORT=4444 -e DOCKER_DAEMON_ARGS="-D" smartkit/tensor-cloud-dind:mariadb_wordpress
+wget http://118.190.96.120/saved_tensor-cloud-dind_mariadb_wordpress_basic.tar.gz
 ```
-or 
-### Docker load
-
+### 1.1 Docker load
 ```
-gzcat saved_tensor-cloud-dind_mariadb_wordpress_basic.tar.gz  | docker load
+docker load < saved_tensor-cloud-dind_mariadb_wordpress_basic.tar.gz 
 ```
-
-### 1.2 Docker exec in Dind
-
+### 1.2 Docker run
 ```
-docker exec -it  tensor-cloud-dind-mariadb-wordpress /bin/bash
+docker run --name tensor-cloud-dind-mariadb-wordpress -e DOCKER_DAEMON_ARGS="-D" --privileged -d -p 4445:4445 -e PORT=4445 -e DOCKER_DAEMON_ARGS="-D" smartkit/tensor-cloud-dind:mariadb_wordpress
 ```
-
-### 1.3 Port forwarding in Dind
+### 1.3 Docker exec in Dind
 ```
-iptables -t nat -A PREROUTING -i eth0 -p tcp --dport $srcPortNumber -j REDIRECT --to-port $dstPortNumber
+docker exec -it  tensor-cloud-dind-mariadb-wordpress  bash /TensorCloud/DockerInDocker/mariadb_wordpress_4445.sh
 ```
-
 ## 2.Mediawiki
+### 2.0 Wget
+```
+wget http://118.190.96.120/saved_tensor-cloud-dind_mariadb_mediawiki_basic.tar.gz
+```
+### 2.1 Docker load
 
-### 1.1 Docker run
+```
+docker load < saved_tensor-cloud-dind_mariadb_mediawiki_basic.tar.gz
+```
+### 2.2 Docker run
 
 ```
 docker run --rm --name tensor-cloud-dind-mariadb-mediawiki -e DOCKER_DAEMON_ARGS="-D" --privileged -d -p 4444:4444 -e PORT=4444 smartkit/tensor-cloud-dind:mariadb_mediawiki
 ```
-or 
-### Docker load
 
+#### 2.3 Docker exec 
 ```
-gzcat saved_tensor-cloud-dind_mariadb_mediawiki_basic.tar.gz  | docker load
+docker exec -it  tensor-cloud-dind-mariadb-mediawiki  bash /TensorCloud/DockerInDocker/mariadb_mediawiki_4444.sh
+```
+
+## Save your container?
+```
+docker save tensor-cloud-dind-mariadb-mediawiki | gzip > your_saved_tensor-cloud-dind_mariadb_mediawiki_modified.tar.gz
 ```
 
 ## References
