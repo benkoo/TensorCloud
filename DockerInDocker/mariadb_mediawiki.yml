@@ -2,6 +2,7 @@ version: '2'
 services:
   mariadb:
     image: 'bitnami/mariadb:latest'
+    restart: always
     environment:
       - ALLOW_EMPTY_PASSWORD=yes
       - MARIADB_USER=bn_mediawiki
@@ -9,6 +10,8 @@ services:
     volumes:
       - '$PWD/mariadb_data:/bitnami'
   mediawiki:
+    restart: always
+    depends_on: mariadb
     image: 'smartkit/mediawiki:locale'
     environment:
       - MEDIAWIKI_DATABASE_USER=root
