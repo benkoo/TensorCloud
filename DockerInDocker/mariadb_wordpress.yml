@@ -2,6 +2,7 @@ version: '2'
 services:
   mariadb:
     image: 'bitnami/mariadb:latest'
+    restart: always
     volumes:
       - '$PWD/mariadb_data:/bitnami'
     environment:
@@ -10,6 +11,8 @@ services:
       - ALLOW_EMPTY_PASSWORD=yes
   wordpress:
     image: 'bitnami/wordpress:latest'
+    restart: always
+    depends_on: mariadb
     labels:
       kompose.service.type: nodeport
     ports:
