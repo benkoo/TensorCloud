@@ -3,7 +3,7 @@ Docker in Docker
 ### 1.1 Docker run
 
 ```
-docker run --name tensor-cloud-dind-mariadb-wordpress --privileged -d -p 4444:4444 -e PORT=4444 smartkit/tensor-cloud-dind:mariadb_wordpress
+docker run --name tensor-cloud-dind-mariadb-wordpress --privileged -d -p 4444:4444 -e PORT=4444 -e DOCKER_DAEMON_ARGS="-D" smartkit/tensor-cloud-dind:mariadb_wordpress
 ```
 or 
 ### Docker load
