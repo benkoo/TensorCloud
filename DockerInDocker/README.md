@@ -37,6 +37,11 @@ docker run --rm --name tensor-cloud-dind-mariadb-mediawiki -e DOCKER_DAEMON_ARGS
 docker exec -it  tensor-cloud-dind-mariadb-mediawiki  bash /TensorCloud/DockerInDocker/mariadb_mediawiki_4444.sh
 ```
 
+## Save your container?
+```
+docker save tensor-cloud-dind-mariadb-mediawiki | gzip > your_saved_tensor-cloud-dind_mariadb_mediawiki_modified.tar.gz
+```
+
 ## References
 
 https://github.com/jpetazzo/dind
