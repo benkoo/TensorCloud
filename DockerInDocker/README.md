@@ -1,40 +1,40 @@
 Docker in Docker 
 ## 1.Wordpress
-### 1.1 Docker run
-
+### 1.0 Wget
+```
+wget http://118.190.96.120/saved_tensor-cloud-dind_mariadb_wordpress_basic.tar.gz
+```
+### 1.1 Docker load
+```
+docker load < saved_tensor-cloud-dind_mariadb_wordpress_basic.tar.gz 
+```
+### Docker run
 ```
 docker run --name tensor-cloud-dind-mariadb-wordpress -e DOCKER_DAEMON_ARGS="-D" --privileged -d -p 4444:4444 -e PORT=4444 -e DOCKER_DAEMON_ARGS="-D" smartkit/tensor-cloud-dind:mariadb_wordpress
 ```
-or 
-### Docker load
-
-```
-gzcat saved_tensor-cloud-dind_mariadb_wordpress_basic.tar.gz  | docker load
-```
-
 ### 1.2 Docker exec in Dind
-
 ```
-docker exec -it  tensor-cloud-dind-mariadb-wordpress /bin/bash
+docker exec -it  tensor-cloud-dind-mariadb-wordpress  bash /TensorCloud/DockerInDocker/mariadb_wordpress_4445.sh
 ```
-
-### 1.3 Port forwarding in Dind
-```
-iptables -t nat -A PREROUTING -i eth0 -p tcp --dport $srcPortNumber -j REDIRECT --to-port $dstPortNumber
-```
-
 ## 2.Mediawiki
+### 2.0 Wget
+```
+wget http://118.190.96.120/saved_tensor-cloud-dind_mariadb_mediawiki_basic.tar.gz
+```
+### 2.1 Docker load
 
-### 1.1 Docker run
+```
+docker load < saved_tensor-cloud-dind_mariadb_mediawiki_basic.tar.gz
+```
+### 2.2 Docker run
 
 ```
 docker run --rm --name tensor-cloud-dind-mariadb-mediawiki -e DOCKER_DAEMON_ARGS="-D" --privileged -d -p 4444:4444 -e PORT=4444 smartkit/tensor-cloud-dind:mariadb_mediawiki
 ```
-or 
-### Docker load
 
+#### 2.3 Docker exec 
 ```
-gzcat saved_tensor-cloud-dind_mariadb_mediawiki_basic.tar.gz  | docker load
+docker exec -it  tensor-cloud-dind-mariadb-mediawiki  bash /TensorCloud/DockerInDocker/mariadb_mediawiki_4444.sh
 ```
 
 ## References
