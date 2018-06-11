@@ -15,7 +15,7 @@ wget http://118.190.96.120/saved_tensor_cloud_dind_mariadb_wordpress_basic.tar.g
 ```
 ### 1.1 Docker load
 ```
-docker load < saved_tensor-cloud-dind_mariadb_wordpress_basic.tar.gz 
+docker load < saved_tensor_cloud_dind_mariadb_wordpress_basic.tar.gz 
 ```
 ### 1.2 Docker run
 ```
@@ -33,7 +33,7 @@ wget http://118.190.96.120/saved_tensor_cloud_dind_mariadb_mediawiki_basic.tar.g
 ### 2.1 Docker load
 
 ```
-docker load < saved_tensor-cloud-dind_mariadb_mediawiki_basic.tar.gz
+docker load < saved_tensor_cloud_dind_mariadb_mediawiki_basic.tar.gz
 ```
 ### 2.2 Docker run
 
