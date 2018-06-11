@@ -1,4 +1,13 @@
 Docker in Docker 
+
+Install Docker: 
+
+1.Ubuntu: https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-16-04
+
+2.Windows: https://docs.docker.com/docker-for-windows/
+
+3.MacOSX: https://docs.docker.com/docker-for-mac/install/
+
 ## 1.Wordpress
 ### 1.0 Wget
 ```
