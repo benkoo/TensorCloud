@@ -1,0 +1,102 @@
+### Jenkins
+docker run --rm \
+    -v jenkins_volume:/source \
+    -v $PWD/backup_volume:/backup:ro \
+    -v cache_volume:/volumerize-cache \
+    -e "VOLUMERIZE_SOURCE=/source" \
+    -e "VOLUMERIZE_TARGET=file:///backup" \
+    blacklabelops/volumerize restore
+
+
+docker run -d \
+    --name volumerize \
+    -v jenkins_volume:/source:ro \
+    -v $PWD/backup_volume:/backup \
+    -v cache_volume:/volumerize-cache \
+    -e "VOLUMERIZE_SOURCE=/source" \
+    -e "VOLUMERIZE_TARGET=file:///backup" \
+    blacklabelops/volumerize
+
+### Mediawiki
+
+docker run -d \
+    --name volumerize_backup \
+    -v mediawiki_mediawiki_data:/source/application_data_mediawiki:ro \
+    -v mediawiki_mariadb_data:/source/application_database_data_mariadb:ro \
+    -v $PWD/backup_volume:/backup \
+    -v cache_volume:/volumerize-cache \
+    -e "VOLUMERIZE_SOURCE=/source" \
+    -e "VOLUMERIZE_TARGET=file:///backup" \
+    blacklabelops/volumerize
+
+docker exec volumerize_backup backup
+
+docker run -d \
+    --name volumerize_restore \
+    -v mediawiki_mediawiki_data:/source/application_data_mediawiki \
+    -v mediawiki_mariadb_data:/source/application_database_data_mariadb \
+    -v $PWD/backup_volume:/backup:ro \
+    -v cache_volume:/volumerize-cache \
+    -e "VOLUMERIZE_SOURCE=/source" \
+    -e "VOLUMERIZE_TARGET=file:///backup" \
+    blacklabelops/volumerize 
+
+docker exec volumerize_restore restore --dry-run
+
+docker exec volumerize_restore verify
+
+### Wordpress
+
+docker run -d \
+    --name volumerize_backup \
+    -v tensorcloud_wordpress_data:/source/application_data_wordpress:ro \
+    -v tensorcloud_mariadb_data:/source/application_database_data_mariadb:ro \
+    -v $PWD/backup_volume:/backup \
+    -v cache_volume:/volumerize-cache \
+    -e "VOLUMERIZE_SOURCE=/source" \
+    -e "VOLUMERIZE_TARGET=file:///backup" \
+    blacklabelops/volumerize
+
+docker exec volumerize_backup backup
+
+docker run -d \
+    --name volumerize_restore \
+    -v volumerize_wordpress_data:/source/application_data_wordpress \
+    -v volumerize_mariadb_data:/source/application_database_data_mariadb \
+    -v $PWD/backup_volume:/backup:ro \
+    -v cache_volume:/volumerize-cache \
+    -e "VOLUMERIZE_SOURCE=/source" \
+    -e "VOLUMERIZE_TARGET=file:///backup" \
+    blacklabelops/volumerize 
+
+docker exec volumerize_restore restore --dry-run
+
+docker exec volumerize_restore verify
+
+### Piwik
+
+docker run -d \
+    --name volumerize_backup \
+    -v piwik_piwik_data:/source/application_data_piwik:ro \
+    -v piwik_mariadb_data:/source/application_database_data_mariadb:ro \
+    -v $PWD/backup_volume:/backup \
+    -v cache_volume:/volumerize-cache \
+    -e "VOLUMERIZE_SOURCE=/source" \
+    -e "VOLUMERIZE_TARGET=file:///backup" \
+    blacklabelops/volumerize
+
+docker exec volumerize_backup backup
+
+docker run -d \
+    --name volumerize_restore \
+    -v volumerize_piwik_data:/source/application_data_piwik \
+    -v volumerize_mariadb_data:/source/application_database_data_mariadb \
+    -v $PWD/backup_volume:/backup:ro \
+    -v cache_volume:/volumerize-cache \
+    -e "VOLUMERIZE_SOURCE=/source" \
+    -e "VOLUMERIZE_TARGET=file:///backup" \
+    blacklabelops/volumerize 
+
+docker exec volumerize_restore restore --dry-run
+
+docker exec volumerize_restore verify    
