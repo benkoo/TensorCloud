@@ -11,7 +11,7 @@ Install Docker:
 ## 1.Wordpress
 ### 1.0 Wget
 ```
-wget http://118.190.96.120/saved_tensor-cloud-dind_mariadb_wordpress_basic.tar.gz
+wget http://118.190.96.120/saved_tensor_cloud_dind_mariadb_wordpress_basic.tar.gz
 ```
 ### 1.1 Docker load
 ```
@@ -28,7 +28,7 @@ docker exec -it  tensor-cloud-dind-mariadb-wordpress  bash /TensorCloud/DockerIn
 ## 2.Mediawiki
 ### 2.0 Wget
 ```
-wget http://118.190.96.120/saved_tensor-cloud-dind_mariadb_mediawiki_basic.tar.gz
+wget http://118.190.96.120/saved_tensor_cloud_dind_mariadb_mediawiki_basic.tar.gz
 ```
 ### 2.1 Docker load
 
