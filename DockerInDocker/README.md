@@ -9,7 +9,7 @@ or
 ### Docker load
 
 ```
-gzcat saved_tensor-cloud-dind_mariadb_wordpress.tar.gz  | docker load
+gzcat saved_tensor-cloud-dind_mariadb_wordpress_basic.tar.gz  | docker load
 ```
 
 ### 1.2 Docker exec in Dind
@@ -24,7 +24,18 @@ iptables -t nat -A PREROUTING -i eth0 -p tcp --dport $srcPortNumber -j REDIRECT 
 ```
 
 ## 2.Mediawiki
-### 
+
+### 1.1 Docker run
+
+```
+docker run --name tensor-cloud-dind-mariadb-mediawiki --privileged -d -p 4444:4444 -e PORT=4444 -e DOCKER_DAEMON_ARGS="-D" smartkit/tensor-cloud-dind:mariadb_mediawiki
+```
+or 
+### Docker load
+
+```
+gzcat saved_tensor-cloud-dind_mariadb_mediawiki_basic.tar.gz  | docker load
+```
 
 ## References
 
