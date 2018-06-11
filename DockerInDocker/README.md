@@ -8,11 +8,11 @@ wget http://118.190.96.120/saved_tensor-cloud-dind_mariadb_wordpress_basic.tar.g
 ```
 docker load < saved_tensor-cloud-dind_mariadb_wordpress_basic.tar.gz 
 ```
-### Docker run
+### 1.2 Docker run
 ```
 docker run --name tensor-cloud-dind-mariadb-wordpress -e DOCKER_DAEMON_ARGS="-D" --privileged -d -p 4444:4444 -e PORT=4444 -e DOCKER_DAEMON_ARGS="-D" smartkit/tensor-cloud-dind:mariadb_wordpress
 ```
-### 1.2 Docker exec in Dind
+### 1.3 Docker exec in Dind
 ```
 docker exec -it  tensor-cloud-dind-mariadb-wordpress  bash /TensorCloud/DockerInDocker/mariadb_wordpress_4445.sh
 ```
