@@ -10,7 +10,7 @@ docker load < saved_tensor-cloud-dind_mariadb_wordpress_basic.tar.gz
 ```
 ### 1.2 Docker run
 ```
-docker run --name tensor-cloud-dind-mariadb-wordpress -e DOCKER_DAEMON_ARGS="-D" --privileged -d -p 4444:4444 -e PORT=4444 -e DOCKER_DAEMON_ARGS="-D" smartkit/tensor-cloud-dind:mariadb_wordpress
+docker run --name tensor-cloud-dind-mariadb-wordpress -e DOCKER_DAEMON_ARGS="-D" --privileged -d -p 4445:4445 -e PORT=4445 -e DOCKER_DAEMON_ARGS="-D" smartkit/tensor-cloud-dind:mariadb_wordpress
 ```
 ### 1.3 Docker exec in Dind
 ```
