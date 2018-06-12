@@ -17,9 +17,13 @@ wget http://118.190.96.120/saved_tensor_cloud_dind_mariadb_wordpress_basic.tar.g
 ```
 docker load < saved_tensor_cloud_dind_mariadb_wordpress_basic.tar.gz 
 ```
+or
+```
+docker pull smartkit/tensor-cloud-dind:mariadb_wordpress_basic
+```
 ### 1.2 Docker run
 ```
-docker run --name tensor-cloud-dind-mariadb-wordpress -e DOCKER_DAEMON_ARGS="-D" --privileged -d -p 4445:4445 -e PORT=4445  smartkit/tensor-cloud-dind:mariadb_wordpress
+docker run --name tensor-cloud-dind-mariadb-wordpress -e DOCKER_DAEMON_ARGS="-D" --privileged -d -p 4445:4445 -e PORT=4445  smartkit/tensor-cloud-dind:mariadb_wordpress_basic
 ```
 ### 1.3 Docker exec in Dind
 ```
@@ -35,10 +39,14 @@ wget http://118.190.96.120/saved_tensor_cloud_dind_mariadb_mediawiki_basic.tar.g
 ```
 docker load < saved_tensor_cloud_dind_mariadb_mediawiki_basic.tar.gz
 ```
+or
+```
+docker pull smartkit/tensor-cloud-dind:mariadb_mediawiki_basic
+```
 ### 2.2 Docker run
 
 ```
-docker run --rm --name tensor-cloud-dind-mariadb-mediawiki -e DOCKER_DAEMON_ARGS="-D" --privileged -d -p 4444:4444 -e PORT=4444 smartkit/tensor-cloud-dind:mariadb_mediawiki
+docker run --rm --name tensor-cloud-dind-mariadb-mediawiki -e DOCKER_DAEMON_ARGS="-D" --privileged -d -p 4444:4444 -e PORT=4444 smartkit/tensor-cloud-dind:mariadb_mediawiki_basic
 ```
 
 #### 2.3 Docker exec 
