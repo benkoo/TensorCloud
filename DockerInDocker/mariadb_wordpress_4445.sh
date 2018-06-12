@@ -1,8 +1,8 @@
 #!/bin/sh
 ##Mediawiki
 cd /TensorCloud/DockerInDocker
-mkdir mariadb_data
-mkdir wordpress_data
+mkdir -p mariadb_data
+mkdir -p wordpress_data
 chmod -R 777 mariadb_data
 chmod -R 777 wordpress_data
 

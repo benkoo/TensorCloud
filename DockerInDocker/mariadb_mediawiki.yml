@@ -24,7 +24,6 @@ services:
       - '$PWD/mediawiki_data:/bitnami'
     depends_on:
       - mariadb
-    command: bash -c "mariadb_mediawiki_4444.sh"
 # volumes:
 #   $PWD/mariadb_data:
 #     driver: local
