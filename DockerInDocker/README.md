@@ -9,6 +9,9 @@ Install Docker:
 3.MacOSX: https://docs.docker.com/docker-for-mac/install/
 
 ## 1.Wordpress
+
+tags:basic,remix
+
 ### 1.0 Wget
 ```
 wget http://118.190.96.120/saved_tensor_cloud_dind_mariadb_wordpress_basic.tar.gz
@@ -30,6 +33,9 @@ docker run --name tensor-cloud-dind-mariadb-wordpress -e DOCKER_DAEMON_ARGS="-D"
 docker exec -it  tensor-cloud-dind-mariadb-wordpress  bash /TensorCloud/DockerInDocker/mariadb_wordpress_4445.sh
 ```
 ## 2.Mediawiki
+
+tags:basic,toyhouse
+
 ### 2.0 Wget
 ```
 wget http://118.190.96.120/saved_tensor_cloud_dind_mariadb_mediawiki_basic.tar.gz
@@ -54,6 +60,9 @@ docker run --rm --name tensor-cloud-dind-mariadb-mediawiki -e DOCKER_DAEMON_ARGS
 docker exec -it  tensor-cloud-dind-mariadb-mediawiki  bash /TensorCloud/DockerInDocker/mariadb_mediawiki_4444.sh
 ```
 ## 3.Piwik
+
+tags:basic,remix
+
 ### 3.0 Wget
 ```
 wget http://118.190.96.120/saved_tensor_cloud_dind_mariadb_piwik_basic.tar.gz
