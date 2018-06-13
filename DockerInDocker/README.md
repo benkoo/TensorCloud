@@ -75,7 +75,7 @@ docker run --rm --name tensor-cloud-dind-mariadb-piwik -e DOCKER_DAEMON_ARGS="-D
 
 #### 3.3 Docker exec 
 ```
-docker exec -it  tensor-cloud-dind-mariadb-mediawiki  bash /TensorCloud/DockerInDocker/mariadb_piwik_4446.sh
+docker exec -it  tensor-cloud-dind-mariadb-piwik  bash /TensorCloud/DockerInDocker/mariadb_piwik_4446.sh
 ```
 
 
