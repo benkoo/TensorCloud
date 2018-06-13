@@ -53,6 +53,31 @@ docker run --rm --name tensor-cloud-dind-mariadb-mediawiki -e DOCKER_DAEMON_ARGS
 ```
 docker exec -it  tensor-cloud-dind-mariadb-mediawiki  bash /TensorCloud/DockerInDocker/mariadb_mediawiki_4444.sh
 ```
+## 3.Piwik
+### 2.0 Wget
+```
+wget http://118.190.96.120/saved_tensor_cloud_dind_mariadb_piwik_basic.tar.gz
+```
+### 2.1 Docker load
+
+```
+docker load < saved_tensor_cloud_dind_mariadb_piwik_basic.tar.gz
+```
+or
+```
+docker pull smartkit/tensor-cloud-dind:mariadb_piwik_basic
+```
+### 2.2 Docker run
+
+```
+docker run --rm --name tensor-cloud-dind-mariadb-piwik -e DOCKER_DAEMON_ARGS="-D" --privileged -d -p 4446:4446 -e PORT=4446 smartkit/tensor-cloud-dind:mariadb_piwik_basic
+```
+
+#### 2.3 Docker exec 
+```
+docker exec -it  tensor-cloud-dind-mariadb-mediawiki  bash /TensorCloud/DockerInDocker/mariadb_piwik_4446.sh
+```
+
 
 ## Save your container?
 ```
