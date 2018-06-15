@@ -101,4 +101,4 @@ https://blog.giantswarm.io/moving-docker-container-images-around/
 
 https://www.cyberciti.biz/faq/linux-port-redirection-with-iptables/
 
-
+ADJUST IMAGE SIZE OF DOCKER QCOW2 FILE: https://www.itsfullofstars.de/2017/12/adjust-the-image-size-of-docker/
