@@ -8,6 +8,28 @@ Install Docker:
 
 3.MacOSX: https://docs.docker.com/docker-for-mac/install/
 
+## 0.Docker Images Links
+
+1.bitnami/mariadb:latest: http://118.190.96.120/saved_bitnami_mariadb_latest.tar.gz
+
+2.btnami/wordpress:latest: http://118.190.96.120/saved_bitnami_wordpress_latest.tar.gz
+
+3.bitnami/piwik:latest: http://118.190.96.120/saved_bitnami_piwik_latest.tar.gz
+
+4.smartkit/mediawiki:locale: http://118.190.96.120/saved_smartkit_mediawiki_locale.tar.gz
+
+5.smartkit/tensor-cloud-dind:
+
+http://118.190.96.120/saved_tensor_cloud_dind_mariadb_wordpress_basic.tar.gz
+
+http://118.190.96.120/saved_tensor_cloud_dind_mariadb_mediawiki_basic.tar.gz
+
+http://118.190.96.120/saved_tensor_cloud_dind_mariadb_piwik_basic.tar.gz
+
+http://118.190.96.120/saved_tensor_cloud_dind_mariadb_wordpress_remix.tar.gz
+
+http://118.190.96.120/saved_tensor_cloud_dind_mariadb_wordpress_spacegambit.tar.gz
+
 ## 1.Wordpress
 
 tags:basic,remix
