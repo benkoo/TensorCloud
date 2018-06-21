@@ -129,7 +129,5 @@ In Ubuntu:
 ```
 systemctl stop docker
 
-```
-```
 nohup dockerd --storage-opt dm.basesize=150G &
 ```
