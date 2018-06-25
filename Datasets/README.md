@@ -11,7 +11,10 @@
 
 ### Mediawiki example:
 
-1.Download Toyhouse.cc **SQL data**: http://118.190.96.120/toyhousewiki_67.sql.gz
+1.Download Toyhouse.cc **SQL data**: http://118.190.96.120/toyhousewiki_67.sql.gz & save to whichever system folder you choose.
+```
+curl http://118.190.96.120/toyhousewiki_67.sql.gz
+```
 
 1.1.Docker-compose up:
 ```
