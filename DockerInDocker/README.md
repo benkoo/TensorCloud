@@ -30,6 +30,10 @@ http://118.190.96.120/saved_tensor_cloud_dind_mariadb_wordpress_remix.tar.gz
 
 http://118.190.96.120/saved_tensor_cloud_dind_mariadb_wordpress_spacegambit.tar.gz
 
+6.all docker image tags:
+
+https://hub.docker.com/r/smartkit/tensor-cloud-dind/tags/
+
 ## 1.Wordpress
 
 tags:basic,remix
