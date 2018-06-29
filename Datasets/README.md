@@ -13,7 +13,10 @@
 
 1.Download Toyhouse.cc **SQL data**: http://118.190.96.120/toyhousewiki_67.sql.gz & save to whichever system folder you choose.
 ```
-curl http://118.190.96.120/toyhousewiki_67.sql.gz
+wget http://118.190.96.120/toyhousewiki_67.sql.gz
+```
+```
+gunzip toyhousewiki_67.sql.gz
 ```
 
 1.1.Docker-compose up:
@@ -22,6 +25,9 @@ curl -sSL https://raw.githubusercontent.com/benkoo/TensorCloud/master/Mediawiki/
 ```
 ```
 docker-compose up -d
+```
+```
+docker cp toyhousewiki_67.sql YourMariadbContainerID:/
 ```
 1.2.Drop original database:
 ```
@@ -55,7 +61,7 @@ CREATE DATABASE bitnami_mediawiki DEFAULT CHARACTER SET latin1 DEFAULT COLLATE l
 use bitnami_mediawiki;
 ```
 ```
-source /toyhouseWiki20180528Latin1.sql
+source /toyhousewiki_67.sql
 ```
 
 2.Download Toyhouse.cc **application data**: ftp://118.190.3.169/toyhouseWiki.tar.gz
