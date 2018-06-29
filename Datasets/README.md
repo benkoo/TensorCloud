@@ -63,6 +63,27 @@ use bitnami_mediawiki;
 ```
 source /toyhousewiki_67.sql
 ```
+1.6.Reconfigure MediaWiki
+```
+docker exec -it MediaWikiContainerID /bin/bash
+```
+(Install text editor (such as Vim))
+```
+apt update && apt install vim
+```
+Then...Find settings file!
+```
+find / -name LocalSettings.php
+```
+Then Copy the First File path (starts with:  /opt/....)
+```
+vim path_to_LocalSettings.php
+```
+Inside the file, find the line that starts with <code>$wgDBprefix = ""</code>
+
+Change to <code>$wgDBprefix = "wiki_"</code>
+Save changes on exit (in vim, :wq)
+
 
 2.Download Toyhouse.cc **application data**: ftp://118.190.3.169/toyhouseWiki.tar.gz
 
