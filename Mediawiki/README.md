@@ -12,6 +12,8 @@ use remix_mediawiki
 source toyhousewiki_67.sql
 ```
 
+Logo path: /opt/bitnami/mediawiki/resources/assets/wiki.png
+
 More: https://github.com/benkoo/TensorCloud/tree/master/Datasets
 
 ## References
