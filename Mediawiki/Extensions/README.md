@@ -13,5 +13,7 @@ Following files should now be accepted in file upload: 'png', 'gif', 'jpg', 'jpe
 ## Piwik
 
 require_once "$IP/extensions/Piwik/Piwik.php";
+
 $wgPiwikURL = "docker.toyhouse.cc";//without http protocal
+
 $wgPiwikIDSite = "2";
