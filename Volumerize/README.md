@@ -42,7 +42,7 @@ docker rm volumerize_backup
 ```
 ### 2.5 save volumerize_backup
 ```
-zip -r back_volume.zip back_volume
+zip -r backup_volume.zip backup_volume
 ```
 
 ### 3.0 transfer back_volume.tar.gz to another machine
