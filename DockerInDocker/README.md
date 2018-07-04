@@ -137,7 +137,7 @@ docker exec volumerize_backup backup
 ```
 
 ```
-zip -r backup_volumue_piwik.zip backup_volumue
+zip -r backup_volume_piwik.zip backup_volumue
 ```
 Finally, copy out of Dind container.
 
@@ -146,11 +146,11 @@ Finally, copy out of Dind container.
 Copy to inside of Dind container,
 
 ```
-docker cp backup_volumue_piwik.zip YourDindContainerID:/TensorCloud/DockerInDocker/
+docker cp backup_volume_piwik.zip YourDindContainerID:/TensorCloud/DockerInDocker/
 ```
 Unzip it,
 ```
-apt-get install zip & unzip backup_volumue_piwik.zip
+apt-get install zip & unzip backup_volume_piwik.zip
 ```
 
 Stop existed piwik docker service,
