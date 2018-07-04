@@ -119,6 +119,28 @@ docker exec -it  tensor-cloud-dind-mariadb-piwik  bash /TensorCloud/DockerInDock
 docker save tensor-cloud-dind-mariadb-mediawiki | gzip > your_saved_tensor-cloud-dind_mariadb_mediawiki_modified.tar.gz
 ```
 
+## In Dind volumerize backup
+docker run -d \
+    --name volumerize_backup \
+    -v $PWD/piwik_data:/source/application_data_piwik:ro \
+    -v $PWD/mariadb_data:/source/application_database_data_mariadb:ro \
+    -v $PWD/backup_volume:/backup \
+    -v cache_volume:/volumerize-cache \
+    -e "VOLUMERIZE_SOURCE=/source" \
+    -e "VOLUMERIZE_TARGET=file:///backup" \
+    blacklabelops/volumerize
+
+## In Dind volumerize restore
+  docker run -d \
+   --name volumerize_restore \
+   -v $PWD/piwik_data:/source/application_data_mediawiki \
+   -v $PWD/mariadb_data:/source/application_database_data_mariadb \
+   -v $PWD/backup_volume:/backup:ro \
+   -v cache_volume:/volumerize-cache \
+   -e "VOLUMERIZE_SOURCE=/source" \
+   -e "VOLUMERIZE_TARGET=file:///backup" \
+   blacklabelops/volumerize   
+
 ## References
 
 https://github.com/jpetazzo/dind
