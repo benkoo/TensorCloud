@@ -120,6 +120,7 @@ docker save tensor-cloud-dind-mariadb-mediawiki | gzip > your_saved_tensor-cloud
 ```
 
 ## In Dind volumerize backup
+```
 docker run -d \
     --name volumerize_backup \
     -v $PWD/piwik_data:/source/application_data_piwik:ro \
@@ -129,8 +130,10 @@ docker run -d \
     -e "VOLUMERIZE_SOURCE=/source" \
     -e "VOLUMERIZE_TARGET=file:///backup" \
     blacklabelops/volumerize
+```
 
 ## In Dind volumerize restore
+```
   docker run -d \
    --name volumerize_restore \
    -v $PWD/piwik_data:/source/application_data_mediawiki \
@@ -140,6 +143,7 @@ docker run -d \
    -e "VOLUMERIZE_SOURCE=/source" \
    -e "VOLUMERIZE_TARGET=file:///backup" \
    blacklabelops/volumerize   
+```
 
 ## References
 
