@@ -131,6 +131,9 @@ docker run -d \
     -e "VOLUMERIZE_TARGET=file:///backup" \
     blacklabelops/volumerize
 ```
+```
+docker exec volumerize_backup backup
+```
 
 ## In Dind volumerize restore
 ```
@@ -143,6 +146,14 @@ docker run -d \
    -e "VOLUMERIZE_SOURCE=/source" \
    -e "VOLUMERIZE_TARGET=file:///backup" \
    blacklabelops/volumerize   
+```
+
+```
+docker stop $(docker ps -aq)
+```
+
+```
+docker exec volumerize_restore restore
 ```
 
 ## References
