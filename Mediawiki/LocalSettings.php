@@ -112,12 +112,20 @@ $wgRightsUrl = "";
 $wgRightsText = "";
 $wgRightsIcon = "";
 
+## Math
+require_once "$IP/extensions/Math/Math.php";
+$wgDefaultUserOptions['math'] = 'mathml';
+$wgMathFullRestbaseURL = 'https://en.wikipedia.org/api/rest_';
+
 ## Overriding the default File Extension with a bundle of filetypes
 $wgFileExtensions = array(
     'png', 'gif', 'jpg', 'jpeg', 'jp2', 'webp', 'ppt', 'pdf', 'psd',
     'mp3', 'xls', 'xlsx', 'swf', 'doc','docx', 'odt', 'odc', 'odp',
     'odg', 'mpp'
     );
+
+//$wgShowExceptionDetails = true;
+//$wgShowDBErrorBacktrace = true;
 
 # Path to the GNU diff3 utility. Used for conflict resolution.
 $wgDiff3 = "/usr/bin/diff3";
