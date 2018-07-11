@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Dbc334",
+			"Eleassar"
+		]
+	},
+	"mwoauth-consumer-allwikis": "Vsi projekti na tem spletišču",
+	"mwoauthmanagemygrants-review": "upravljaj z dostopom",
+	"mwoauthmanagemygrants-grantaccept": "Donirano",
+	"mwoauthmanagemygrants-update": "Posodobitev donacij",
+	"mwoauthmanagemygrants-renounce": "Deavtoriziraj",
+	"mwoauth-form-description-allwikis": "Pozdravljeni, $1,\n\nza dokončanje prošnje potrebuje '''$2''' dovoljenje, da v vašem imenu v vseh projektih tega spletišča izvede naslednje dejanje:\n\n\n$4",
+	"mwoauth-form-description-onewiki": "Pozdravljeni, $1,\n\nza dokončanje prošnje potrebuje '''$2''' dovoljenje, da na projektu »$4« v vašem imenu izvede naslednje dejanje:\n\n\n$5",
+	"mwoauth-form-description-allwikis-nogrants": "Pozdravljeni, $1,\n\nza dokončanje prošnje potrebuje '''$2''' dovoljenje, da v vseh projektih tega spletišča dostopa do informacij v vašem imenu. Z vašim računom ne bo narejena nobena sprememba.",
+	"mwoauth-form-description-onewiki-nogrants": "Pozdravljeni, $1,\n\nza dokončanje prošnje potrebuje '''$2''' dovoljenje, da v projektu ''$4'' v vašem imenu dostopa do informacij. Z vašim računom ne bo narejena nobena sprememba.",
+	"mwoauth-form-button-approve": "Dovoli",
+	"mwoauth-form-button-cancel": "Prekliči",
+	"mwoauth-acceptance-cancelled": "Odločili ste se, da »$1« na dovolite dostopa do svojega računa. Oseba »$1« ne bo delovala, razen če ji dovolite dostop. Greste lahko nazaj na »$1« ali na[[Special:OAuthManageMyGrants|urejanje]] vaših povezanih aplikacij.",
+	"mwoauth-oauth-exception": "Napaka v protokolu OAuth: $1"
+}

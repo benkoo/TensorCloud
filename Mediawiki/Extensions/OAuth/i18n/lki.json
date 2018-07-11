@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Lakzon",
+			"Hosseinblue"
+		]
+	},
+	"mwoauth-verified": "این برنامه اجازهٔ دسترسی به مدیاویکی از طرف شما را دارد.\n\nبرای تکمیل این فرایند، مقدار تأیید را برای برنامه فراهم کنید: '''$1'''",
+	"mwoauth-consumer-description": "توضیحات نرم‌افزار:",
+	"mwoauthconsumerregistration-description": "توضیحۀل",
+	"mwoauthmanageconsumers-review": "دووارە دئین /مدیریەت",
+	"mwoauthlistconsumers-description": "توضیحةل"
+}

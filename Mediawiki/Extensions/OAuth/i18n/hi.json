@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"संजीव कुमार",
+			"राम प्रसाद जोशी"
+		]
+	},
+	"mwoauth-consumer-email-unconfirmed": "आप के खाता पर इमेल पता प्रमाणित नही है।",
+	"mwoauthdatastore-bad-source-ip": "यह अनुरोध एक अवैध आईपी पते से आया है।"
+}

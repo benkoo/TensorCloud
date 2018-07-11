@@ -1,0 +1,43 @@
+{
+	"@metadata": {
+		"authors": [
+			"Joetaras"
+		]
+	},
+	"mwoauth-desc": "Permette l'ause de OAuth 1.0a API de autendicazione",
+	"mwoauth-missing-field": "Valore zumbate pu cambe \"$1\"",
+	"mwoauth-invalid-field": "Valore date invalide pu cambe \"$1\"",
+	"mwoauth-field-hidden": "(sta 'mbormazione jè scunnute)",
+	"mwoauth-field-private": "(sta 'mbormazione jè private)",
+	"mwoauth-consumer-key": "Chiave d'u consumatore:",
+	"mwoauth-consumer-name": "Nome de l'applicazione:",
+	"mwoauth-consumer-version": "Versione d'u consumatore:",
+	"mwoauth-consumer-user": "Pubblecatore:",
+	"mwoauth-consumer-stage": "State de mò:",
+	"mwoauth-consumer-email": "Indirizze email de condatte:",
+	"mwoauth-consumer-description": "Descrizione de l'applicazione:",
+	"mwoauth-consumer-wiki": "Pruggette applicabbile:",
+	"mwoauth-consumer-restrictions": "Ause le restriziune:",
+	"mwoauth-consumer-rsakey": "Chiave pubblche RSA (opzionale):",
+	"mwoauth-consumer-reason": "Mutive:",
+	"mwoauth-consumer-stage-proposed": "proposte",
+	"mwoauth-consumer-stage-rejected": "scettate",
+	"mwoauth-consumer-stage-expired": "scadute",
+	"mwoauth-consumer-stage-approved": "approvate",
+	"mwoauth-consumer-stage-disabled": "disabbilitate",
+	"mwoauth-consumer-stage-suppressed": "scangellate",
+	"mwoauthconsumerregistration-navigation": "Navigazzione:",
+	"mwoauthconsumerregistration-main": "Prengepàle",
+	"mwoauthconsumerregistration-user": "Pubblecatore",
+	"mwoauthconsumerregistration-description": "Descrizione",
+	"mwoauthconsumerregistration-email": "Email de condatte",
+	"mwoauthconsumerregistration-consumerkey": "Chiave d'u consumatore",
+	"mwoauthconsumerregistration-lastchange": "Urteme cangiamende",
+	"mwoauthconsumerregistration-manage": "gestisce",
+	"mwoauthmanageconsumers-type": "Code:",
+	"mwoauthmanageconsumers-showproposed": "Richieste proposte",
+	"mwoauthmanageconsumers-showrejected": "Richieste scettate",
+	"mwoauthmanageconsumers-showexpired": "Richieste scadute",
+	"mwoauthmanageconsumers-main": "Prengepàle",
+	"mwoauthmanageconsumers-reason": "Mutive:"
+}

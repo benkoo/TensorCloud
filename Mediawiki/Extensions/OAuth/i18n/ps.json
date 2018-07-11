@@ -1,0 +1,34 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ahmed-Najib-Biabani-Ibrahimkhel",
+			"Baloch Khan"
+		]
+	},
+	"mwoauth-prefs-managegrants": "اړيکمن کاريالونه:",
+	"mwoauth-prefs-managegrantslink": "$1 {{PLURAL:$1|نښلېدلی کاريال|نښلېدلي کاريالونه}} مهارول",
+	"mwoauth-consumer-allwikis": "په دې ويبځي ټولې پروژې",
+	"mwoauth-consumer-name": "کاريال نوم:",
+	"mwoauth-consumer-user": "خپروونکی:",
+	"mwoauth-consumer-owner-only-label": "يوازې-خاوند:",
+	"mwoauthconsumerregistration-user": "خپروونکی",
+	"mwoauthconsumerregistration-description": "څرگندونه",
+	"mwoauthmanageconsumers-user": "خپروونکی",
+	"mwoauthmanageconsumers-description": "څرگندونه",
+	"oauthlistconsumers": "د OAuth کاريالونو لړليک",
+	"mwoauthlistconsumers-name": "کاريال نوم",
+	"mwoauthlistconsumers-user": "خپروونکی",
+	"mwoauthlistconsumers-description": "څرگندونه",
+	"mwoauthlistconsumers-status": "دريځ",
+	"oauthmanagemygrants": "نښلېدلي کاريالونه مهارول",
+	"mwoauthmanagemygrants-user": "خپروونکی:",
+	"mwoauthmanagemygrants-description": "څرگندونه",
+	"mwoauth-form-button-cancel": "ناگارل",
+	"grant-mwoauth-authonly": "يواځې د کارن د پېژندنې تصديق، د پاڼو د لوستلو توان نلري یا د کارن په استازیتوب عمل وکړي",
+	"grant-mwoauth-authonlyprivate": "د کارن د پېژندنې تصدیق یوازې د اصلي نوم او بریښناليک پواسطه، د پاڼو د لوستلو توان نلري یا د کارن په استازیتوب عمل وکړي.",
+	"notification-oauth-app-approve-primary-link": "کاريال کتل",
+	"notification-oauth-app-reject-primary-link": "کاريال کتل",
+	"notification-oauth-app-disable-primary-link": "کاريال کتل",
+	"notification-oauth-app-reenable-primary-link": "کاريال کتل",
+	"notification-oauth-app-body": "سبب: $1"
+}

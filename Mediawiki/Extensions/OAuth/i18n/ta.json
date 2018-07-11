@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kalyanasundar",
+			"ElangoRamanujam"
+		]
+	},
+	"notification-oauth-app-approve-primary-link": "செயலியைக் காண்",
+	"notification-oauth-app-reject-primary-link": "செயலியைக் காண்",
+	"notification-oauth-app-disable-primary-link": "செயலியைக் காண்",
+	"notification-oauth-app-reenable-primary-link": "செயலியைக் காண்",
+	"notification-oauth-app-body": "காரணம்: $1"
+}

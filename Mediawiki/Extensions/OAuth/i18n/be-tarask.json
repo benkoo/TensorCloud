@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Red Winged Duck"
+		]
+	},
+	"mwoauth-prefs-managegrants": "Падключаныя дадаткі:",
+	"mwoauth-prefs-managegrantslink": "Кіраваць $1 {{PLURAL:$1|падключаным дадаткам|падключанымі дадаткамі}}",
+	"mwoauth-consumer-name": "Назва праграмы:",
+	"mwoauth-consumer-stage": "Актуальны статус:",
+	"oauthlistconsumers": "Сьпіс праграмаў OAuth",
+	"mwoauthlistconsumers-legend": "Прагляд OAuth-праграмаў",
+	"oauthmanagemygrants": "Кіраваньне падключанымі праграмамі",
+	"mwoauthmanagemygrants-navigation": "Навігацыя:",
+	"mwoauthmanagemygrants-showlist": "Сьпіс падключаных праграмаў",
+	"mwoauthmanagemygrants-none": "Няма праграмаў, падключаных да вашага рахунку.",
+	"right-mwoauthproposeconsumer": "прапаноўваць новых спажыўцоў OAuth",
+	"right-mwoauthupdateownconsumer": "абнаўленьне кантраляваных вамі OAuth-дадаткаў",
+	"right-mwoauthmanagemygrants": "кіраваньне OAuth-дазволамі",
+	"action-mwoauthproposeconsumer": "прапанову новых спажыўцоў OAuth"
+}

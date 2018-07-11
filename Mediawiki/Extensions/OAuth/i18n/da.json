@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Sarrus",
+			"Knud Winckelmann"
+		]
+	},
+	"mwoauth-prefs-managegrants": "Forbundne apps:",
+	"mwoauth-prefs-managegrantslink": "Håndtér $1 {{PLURAL:$1|forbundet applikation|forbundne applikationer}}",
+	"oauthmanagemygrants": "Administrer forbundne applikationer",
+	"mwoauthmanagemygrants-confirm-legend": "Håndtér forbundet applikation"
+}

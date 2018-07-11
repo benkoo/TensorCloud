@@ -1,0 +1,38 @@
+{
+	"@metadata": {
+		"authors": [
+			"MaGa",
+			"Ex13",
+			"Bugoslav"
+		]
+	},
+	"mwoauth-prefs-managegrants": "Povezane aplikacije:",
+	"mwoauth-prefs-managegrantslink": "upravljaj s ukupno $1 {{PLURAL:$1|aplikacijom|aplikacije|aplikacija}}",
+	"mwoauth-consumer-allwikis": "svim projektima",
+	"oauthconsumerregistration": "Registracija trošača OAutha",
+	"mwoauthconsumerregistration-navigation": "Orijentacija:",
+	"oauthlistconsumers": "Popis OAuth aplikacija",
+	"mwoauthlistconsumers-none": "Nisu pronađene aplikacije prema zadnom kriteriju.",
+	"oauthmanagemygrants": "Upravljanje povezanim aplikacijama",
+	"mwoauthmanagemygrants-text": "Ovo je popis svih aplikacija koje možete koristiti s Vašim suradničkim računom. Opseg djelovanja svake aplikacije ograničen je dopuštenjima koja odobrite prilikom autorizacije. Ukoliko posebno definirate dopuštenja za svaki sestrinski projekt, vidjet ćete posebne konfiguracije za svaki projekt.\n\nPovezane aplikacije pristupaju Vašem suradničkom računu putem protokola OAuth. <span class=\"plainlinks\">([https://www.mediawiki.org/wiki/Special:MyLanguage/Help:OAuth Saznajte više o povezanim aplikacijama])</span>",
+	"mwoauthmanagemygrants-notloggedin": "Da biste pristupili ovoj stranici, morate biti prijavljeni.",
+	"mwoauthmanagemygrants-navigation": "Orijentacija:",
+	"mwoauthmanagemygrants-showlist": "Popis povezanih aplikacija",
+	"mwoauthmanagemygrants-none": "Nema aplikacija povezanih s Vašim računom.",
+	"mwoauthmanagemygrants-user": "Objavljivač:",
+	"mwoauthmanagemygrants-wikiallowed": "Dopušteno na:",
+	"mwoauthmanagemygrants-applicablegrantsallowed": "Moguće dopustiti sljedeća prava:",
+	"mwoauthmanagemygrants-review": "upravljaj pristupom",
+	"mwoauthmanagemygrants-revoke": "opozovi pristup",
+	"mwoauthmanagemygrants-grantaccept": "Odobreno",
+	"mwoauthmanagemygrants-update-text": "Koristite donji obrazac za promjenu dopuštenja koja su odobrena aplikaciji.",
+	"mwoauthmanagemygrants-revoke-text": "Koristite donji obrazac za opoziv pristupa aplikacije.",
+	"mwoauthmanagemygrants-confirm-legend": "Upravljaj povezanom aplikacijom",
+	"mwoauthmanagemygrants-update": "Ažuriraj odobrenja",
+	"mwoauthmanagemygrants-renounce": "Poništi autorizaciju",
+	"mwoauthmanagemygrants-success-update": "Vaše postavke ove aplikacije su ažurirane.",
+	"mwoauthmanagemygrants-basic-tooltip": "Zašto ne mogu promijeniti ovo odobrenje? Ono omogućava povezanoj aplikaciji osnovno dopuštenje koje je nužno za njeno djelovanje. Ako ne želite da aplikacija ima ova dopuštenja, opozovite prava pristupa aplikacije.",
+	"mwoauth-form-button-approve": "Dopusti",
+	"mwoauth-form-button-cancel": "Odustani",
+	"echo-category-title-oauth-owner": "Razvoj OAutha"
+}

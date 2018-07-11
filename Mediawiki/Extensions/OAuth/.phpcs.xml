@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<ruleset>
+	<rule ref="./vendor/mediawiki/mediawiki-codesniffer/MediaWiki">
+		<exclude name="Generic.Files.OneObjectStructurePerFile.MultipleFound" />
+		<exclude name="MediaWiki.Commenting.FunctionComment.MissingDocumentationPublic" />
+		<exclude name="MediaWiki.Commenting.FunctionComment.MissingDocumentationProtected"/>
+		<exclude name="MediaWiki.Commenting.MissingCovers.MissingCovers" />
+		<exclude name="Squiz.Classes.ValidClassName.NotCamelCaps" />
+		<exclude name="Squiz.Scope.MethodScope.Missing" />
+		<exclude name="MediaWiki.NamingConventions.LowerCamelFunctionsName.FunctionName"/>
+		<exclude name="MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.NewLineComment"/>
+		<exclude name="MediaWiki.ControlStructures.AssignmentInControlStructures.AssignmentInControlStructures" />
+		<exclude name="MediaWiki.Files.ClassMatchesFilename.NotMatch" />
+		<exclude name="MediaWiki.Usage.ExtendClassUsage.FunctionVarUsage"/>
+	</rule>
+	<file>.</file>
+	<arg name="extensions" value="php,php5,inc"/>
+	<arg name="encoding" value="UTF-8"/>
+	<exclude-pattern type="relative">^lib/</exclude-pattern>
+	<exclude-pattern type="relative">^tests/phpunit/lib/</exclude-pattern>
+</ruleset>

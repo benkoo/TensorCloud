@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Anakmalaysia"
+		]
+	},
+	"mwoauth-desc": "Kelulusan OAuth 1.0a API",
+	"mwoauth-verified": "Aplikasi ini kini dibenarkan untuk mengakses MediaWiki bagi pihak anda.\n\nUntuk melengkapkan proses ini, berikan nilai penentusahan ini kepada aplikasi: '''$1'''",
+	"mwoauth-missing-field": "Nilai tertinggal untuk ruangan \"$1\"",
+	"mwoauth-invalid-field": "Nilai yang diberikan tidak sah untuk ruangan \"$1\"",
+	"mwoauth-invalid-field-generic": "Nilai yang diberikan tidak sah",
+	"mwoauth-field-hidden": "(maklumat ini tersembunyi)",
+	"mwoauth-field-private": "(maklumat ini adalah peribadi)",
+	"mwoauth-tag-reserved": "Teg-teg yang berawalan <code>OAuth CID:</code> adalah untuk kegunaan OAuth sahaja."
+}

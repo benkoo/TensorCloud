@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"MokaAkashiyaPT",
+			"Athena in Wonderland"
+		]
+	},
+	"mwoauth-prefs-managegrants": "Aplicaçones lhigadas:",
+	"mwoauth-prefs-managegrantslink": "Gerir $1 {{PLURAL:$1|aplicaçon lhigada|aplicaçones lhigadas}}",
+	"mwoauth-consumer-stage-disabled": "zatibado",
+	"mwoauthmanageconsumers-disable": "Zatibado",
+	"oauthlistconsumers": "Aplicaçones OAuth",
+	"mwoauthlistconsumers-status-disabled": "zatibado",
+	"oauthmanagemygrants": "Admenistrar aplicaçones lhigadas"
+}

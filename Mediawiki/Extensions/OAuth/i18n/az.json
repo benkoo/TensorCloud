@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Serkanland",
+			"Wertuose"
+		]
+	},
+	"mwoauth-missing-field": "\"$1\" üçün heç bir göstərici qeyd edilməyib",
+	"mwoauth-invalid-field": "\"$1\" üçün yanlış göstərici daxil etmisiniz",
+	"mwoauth-invalid-field-generic": "Yanlış göstərici daxil etmisiniz",
+	"mwoauth-field-hidden": "(bu məlumat gizlədilib)",
+	"mwoauth-field-private": "(bu məlumat konfidensialdır)",
+	"mwoauth-prefs-managegrants": "Əlaqələndirilmiş tətbiqlər:",
+	"mwoauth-consumer-stage-disabled": "söndürülüb",
+	"mwoauthconsumerregistration-stage": "Vəziyyəti",
+	"mwoauthconsumerregistration-lastchange": "Son redaktə",
+	"mwoauthconsumerregistration-manage": "idarəetmə",
+	"mwoauthconsumerregistration-resetsecretkey": "Gizli açarı sıfırlayıb, yenisini təyin et",
+	"mwoauthmanageconsumers-disable": "Söndürülüb",
+	"mwoauthlistconsumers-status-disabled": "söndürülüb"
+}

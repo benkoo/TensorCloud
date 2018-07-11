@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Gitartha.bordoloi"
+		]
+	},
+	"mwoauth-prefs-managegrantslink": "সংযুক্ত $1 {{PLURAL:$1|এপ্লিকেছনৰ|এপ্লিকেছনসমূহৰ}} পৰিচালনা কৰক",
+	"oauthmanagemygrants": "সংযোজিত এপ্লিকেছনসমূহৰ ব্যৱস্থাপনা কৰক"
+}

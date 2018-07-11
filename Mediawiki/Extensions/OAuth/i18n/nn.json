@@ -1,0 +1,41 @@
+{
+	"@metadata": {
+		"authors": [
+			"Njardarlogar"
+		]
+	},
+	"mwoauth-prefs-managegrants": "Tilkopla småprogram:",
+	"mwoauth-prefs-managegrantslink": "Handsam {{PLURAL:$1|eitt tilkopla småprogram|$1 tilkopla småprogram}}",
+	"mwoauth-consumer-allwikis": "Alle prosjekta på denne nettstaden",
+	"mwoauth-consumer-name": "Programnamn:",
+	"mwoauth-consumer-user": "Utgjevar:",
+	"mwoauth-consumer-description": "Programskildring:",
+	"mwoauth-consumer-stage-proposed": "framlagd",
+	"mwoauth-consumer-stage-approved": "godkjent",
+	"mwoauthconsumerregistration-user": "Utgjevar",
+	"mwoauthconsumerregistration-manage": "handsam",
+	"mwoauthmanageconsumers-user": "Utgjevar",
+	"oauthlistconsumers": "List opp OAuth-småprogram",
+	"mwoauthlistconsumers-legend": "Bla gjennom OAuth-småprogram",
+	"mwoauthlistconsumers-view": "detaljar",
+	"mwoauthlistconsumers-name": "Programnamn:",
+	"mwoauthlistconsumers-user": "Utgjevar",
+	"mwoauthlistconsumers-description": "Skildring",
+	"mwoauthlistconsumers-wiki": "For prosjekt",
+	"mwoauthlistconsumers-grants": "For løyve",
+	"oauthmanagemygrants": "Handsam tilkopla småprogram",
+	"mwoauthmanagemygrants-showlist": "Liste over tilkopla småprogram",
+	"mwoauthmanagemygrants-none": "Det finst ingen småprogram knytte til kontoen din.",
+	"mwoauthmanagemygrants-user": "Utgjevar:",
+	"mwoauthmanagemygrants-description": "Skildring",
+	"mwoauthmanagemygrants-wikiallowed": "Tillate på prosjekt:",
+	"mwoauthmanagemygrants-applicablegrantsallowed": "Mogelege løyve:",
+	"mwoauthmanagemygrants-review": "handsam tilgang",
+	"mwoauthmanagemygrants-revoke": "ta frå tilgang",
+	"mwoauthmanagemygrants-grantaccept": "Gjeve",
+	"mwoauthmanagemygrants-update-text": "Nytt skjemaet under for å endra løyva gjevne til eit småprogram for å handla på dine vegner.",
+	"mwoauthmanagemygrants-confirm-legend": "Handsam tilkopla småprogram",
+	"mwoauthmanagemygrants-update": "Oppdater løyve",
+	"mwoauth-form-description-allwikis": "Hei $1,\n\nfor å fullføra førespurnaden treng '''$2''' løyve til å utføra desse handlingane på dine vegner på alle prosjekta på denne nettstaden:\n\n$4",
+	"mwoauth-form-description-onewiki": "Hei $1,\n\nfor å fullføra førespurnaden treng '''$2''' løyve til å utføra desse handlingane på dine vegner på ''$4'':\n\n$5"
+}

@@ -155,16 +155,25 @@ $wgGroupPermissions['*']['createaccount'] = true;
 
 require_once "$IP/extensions/OAuthLogin/OAuthLogin.php"; 
 
-# Phabricator OAuth 
+#OAuthClient 4 remix.zone
+#https://www.mediawiki.org/wiki/Manual:$wgInvalidUsernameCharacters
+$wgInvalidUsernameCharacters = '';
 wfLoadExtension( 'MW-OAuth2Client' );
 
-$wgOAuth2Client['client']['id']     = ''; // The client ID assigned to you by the provider
-$wgOAuth2Client['client']['secret'] = ''; // The client secret assigned to you by the provider
+$wgOAuth2Client['client']['id']     = 'lcpcN3RTTdhhY1DLYH2L93tJ8UgUko6FAwSozJhs'; // The client ID assigned to you by the provider
+$wgOAuth2Client['client']['secret'] = 'XyKWznIy4KkdONXWIdQ2BXIctBA3lSwiqge0DXzI'; // The client secret assigned to you by the provider
 
-$wgOAuth2Client['configuration']['authorize_endpoint']     = 'http://127.0.0.1:86/oauthserver/auth/'; // Authorization URL
-$wgOAuth2Client['configuration']['access_token_endpoint']  = 'http://127.0.0.1:86/oauthserver/token/'; // Token URL
-$wgOAuth2Client['configuration']['api_endpoint']           = 'http://127.0.0.1:86/api/user.whoami?access_token=ktxejl7z5v3bjabc3qbki7zkrgeqq45k'; // URL to fetch user JSON
-$wgOAuth2Client['configuration']['redirect_uri']           = 'http://127.0.0.1/Special:OAuth2Client/callback'; // URL for OAuth2 server to redirect to
+$wgOAuth2Client['configuration']['authorize_endpoint']     = 'http://remix.zone/oauth/authorize/'; // Authorization URL
+$wgOAuth2Client['configuration']['access_token_endpoint']  = 'http://remix.zone/oauth/token/'; // Token URL
+$wgOAuth2Client['configuration']['api_endpoint']           = 'http://remix.zone/oauth/me';//access_token=7cooy2jwgvzn5wbn6uiz27tszsf3zcjj'; // URL to fetch user JSON
+$wgOAuth2Client['configuration']['redirect_uri']           = 'http://remix.digital/index.php/Special:OAuth2Client/callback'; // URL for OAuth2 server to redirect to, "http://localhost:8080/login/phabricator"
 
-$wgOAuth2Client['configuration']['username'] = 'username'; // JSON path to username
-$wgOAuth2Client['configuration']['email'] = 'email'; // JSON path to email
+$wgOAuth2Client['configuration']['username'] = 'user_login'; // JSON path to username
+$wgOAuth2Client['configuration']['email'] = 'user_email'; // JSON path to email
+
+$wgOAuth2Client['configuration']['http_bearer_token'] = 'Bearer'; // Token to use in HTTP Authentication
+$wgOAuth2Client['configuration']['query_parameter_token'] = 'access_token'; // query parameter to use
+//$wgOAuth2Client['configuration']['scopes'] = 'read_citizen_info'; //Permissions
+
+$wgOAuth2Client['configuration']['service_name'] = 'RemixZone Registry'; // the name of your service
+$wgOAuth2Client['configuration']['service_login_link_text'] = 'OAuth2Login'; // the text of the login link

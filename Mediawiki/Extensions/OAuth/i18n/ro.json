@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Minisarm",
+			"XXN",
+			"Rsocol"
+		]
+	},
+	"mwoauth-prefs-managegrants": "Aplicații conectate:",
+	"mwoauth-prefs-managegrantslink": "Administrează {{PLURAL:$1|$1 aplicație conectată|$1 aplicații conectate|$1 de aplicații conectate}}",
+	"oauthmanagemygrants": "Administrare aplicații conectate",
+	"mwoauthmanagemygrants-text": "Această pagină afișează toate aplicațiile care pot folosi contul dumneavoastră. Pentru fiecare astfel de aplicație, accesul este limitat de permisiunile pe care le-ați acordat aplicației atunci când ați autorizat-o să acționeze în numele dumneavoastră. Dacă ați autorizat separat o aplicație să acceseze anumite proiecte în numele dumneavoastră, veți vedea mai jos configurări separate pentru fiecare proiect.\n\nAplicațiile conectate accesează contul dumneavoastră folosind protocolul OAuth. <span class=\"plainlinks\">([https://www.mediawiki.org/wiki/Special:MyLanguage/Help:OAuth Aflați mai multe despre aplicații conectate])</span>"
+}

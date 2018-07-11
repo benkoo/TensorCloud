@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Drashti4"
+		]
+	},
+	"mwoauth-desc": "API અધિકૃતિ માટે OAuth 1.0a નો ઉપયોગ કરવાની મંજૂરી આપે છે",
+	"mwoauth-verified": "એપ્લિકેશનને હવે તમારા વતી મીડિયાવિકિને એક્સેસ કરવાની મંજૂરી છે.\n\nપ્રક્રિયા પૂર્ણ કરવા માટે, એપ્લિકેશનમાં આ ચકાસણી મૂલ્ય પ્રદાન કરો:  '''$1'''",
+	"mwoauth-db-readonly": "OAuth ડેટાબેસ અસ્થાયી રૂપે લૉક કરેલું છે. કૃપા કરીને થોડીવારમાં ફરી પ્રયાસ કરો.",
+	"mwoauth-missing-field": "\"$1\" ફીલ્ડ માટે ખૂટેલું મૂલ્ય",
+	"mwoauth-invalid-field": "\"$1\" ફીલ્ડ માટે અમાન્ય મૂલ્ય પ્રદાન કરેલું છે",
+	"mwoauth-invalid-field-generic": "અમાન્ય મૂલ્ય પ્રદાન કરેલ",
+	"mwoauth-field-hidden": "(આ માહિતી છુપાયેલ છે)",
+	"mwoauth-field-private": "(આ માહિતી ખાનગી છે)",
+	"mwoauth-prefs-managegrants": "જોડાણ કરેલ એપ્લિકેશનો:",
+	"mwoauth-prefs-managegrantslink": "જોડાણ $1 સંચાલન {{PLURAL:$1|એપ્લિકેશન|કાર્યક્રમો}}",
+	"mwoauth-consumer-allwikis": "આ સાઇટ પરના બધા પ્રોજેક્ટ્સ",
+	"mwoauth-consumer-key": "ઉપભોક્તા ચાવી:",
+	"mwoauth-consumer-name": "એપ્લિકેશનનું નામ"
+}

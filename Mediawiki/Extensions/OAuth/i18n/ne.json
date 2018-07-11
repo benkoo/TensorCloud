@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"Nirjal stha",
+			"NehalDaveND",
+			"राम प्रसाद जोशी",
+			"सरोज कुमार ढकाल"
+		]
+	},
+	"mwoauth-consumer-granttypes": "निवेदन गरिएको अनुदानको प्रकारः",
+	"mwoauth-consumer-reason": "कारण:",
+	"mwoauth-consumer-email-unconfirmed": "तपाईंको खातामा इमेल ठेगाना प्रमाणित भएको छैन ।",
+	"mwoauthconsumerregistration-main": "मुख्य",
+	"mwoauthconsumerregistration-stage": "स्थिति",
+	"mwoauthmanageconsumers-main": "मुख्य",
+	"mwoauthmanageconsumers-description": "विवरण",
+	"mwoauthmanageconsumers-reason": "कारण:",
+	"mwoauthlistconsumers-view": "विवरणहरू",
+	"mwoauthlistconsumers-status": "स्थिति",
+	"mwoauthmanagemygrants-description": "विवरण",
+	"mwoauth-form-button-cancel": "रद्द गर्ने",
+	"mwoauth-granttype-normal": "विशेष अनुमति अधिकारको लागि निवेदन गर्नुहोस् ।"
+}

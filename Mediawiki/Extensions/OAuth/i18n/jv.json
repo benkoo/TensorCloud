@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"NoiX180"
+		]
+	},
+	"mwoauth-prefs-managegrants": "Aplikasi sing nggayut:",
+	"mwoauth-prefs-managegrantslink": "Kemunah aplikasi cacah $1 sing nggayut",
+	"oauthmanagemygrants": "Kemunah aplikasi sing nggayut",
+	"mwoauthmanagemygrants-confirm-legend": "Kemunah aplikasi sing nggayut"
+}

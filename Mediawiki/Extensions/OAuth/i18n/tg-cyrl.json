@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"ToJack"
+		]
+	},
+	"mwoauth-prefs-managegrants": "Барномаҳои фаъол:",
+	"mwoauth-consumer-name": "Номи барнома:",
+	"mwoauth-consumer-description": "Тавзеҳоти барнома:",
+	"mwoauthlistconsumers-name": "Номи барнома",
+	"mwoauthmanagemygrants-success-update": "Танзимоти ин барнома азнавсозӣ шудаанд."
+}

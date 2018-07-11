@@ -1,0 +1,168 @@
+{
+	"name": "OAuth",
+	"author": [
+		"Aaron Schulz",
+		"Chris Steipp",
+		"Brad Jorsch"
+	],
+	"url": "https://www.mediawiki.org/wiki/Extension:OAuth",
+	"descriptionmsg": "mwoauth-desc",
+	"license-name": "GPL-2.0-or-later",
+	"type": "other",
+	"requires": {
+		"MediaWiki": ">= 1.29.0"
+	},
+	"callback": "MediaWiki\\Extensions\\OAuth\\MWOAuthHooks::onExtensionRegistration",
+	"ExtensionFunctions": [
+		"MediaWiki\\Extensions\\OAuth\\MWOAuthHooks::onExtensionFunctions"
+	],
+	"DefaultUserOptions": {
+		"echo-subscriptions-web-oauth-owner": true,
+		"echo-subscriptions-email-oauth-owner": true,
+		"echo-subscriptions-web-oauth-admin": true,
+		"echo-subscriptions-email-oauth-admin": true
+	},
+	"GroupPermissions": {
+		"user": {
+			"mwoauthmanagemygrants": true
+		}
+	},
+	"AvailableRights": [
+		"mwoauthproposeconsumer",
+		"mwoauthupdateownconsumer",
+		"mwoauthmanageconsumer",
+		"mwoauthsuppress",
+		"mwoauthviewsuppressed",
+		"mwoauthviewprivate",
+		"mwoauthmanagemygrants"
+	],
+	"SpecialPages": {
+		"OAuth": "MediaWiki\\Extensions\\OAuth\\SpecialMWOAuth",
+		"OAuthManageMyGrants": "MediaWiki\\Extensions\\OAuth\\SpecialMWOAuthManageMyGrants",
+		"OAuthListConsumers": "MediaWiki\\Extensions\\OAuth\\SpecialMWOAuthListConsumers"
+	},
+	"MessagesDirs": {
+		"MWOAuth": [
+			"i18n"
+		]
+	},
+	"ExtensionMessagesFiles": {
+		"MWOAuthAliases": "frontend/language/MWOAuth.alias.php"
+	},
+	"AutoloadClasses": {
+		"MediaWiki\\Extensions\\OAuth\\MWOAuthAPISetup": "api/MWOAuthAPI.setup.php",
+		"MediaWiki\\Extensions\\OAuth\\MWOAuthUISetup": "frontend/MWOAuthUI.setup.php",
+		"MediaWiki\\Extensions\\OAuth\\MWOAuthUIHooks": "frontend/MWOAuthUI.hooks.php",
+		"MediaWiki\\Extensions\\OAuth\\MWOAuthHooks": "backend/MWOAuth.hooks.php",
+		"MediaWiki\\Extensions\\OAuth\\SpecialMWOAuth": "frontend/specialpages/SpecialMWOAuth.php",
+		"MediaWiki\\Extensions\\OAuth\\SpecialMWOAuthConsumerRegistration": "frontend/specialpages/SpecialMWOAuthConsumerRegistration.php",
+		"MediaWiki\\Extensions\\OAuth\\MWOAuthListMyConsumersPager": "frontend/specialpages/SpecialMWOAuthConsumerRegistration.php",
+		"MediaWiki\\Extensions\\OAuth\\SpecialMWOAuthManageConsumers": "frontend/specialpages/SpecialMWOAuthManageConsumers.php",
+		"MediaWiki\\Extensions\\OAuth\\MWOAuthManageConsumersPager": "frontend/specialpages/SpecialMWOAuthManageConsumers.php",
+		"MediaWiki\\Extensions\\OAuth\\SpecialMWOAuthManageMyGrants": "frontend/specialpages/SpecialMWOAuthManageMyGrants.php",
+		"MediaWiki\\Extensions\\OAuth\\MWOAuthManageMyGrantsPager": "frontend/specialpages/SpecialMWOAuthManageMyGrants.php",
+		"MediaWiki\\Extensions\\OAuth\\SpecialMWOAuthListConsumers": "frontend/specialpages/SpecialMWOAuthListConsumers.php",
+		"MediaWiki\\Extensions\\OAuth\\MWOAuthListConsumersPager": "frontend/specialpages/SpecialMWOAuthListConsumers.php",
+		"MediaWiki\\Extensions\\OAuth\\MWOAuthUIUtils": "frontend/MWOAuthUIUtils.php",
+		"MediaWiki\\Extensions\\OAuth\\MWOAuthLogFormatter": "frontend/MWOAuthLogFormatter.php",
+		"MediaWiki\\Extensions\\OAuth\\MWOAuthUtils": "backend/MWOAuthUtils.php",
+		"MediaWiki\\Extensions\\OAuth\\MWOAuthException": "backend/MWOAuthException.php",
+		"MediaWiki\\Extensions\\OAuth\\MWOAuthDAO": "backend/MWOAuthDAO.php",
+		"MediaWiki\\Extensions\\OAuth\\MWOAuthToken": "backend/MWOAuthToken.php",
+		"MediaWiki\\Extensions\\OAuth\\MWOAuthConsumer": "backend/MWOAuthConsumer.php",
+		"MediaWiki\\Extensions\\OAuth\\MWOAuthConsumerAcceptance": "backend/MWOAuthConsumerAcceptance.php",
+		"MediaWiki\\Extensions\\OAuth\\MWOAuthRequest": "backend/MWOAuthRequest.php",
+		"MediaWiki\\Extensions\\OAuth\\MWOAuthDAOAccessControl": "control/MWOAuthDAOAccessControl.php",
+		"MediaWiki\\Extensions\\OAuth\\MWOAuthSubmitControl": "control/MWOAuthSubmitControl.php",
+		"MediaWiki\\Extensions\\OAuth\\MWOAuthConsumerSubmitControl": "control/MWOAuthConsumerSubmitControl.php",
+		"MediaWiki\\Extensions\\OAuth\\MWOAuthConsumerAcceptanceSubmitControl": "control/MWOAuthConsumerAcceptanceSubmitControl.php",
+		"MediaWiki\\Extensions\\OAuth\\MWOAuthServer": "backend/MWOAuthServer.php",
+		"MediaWiki\\Extensions\\OAuth\\MWOAuthSignatureMethod_RSA_SHA1": "backend/MWOAuthSignatureMethod.php",
+		"MediaWiki\\Extensions\\OAuth\\EchoOAuthStageChangePresentationModel": "frontend/EchoOAuthStageChangePresentationModel.php",
+		"MediaWiki\\Extensions\\OAuth\\OAuthException": "lib/OAuth.php",
+		"MediaWiki\\Extensions\\OAuth\\OAuthConsumer": "lib/OAuth.php",
+		"MediaWiki\\Extensions\\OAuth\\OAuthToken": "lib/OAuth.php",
+		"MediaWiki\\Extensions\\OAuth\\OAuthSignatureMethod": "lib/OAuth.php",
+		"MediaWiki\\Extensions\\OAuth\\OAuthSignatureMethod_HMAC_SHA1": "lib/OAuth.php",
+		"MediaWiki\\Extensions\\OAuth\\OAuthSignatureMethod_PLAINTEXT": "lib/OAuth.php",
+		"MediaWiki\\Extensions\\OAuth\\OAuthSignatureMethod_RSA_SHA1": "lib/OAuth.php",
+		"MediaWiki\\Extensions\\OAuth\\OAuthRequest": "lib/OAuth.php",
+		"MediaWiki\\Extensions\\OAuth\\OAuthServer": "lib/OAuth.php",
+		"MediaWiki\\Extensions\\OAuth\\OAuthDataStore": "lib/OAuth.php",
+		"MediaWiki\\Extensions\\OAuth\\OAuthUtil": "lib/OAuth.php",
+		"MediaWiki\\Extensions\\OAuth\\MWOAuthDataStore": "backend/MWOAuthDataStore.php",
+		"MediaWiki\\Extensions\\OAuth\\MWOAuthUpdaterHooks": "backend/schema/MWOAuthUpdater.hooks.php",
+		"MediaWiki\\Extensions\\OAuth\\MWOAuthSessionProvider": "api/MWOAuthSessionProvider.php"
+	},
+	"ResourceModules": {
+		"ext.MWOAuth.BasicStyles": {
+			"styles": [
+				"ext.MWOAuth.BasicStyles.css"
+			]
+		},
+		"ext.MWOAuth.AuthorizeForm": {
+			"styles": [
+				"ext.MWOAuth.AuthorizeForm.css"
+			]
+		},
+		"ext.MWOAuth.AuthorizeDialog": {
+			"scripts": [
+				"ext.MWOAuth.AuthorizeDialog.js"
+			],
+			"dependencies": [
+				"jquery.ui.dialog"
+			],
+			"messages": [
+				"mwoauth-desc"
+			]
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "frontend/modules",
+		"remoteExtPath": "OAuth/frontend/modules"
+	},
+	"Hooks": {
+		"ChangeTagCanCreate": "MediaWiki\\Extensions\\OAuth\\MWOAuthHooks::onChangeTagCanCreate",
+		"MergeAccountFromTo": "MediaWiki\\Extensions\\OAuth\\MWOAuthHooks::onMergeAccountFromTo",
+		"CentralAuthGlobalUserMerged": "MediaWiki\\Extensions\\OAuth\\MWOAuthHooks::onCentralAuthGlobalUserMerged",
+		"LoadExtensionSchemaUpdates": "MediaWiki\\Extensions\\OAuth\\MWOAuthUpdaterHooks::addSchemaUpdates",
+		"GetPreferences": "MediaWiki\\Extensions\\OAuth\\MWOAuthUIHooks::onGetPreferences",
+		"MessagesPreLoad": "MediaWiki\\Extensions\\OAuth\\MWOAuthUIHooks::onMessagesPreLoad",
+		"SpecialPageAfterExecute": "MediaWiki\\Extensions\\OAuth\\MWOAuthUIHooks::onSpecialPageAfterExecute",
+		"SpecialPageBeforeFormDisplay": "MediaWiki\\Extensions\\OAuth\\MWOAuthUIHooks::onSpecialPageBeforeFormDisplay",
+		"BeforeCreateEchoEvent": "MediaWiki\\Extensions\\OAuth\\MWOAuthUIHooks::onBeforeCreateEchoEvent",
+		"CentralAuthAbortCentralAuthToken": "MediaWiki\\Extensions\\OAuth\\MWOAuthAPISetup::onCentralAuthAbortCentralAuthToken",
+		"TestCanonicalRedirect": "MediaWiki\\Extensions\\OAuth\\MWOAuthAPISetup::onTestCanonicalRedirect",
+		"SetupAfterCache": "MediaWiki\\Extensions\\OAuth\\MWOAuthHooks::onSetupAfterCache",
+		"ApiRsdServiceApis": "MediaWiki\\Extensions\\OAuth\\MWOAuthHooks::onApiRsdServiceApis",
+		"SpecialPage_initList": "MediaWiki\\Extensions\\OAuth\\MWOAuthUIHooks::onSpecialPage_initList"
+	},
+	"config": {
+		"MWOAuthCentralWiki": {
+			"value": false
+		},
+		"MWOAuthSharedUserIDs": {
+			"value": false
+		},
+		"MWOAuthSharedUserSource": {
+			"value": null
+		},
+		"MWOAuthRequestExpirationAge": {
+			"value": 2592000
+		},
+		"MWOAuthSecureTokenTransfer": {
+			"value": true
+		},
+		"MWOauthDisabledApiModules": {
+			"value": []
+		},
+		"MWOAuthReadOnly": {
+			"value": false
+		},
+		"OAuthGroupsToNotify": {
+			"value": []
+		}
+	},
+	"load_composer_autoloader": true,
+	"manifest_version": 2
+}

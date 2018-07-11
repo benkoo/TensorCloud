@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"Pginer",
+			"Fitoschido"
+		]
+	},
+	"mwoauth-prefs-managegrants": "Aplicacions connectades:",
+	"mwoauth-prefs-managegrantslink": "Gestiona $1 {{PLURAL:$1|aplicació connectada|aplicacions connectades}}",
+	"mwoauth-consumer-allwikis": "Tots els projectes d’aquest lloc",
+	"mwoauth-consumer-name": "Nom de l’aplicació:",
+	"mwoauthconsumerregistration-navigation": "Navegació:",
+	"mwoauthconsumerregistration-description": "Descripció",
+	"mwoauthconsumerregistration-stage": "Estat",
+	"mwoauthconsumerregistration-manage": "gestiona",
+	"mwoauthmanageconsumers-description": "Descripció",
+	"mwoauthlistconsumers-view": "detalls",
+	"oauthmanagemygrants": "Gestió d’aplicacions connectades",
+	"mwoauthmanagemygrants-navigation": "Navegació:",
+	"mwoauthmanagemygrants-description": "Descripció",
+	"mwoauthdatastore-bad-source-ip": "La sol·licitud provenia d’una adreça IP no vàlida.",
+	"notification-oauth-app-body": "Motiu: $1"
+}

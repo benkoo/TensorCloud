@@ -1,0 +1,27 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kusavica",
+			"Sudo77(new)",
+			"Teslaton"
+		]
+	},
+	"mwoauth-prefs-managegrants": "Pripojené aplikácie:",
+	"mwoauth-prefs-managegrantslink": "Spravovať $1 {{PLURAL:$1|pripojenú aplikáciu|pripojené aplikácie|pripojených aplikácií}}",
+	"mwoauth-consumer-allwikis": "Všetky projekty na tomto webe",
+	"mwoauth-consumer-user": "Vydavateľ:",
+	"mwoauth-consumer-grantshelp": "Každé oprávnenie prideľuje prístup k uvedeným používateľským právam, ktoré príslušný používateľský účet už má. Viac informácií nájdete v [[Special:ListGrants|tabuľke oprávnení]].",
+	"mwoauthconsumerregistration-navigation": "Navigácia:",
+	"oauthlistconsumers": "Zoznam aplikácií OAuth",
+	"oauthmanagemygrants": "Spravovanie pripojených aplikácií",
+	"mwoauthmanagemygrants-text": "Táto stránka obsahuje zoznam aplikácií, ktoré môžu využívať váš účet. Každá z aplikácii má rozsah prístupu obmedzený oprávneniami, ktoré ste aplikácii {{GENDER:|pridelil|pridelila|pridelili}} v okamihu, keď ste jej {{GENDER:|dovolil|dovolila|dovolili}} konať vo vašom mene. Ak ste aplikácii {{GENDER:|dovolil|dovolila|dovolili}} konať vo vašom mene nezávisle na rôznych sesterských projektoch, uvidíte nižšie oddelené konfigurácie pre každý taký projekt.\n\nPripojené aplikácie pristupujú k vášmu účtu pomocou protokolu OAuth. <span class=\"plainlinks\">([https://www.mediawiki.org/wiki/Special:MyLanguage/Help:OAuth?uselang=sk Viac informácií o pripojených aplikáciách])</span>",
+	"mwoauthmanagemygrants-navigation": "Navigácia:",
+	"mwoauthmanagemygrants-showlist": "Zoznam pripojených aplikácií",
+	"mwoauthmanagemygrants-wikiallowed": "Povolené na projekte:",
+	"mwoauthmanagemygrants-review": "spravovať prístup",
+	"mwoauthmanagemygrants-revoke": "odobrať prístup",
+	"mwoauthmanagemygrants-update-text": "Pomocou nižšie zobrazeného formulára môžete zmeniť oprávnenie pridelené aplikácii, aby mohla konať vo vašom mene.",
+	"mwoauthmanagemygrants-revoke-text": "Pomocou nižšie zobrazeného formulára môžete odvolať oprávnenie aplikácii konať vo vašom mene.",
+	"mwoauth-form-button-approve": "Povoliť",
+	"mwoauth-form-button-cancel": "Zrušiť"
+}

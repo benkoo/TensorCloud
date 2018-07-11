@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Naudefj"
+		]
+	},
+	"mwoauth-prefs-managegrantslink": "Bestuur $1 gekoppelde {{PLURAL:$1|toepassing|toepassings}}",
+	"oauthlistconsumers": "Lys van OAuth-toepassings",
+	"oauthmanagemygrants": "Beheer gekoppelde toepassings",
+	"mwoauthmanagemygrants-confirm-legend": "Bestuur gekoppelde toepassing"
+}

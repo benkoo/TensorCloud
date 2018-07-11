@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hugo.arg",
+			"Eitvys200",
+			"Homo",
+			"Manvydasz"
+		]
+	},
+	"mwoauth-desc": "Leidžia naudoti OAuth 1.0a API autorizacijai",
+	"mwoauth-prefs-managegrants": "Susieti programiniai įskiepiai:",
+	"mwoauth-prefs-managegrantslink": "Tvarkyti $1 {{PLURAL:$1|susietą programinį įskiepį|susietus programinius įskiepius|susietų programinių įskiepių}}",
+	"oauthmanagemygrants": "Tvarkyti susietas programas",
+	"mwoauth-form-description-allwikis-nogrants": "Sveiki $1,\n\nNorėdami įvykdyti jūsų prašymą, '''$2''' reikia leidimo pasiekti informaciją visuose šio puslapio projektuose jūsų vardu. Tai nepaveiks jūsų paskyros.",
+	"echo-pref-tooltip-oauth-owner": "Pranešti man apie įvykius, susijusius su OAuth paraiškomis, kurias aš sukūriau.",
+	"echo-pref-tooltip-oauth-admin": "Pranešti man apie įvykius, susijusius su OAuth paraiškų peržiūromis.",
+	"notification-oauth-app-body": "Priežastis: $1"
+}

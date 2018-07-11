@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Shirayuki"
+		]
+	},
+	"mwoauth-desc": "Allows usage of OAuth 1.0a for API authorisation",
+	"mwoauthconsumerregistration-propose-text": "Developers should use the form below to propose a new OAuth consumer (see the [//www.mediawiki.org/wiki/Extension:OAuth extension documentation] for more details). After submitting this form, you will receive a token that your application will use to identify itself to MediaWiki. An OAuth administrator will need to approve your application before it can be authorised by other users.\n\nA few recommendations and remarks:\n* Try to use as few grants as possible. Avoid grants that are not actually needed now.\n* Versions are of the form \"major.minor.release\" (the last two being optional) and increase as grant changes are needed.\n* Please provide a public RSA key (in PEM format) if possible; otherwise a (less secure) secret token will have to be used.\n* Use the JSON restrictions field to limit access of this consumer to IP addresses in those CIDR ranges.\n* You can use a project ID to restrict the consumer to a single project on this site (use \"*\" for all projects).\n* The email address provided must match that of your account (which must have been confirmed).",
+	"mwoauthmanagemygrants-text": "This page lists any applications that can use your account. For any such application, the scope of its access is limited by the permissions that you granted to the application when you authorised it to act on your behalf. If you separately authorised an application to access different \"sister\" projects on your behalf, then you will see separate configuration for each such project below.\n\nConnected applications access your account by using the OAuth protocol. <span class=\"plainlinks\">([https://www.mediawiki.org/wiki/Special:MyLanguage/Help:OAuth Learn more about connected applications])</span>",
+	"mwoauthmanagemygrants-renounce": "Deauthorise",
+	"mwoauthdatastore-access-token-not-found": "No approved grant was found for that authorisation token",
+	"mwoauth-invalid-authorization-title": "OAuth authorisation error",
+	"mwoauth-invalid-authorization": "The authorisation headers in your request are not valid: $1",
+	"mwoauth-invalid-authorization-wrong-wiki": "The authorisation headers in your request are not valid for $1",
+	"mwoauth-invalid-authorization-invalid-user": "The authorisation headers in your request are for a user that does not exist here",
+	"mwoauth-invalid-authorization-wrong-user": "The authorisation headers in your request are for a different user",
+	"mwoauth-invalid-authorization-not-approved": "The app that you are trying to connect seems to be set up incorrectly. Contact the author of \"$1\" for help.",
+	"mwoauth-invalid-authorization-blocked-user": "The authorisation headers in your request are for a user who is blocked",
+	"mwoauth-acceptance-cancelled": "You have chosen not to allow \"$1\" to access your account. \"$1\" will not work unless you allow it access. You can go back to \"$1\" or [[Special:OAuthManageMyGrants|manage]] your connected apps."
+}

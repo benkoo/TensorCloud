@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Benoit Rochon"
+		]
+	},
+	"mwoauth-consumer-stage-disabled": "manisinaha",
+	"mwoauthconsumerregistration-description": "E witcikemakak",
+	"mwoauthmanageconsumers-description": "E witcikemakak",
+	"mwoauthmanageconsumers-disable": "Manisinaha",
+	"mwoauthlistconsumers-description": "E witcikemakak",
+	"mwoauthlistconsumers-status-disabled": "manisinaha",
+	"mwoauthmanagemygrants-description": "E witcikemakak"
+}

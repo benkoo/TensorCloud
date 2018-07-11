@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ильнар"
+		]
+	},
+	"mwoauth-prefs-managegrants": "Өстәмә кушымталар",
+	"mwoauth-prefs-managegrantslink": "{{PLURAL:$1|$1 кушымта белән эш итү}}",
+	"mwoauth-consumer-name": "Кушымта исеме:",
+	"oauthmanagemygrants": "Кушымталар белән эшләү"
+}

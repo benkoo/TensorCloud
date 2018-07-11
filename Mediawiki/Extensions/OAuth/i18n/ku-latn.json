@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"George Animal"
+		]
+	},
+	"notification-oauth-app-approve-primary-link": "Sepanê bibîne",
+	"notification-oauth-app-reject-primary-link": "Sepanê bibîne",
+	"notification-oauth-app-disable-primary-link": "Sepanê bibîne",
+	"notification-oauth-app-reenable-primary-link": "Sepanê bibîne",
+	"notification-oauth-app-body": "Sedem: $1"
+}

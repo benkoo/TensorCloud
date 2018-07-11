@@ -1,0 +1,33 @@
+{
+	"@metadata": {
+		"authors": [
+			"NehalDaveND"
+		]
+	},
+	"mwoauth-consumer-reason": "कारणम् :",
+	"mwoauth-consumer-email-unconfirmed": "भवतः/भवत्याः वि-पत्रसङ्केतः इतोऽपि न प्रमाण्यभवत् ।",
+	"mwoauth-consumer-stage-rejected": "तिरस्कृतम्",
+	"mwoauth-consumer-stage-disabled": "निष्क्रियः",
+	"mwoauthconsumerregistration-navigation": "सञ्चरणम् :",
+	"mwoauthconsumerregistration-main": "मुख्यम्",
+	"mwoauthconsumerregistration-user": "प्रकाशकः",
+	"mwoauthconsumerregistration-description": "वर्णनम्",
+	"mwoauthconsumerregistration-stage": "स्थितिः",
+	"mwoauthmanageconsumers-main": "मुख्यम्",
+	"mwoauthmanageconsumers-user": "प्रकाशकः",
+	"mwoauthmanageconsumers-description": "वर्णनम्",
+	"mwoauthmanageconsumers-reject": "तिरस्कृतम्",
+	"mwoauthmanageconsumers-disable": "निष्क्रियः",
+	"mwoauthmanageconsumers-reason": "कारणम् :",
+	"mwoauthlistconsumers-view": "विवरणम्",
+	"mwoauthlistconsumers-user": "प्रकाशकः",
+	"mwoauthlistconsumers-description": "वर्णनम्",
+	"mwoauthlistconsumers-status": "स्थितिः",
+	"mwoauth-consumer-stage-any": "कोऽपि",
+	"mwoauthlistconsumers-status-disabled": "निष्क्रियः",
+	"mwoauthlistconsumers-status-rejected": "तिरस्कृतम्",
+	"mwoauthmanagemygrants-navigation": "सञ्चरणम् :",
+	"mwoauthmanagemygrants-user": "प्रकाशकः",
+	"mwoauthmanagemygrants-description": "वर्णनम्",
+	"mwoauth-form-button-cancel": "निरस्यताम्"
+}

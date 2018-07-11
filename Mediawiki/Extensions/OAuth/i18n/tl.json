@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Emem.calist"
+		]
+	},
+	"mwoauth-consumer-email-help": "Kilala lang sa mga aprubado't baguhang suki",
+	"notification-oauth-app-approve-title": "$1 {{KASARIAN:$1|aprobado}} {{KASARIAN:$3|iyong}} OMaya app ($2)",
+	"notification-oauth-app-disable-title": "$1 {{KASARIAN:$1|maykapansanan}} {{KASARIAN:$3|iyong}} OMaya app ($2)",
+	"notification-oauth-app-reenable-title": "$1 {{KASARIAN:$1|👍}} {{KASARIAN:$3|iyong}} OMaya app ($2)"
+}

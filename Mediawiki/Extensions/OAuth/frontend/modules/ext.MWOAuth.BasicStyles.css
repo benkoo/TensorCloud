@@ -1,0 +1,60 @@
+
+.mw-mwoauthconsumerregistration-body,
+.mw-mwoauthmanageconsumers-body {
+	background-color: #f0f0f0;
+}
+
+.mw-mwoauthmanageconsumers-proposed,
+.mw-mwoauthmanagemygrants-proposed,
+.mw-mwoauthconsumerregistration-proposed {
+	background-color: #b7b8e1;
+}
+
+.mw-mwoauthmanageconsumers-rejected,
+.mw-mwoauthmanagemygrants-rejected,
+.mw-mwoauthconsumerregistration-rejected {
+	background-color: #e1b7ba;
+}
+
+.mw-mwoauthmanageconsumers-expired,
+.mw-mwoauthmanagemygrants-expired,
+.mw-mwoauthconsumerregistration-expired {
+	background-color: #e1cdb7;
+}
+
+.mw-mwoauthmanageconsumers-approved,
+.mw-mwoauthmanagemygrants-approved,
+.mw-mwoauthconsumerregistration-approved {
+	background-color: #bae1b7;
+}
+
+.mw-mwoauthmanageconsumers-disabled,
+.mw-mwoauthmanagemygrants-disabled,
+.mw-mwoauthconsumerregistration-disabled {
+	background-color: #ceb7e1;
+}
+
+.mw-mwoauthmanagemygrants-list-item {
+	margin-bottom: 1em;
+}
+
+.mw-mwoautherror-details {
+	font-size: 0.7em;
+	color: #7d7d7d;
+}
+
+span.mw-grantgroup {
+	font-weight: bold;
+}
+
+.mw-htmlform-field-HTMLInfoField .mw-mwoauth-infotable dt,
+.mw-mwoauth-infotable span.mw-grantgroup {
+	font-weight: normal;
+}
+/* grant descriptions inside an infotable */
+.mw-mwoauth-infotable dl {
+	margin-top: 0;
+}
+dl.mw-mwoauth-infotable dl dd {
+	font-size: 0.9em;
+}

@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"John Reid"
+		]
+	},
+	"mwoauth-db-readonly": "The OAuth database is temperarilie lockit. Please ettle at it again in twa-three minutes.",
+	"mwoauthmanagemygrants-basic-tooltip": "Why can Ah naw update this graunt? This graunt gies yer connected appleecation basic permeessions that it requires fer tae function properlie. Gif ye dinna want this connected appleecation tae hae thir richts, ye shid revoke the appleecation's access."
+}

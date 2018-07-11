@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Murma174"
+		]
+	},
+	"mwoauth-prefs-managegrants": "Ferbünjen werktjüügen:",
+	"mwoauth-prefs-managegrantslink": "Ferbünjen {{PLURAL:$1|werktjüch|werktjüügen}} ferwalte ($1)",
+	"oauthlistconsumers": "List faan OAuth-werktjüügen",
+	"oauthmanagemygrants": "Ferbünjen werktjüügen ferwalte",
+	"echo-category-title-oauth-owner": "OAuth-Ütjwerkin",
+	"echo-pref-tooltip-oauth-owner": "Du mi bööd, wan diar OAuth werktjüügen preewet wurd, diar ik skrewen haa.",
+	"echo-pref-tooltip-oauth-admin": "Du mi bööd, wan diar OAuth werktjüügen preewet wurd."
+}

@@ -1,0 +1,39 @@
+
+#mw-mwoauth-authorize-form {
+	font-size: 1em;
+	color: #333;
+}
+
+#mw-mwoauth-authorize-form > a {
+	font-size: 0.8em;
+}
+
+#mw-mwoauth-authorize-form > p {
+	font-size: 1.4em;
+	padding-left: 1em;
+}
+
+#mw-mwoauth-authorize-form > ul {
+	padding-top: 0.5em;
+	line-height: 1em;
+}
+
+#mw-mwoauth-authorize-form span.mw-grantgroup {
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+input.mw-mwoauth-authorize-button {
+	float: right;
+	margin-left: 0.7em;
+	margin-right: 0.7em;
+	margin-bottom: 0.5em;
+}
+
+.client-js #mw-mwoauth-authorize-dialog {
+	display: none; /* no flicker */
+}
+
+.mw-mwoauth-authorize-jQuery-dialog .ui-dialog-titlebar {
+	display: none;
+}

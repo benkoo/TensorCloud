@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Calak",
+			"Sarchia",
+			"Lost Whispers",
+			"Épine"
+		]
+	},
+	"mwoauth-prefs-managegrants": "بەرنامە لکێنراوەکان:",
+	"mwoauth-prefs-managegrantslink": "بەڕێوەبردنی $1 بەرنامەی بەستراو بەم ھەژمارەوە",
+	"oauthmanageconsumers": "بەڕێوەبەردنی بەکاربەرانی OAuth",
+	"oauthmanagemygrants": "بینین و دەستکاریکردنی ئاپە بەستراوەکان بەم ھەژمارەوە",
+	"right-mwoauthproposeconsumer": "پێشنیاری بەکاربەرانی OAuthی نوێ",
+	"right-mwoauthupdateownconsumer": "نوێکردنەوەی بەکاربەرانی OAuthی تاوتوێی دەکەی",
+	"right-mwoauthmanageconsumer": "بەڕێوەبەردنی بەکاربەرانی OAuth",
+	"right-mwoauthmanagemygrants": "بەڕێوەبەردنی مافەکانی OAuth",
+	"action-mwoauthmanageconsumer": "بەڕێوەبەردنی بەکاربەرانی OAuth",
+	"action-mwoauthmanagemygrants": "بەڕێوەبەردنی مافەکانی OAuthەکەت",
+	"action-mwoauthproposeconsumer": "پێشنیاری بەکاربەرانی OAuthی نوێ",
+	"action-mwoauthupdateownconsumer": "نوێکردنەوەی بەکاربەرانی OAuthی تاوتوێی دەکەی"
+}

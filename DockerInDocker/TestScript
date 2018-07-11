@@ -4,6 +4,22 @@ docker run --rm --name tensor-cloud-dind-mariadb-wordpress -e DOCKER_DAEMON_ARGS
 iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 4444 -j REDIRECT --to-port 80
 
 ## Mediawiki
-docker run --rm --name tensor-cloud-dind-mariadb-mediawiki -e DOCKER_DAEMON_ARGS="-D" --privileged -d -p 4445:4445 -e PORT=4444 smartkit/tensor-cloud-dind:mariadb_mediawiki
+docker run --rm --name tensor-cloud-dind-mariadb-mediawiki -e DOCKER_DAEMON_ARGS="-D" --privileged -d -p 4445:4445 -e PORT=4445 smartkit/tensor-cloud-dind:mariadb_mediawiki
 
 iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 4445 -j REDIRECT --to-port 80
+
+## Piwik
+
+docker run --rm --name tensor-cloud-dind-mariadb-mediawiki -e DOCKER_DAEMON_ARGS="-D" --privileged -d -p 4446:4446 -e PORT=4446 smartkit/tensor-cloud-dind:mariadb_piwik
+
+iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 4446 -j REDIRECT --to-port 80
+
+## Mediawiki+Piwik
+
+
+docker run --rm --name tensor-cloud-dind-mariadb-piwik-mediawiki -e DOCKER_DAEMON_ARGS="-D" --privileged -d -p 4444:4444 -e PORT=4446 -p 4446:4446 -e PORT=4444  smartkit/tensor-cloud-dind:mariadb_piwik_basic
+
+
+iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 4446 -j REDIRECT --to-port 80
+
+iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 4444 -j REDIRECT --to-port 81

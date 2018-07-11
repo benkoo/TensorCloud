@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"J. 'mach' wust"
+		]
+	},
+	"mwoauth-prefs-managegrants": "Verbundeni Awändige:",
+	"mwoauth-prefs-managegrantslink": "Verbundeni {{PLURAL:$1|Awändig|Awändige}} verwalte ($1)",
+	"mwoauth-consumer-allwikis": "Alli Projekt of däm Website",
+	"oauthmanagemygrants": "Verbundeni Awändige verwalte",
+	"mwoauthmanagemygrants-text": "Hie isch e Liste vo allnen Awändige, wo dys Benutzerkonto chöü bruuche. We du eren Awändig erloubsch, das si darf verträtte, de fragt si di, uf was das si darf zuegryffe. Der Zuegriff blybt uf das beschränkt. We du eren Awändig us emne verwandte Projekt erloubsch, das si di darf verträtte, de gsehsch du unde d Ystellige für jedes jewylige verwandte Projekt.\n\nVerbundeni Awändige gryffen über ds OAuth-Protokoll uf dys Benutzerkonto zue. <span class=\"plainlinks\">([https://www.mediawiki.org/wiki/Special:MyLanguage/Help:OAuth Meh über verbundeni Awändige lehre])</span>",
+	"mwoauthmanagemygrants-navigation": "Navigation:",
+	"mwoauthmanagemygrants-showlist": "Liste vo verbundnigen Awändige",
+	"mwoauthmanagemygrants-user": "Use’gä vo:",
+	"mwoauthmanagemygrants-wikiallowed": "Erloubt uf Projekt:",
+	"mwoauthmanagemygrants-revoke": "Erloubnis zrüggnäh"
+}

@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ravichandra",
+			"Veeven",
+			"Chaduvari"
+		]
+	},
+	"mwoauth-prefs-managegrants": "అనుసంధానిత అనువర్తనాలు:",
+	"mwoauth-consumer-owner-only-label": "యజమాని-మాత్రమే:",
+	"notification-oauth-app-body": "కారణం: $1"
+}

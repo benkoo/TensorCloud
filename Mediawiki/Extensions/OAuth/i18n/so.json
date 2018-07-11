@@ -1,0 +1,27 @@
+{
+	"@metadata": {
+		"authors": [
+			"Abshirdheere"
+		]
+	},
+	"mwoauth-prefs-managegrants": "Adeegyada ku xidhan",
+	"mwoauth-prefs-managegrantslink": "Maamul $1 {{PLURAL:$1|adeega ku xiran|adeegyada ku xiran}}",
+	"mwoauth-consumer-allwikis": "Dhammaan mashaaliicda ka midka ah boggaan",
+	"mwoauth-consumer-name": "Magaca dhaqangalka:",
+	"mwoauth-consumer-user": "Faafinta",
+	"mwoauthconsumerregistration-navigation": "Gooshitaan",
+	"mwoauthconsumerregistration-user": "Faafinta",
+	"mwoauthmanageconsumers-user": "Faafinta",
+	"mwoauthlistconsumers-name": "Magaca dhaqangalka",
+	"mwoauthlistconsumers-user": "Faafinta",
+	"oauthmanagemygrants": "Maamul codsiyada xiriirka",
+	"mwoauthmanagemygrants-text": "Boggaan waxa ku taxan adeegsi kasta in aad u isticmaali karto akoonkaada. Adeegsi kasta oo noocaas ah, baaxadda ay u helaan waxaa xadiday rukhsadda lagu siiyey in ay codsiga markii la oggolaaday in ayagoo ku matalaya. Haddii aad si gooni ah u idman codsi ay u helaan mashaariicda kala duwan ee bahwadaagta adiga ku matalaya, markaa waxaad arki doontaa qaabeynta u gaar ah mashruuc kasta sida hoos ku qoran.\n\nAdeegsiga la xiriira si ay u helaan si ay iticmaalada adiga oo isticmaalaya hab maamuuska OAuth. <span class=\"plainlinks\">([https://www.mediawiki.org/wiki/Special:MyLanguage/Help:OAuth sii ogoow waxyaaba dheeraad ah oo ku saabsan adeegsiga])</span>",
+	"mwoauthmanagemygrants-navigation": "Gooshitaan",
+	"mwoauthmanagemygrants-showlist": "Liiska codsiyada waa ku xiriirsan",
+	"mwoauthmanagemygrants-user": "Faafinta",
+	"mwoauthmanagemygrants-wikiallowed": "Ogolaashaha mashruuca:",
+	"mwoauthmanagemygrants-review": "Maamulka galista",
+	"mwoauthmanagemygrants-revoke": "Ka laabasho gaarista",
+	"mwoauthmanagemygrants-grantaccept": "Siismo",
+	"mwoauthmanagemygrants-update": "Cusbonaysii siismada"
+}

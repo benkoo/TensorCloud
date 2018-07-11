@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ammartivari",
+			"Olsi",
+			"Kosovastar"
+		]
+	},
+	"mwoauth-prefs-managegrants": "Aplikacionet e lidhura:",
+	"mwoauth-prefs-managegrantslink": "Menaxho $1 {{PLURAL:$1|aplikacion të lidhur|aplikacione të lidhura}}",
+	"mwoauth-consumer-reason": "Arsyeja:",
+	"mwoauthmanageconsumers-reason": "Arsyeja:",
+	"oauthmanagemygrants": "Menaxho aplikacionet e lidhura"
+}
