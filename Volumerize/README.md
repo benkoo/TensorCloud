@@ -96,12 +96,12 @@ Waiting...Mariadb_Mediawiki service up and restored...
 
 ## 2.Wordpress namespace
 
-### 0.wget mariadb_mediawiki.yml
+### 0.wget mariadb_wordpress.yml
 ```
 curl -sSL https://raw.githubusercontent.com/benkoo/TensorCloud/master/mariadb_wordpress.yml > mariadb_wordpress.yml
 ```
 
-### 1.start mariadb_mediawiki
+### 1.start mariadb_wordpress
 ```
 docker-compose -f mariadb_wordpress.yml up -d
 ```
