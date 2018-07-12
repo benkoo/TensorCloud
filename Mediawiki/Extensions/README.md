@@ -49,3 +49,14 @@ require_once "$IP/extensions/Piwik/Piwik.php";
 $wgPiwikURL = "docker.toyhouse.cc";//without http protocal
 $wgPiwikIDSite = "2";
 ```
+## OpenID/OAuth2.0
+
+### OAuthServer
+
+Wordpress plugin: https://wp-oauth.com
+
+### OAuthClient
+
+Mediawiki extension: https://github.com/Schine/MW-OAuth2Client
+
+
