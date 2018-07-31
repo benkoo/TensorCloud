@@ -1,0 +1,3 @@
+#!/bin/sh
+
+docker ps | grep xlpsystem | awk  '{print "docker kill " $1}' | sh
