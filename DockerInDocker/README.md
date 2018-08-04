@@ -1,6 +1,21 @@
-Docker in Docker 
+# Docker in Docker 
 
-Install Docker: 
+One of the core fundamentals of the Docker In Docker project is standardized structure. If you just want to launch one of the pre-made containers, or load a dataset given to you, just follow the instructions below. 
+
+However, If you want to customize or incorporate your own setup for Docker In Docker, or contribute to this project you will need to learn a few of the key structural aspects of the D-in-D system. 
+
+    1. The structure is typically like this: 1 Outer Container with 3 Inner Containers running.
+    ```
+    ___________________________________________
+    |             |              | Volumerize |
+    | Software    | Database     | (backup    |
+    | (ex: Piwik) | (ex: MariaDB)| generator) |
+    ___________________________________________
+    ```
+
+
+* If You Do Not Have Docker, please first install Docker *
+Docker Installation Instructions: 
 
 1.Ubuntu: https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-16-04
 
