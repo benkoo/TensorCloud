@@ -1,129 +1,141 @@
-Docker in Docker 
+# Docker in Docker
 
-Install Docker: 
+* If You Do Not Have Docker, please first install Docker *
+Docker Installation Instructions: [Ubuntu](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-16-04) | [Windows](https://docs.bitnami.com/containers/how-to/install-docker-in-windows/) | [MacOSX](https://docs.docker.com/docker-for-mac/install/)
 
-1.Ubuntu: https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-16-04
+---
 
-2.Windows: https://docs.bitnami.com/containers/how-to/install-docker-in-windows/
+# EASY INSTALL
 
-3.MacOSX: https://docs.docker.com/docker-for-mac/install/
+The *easiest* way to launch your containers is using the [automated launcher](https://github.com/sergio-rivas/TensorCloud-DinD)
 
-## 0.Docker Images Links
+---
 
-1.bitnami/mariadb:latest: http://118.190.96.120/saved_bitnami_mariadb_latest.tar.gz
+# STANDARD INSTALL
 
-2.btnami/wordpress:latest: http://118.190.96.120/saved_bitnami_wordpress_latest.tar.gz
+## Conceptual Framework & Details
 
-3.bitnami/piwik:latest: http://118.190.96.120/saved_bitnami_piwik_latest.tar.gz
+One of the core fundamentals of the Docker In Docker project is standardized structure. If you just want to launch one of the pre-made containers, or load a dataset given to you, just follow the instructions below.
 
-4.smartkit/mediawiki:locale: http://118.190.96.120/saved_smartkit_mediawiki_locale.tar.gz
+However, If you want to customize or incorporate your own setup for Docker In Docker, or contribute to this project you will need to learn a few of the key structural aspects of the D-in-D system.
 
-5.smartkit/tensor-cloud-dind:
+  1. The structure is typically like this: 1 Outer Container with 3 Inner Containers running.
+  ```
+  ===============OUTER CONTAINER==================
+  /  ___________________________________________  /
+  /  |  (inner 1)  |   (inner 2)  |  (inner 3) |  /
+  /  |             |              | Volumerize |  /
+  /  | Software    | Database     | (backups & |  /
+  /  | (ex: Piwik) | (ex: MariaDB)| restore)   |  /
+  /  ___________________________________________  /
+  /                                               /
+  ================================================
+  ```
+  2. When the outer container is first launched, the inner containers are not active yet. The second command in each example below is the command to launch the inner containers.
+  3. All the scripts related to container interaction is in the outer container's path: <code>/TensorCloud/DockerInDocker/</code>
+  4. The Software and Database containers have a volume mapped to 2 '_data'folders in: <code>/TensorCloud/DockerInDocker/</code> of the outer container, ex: <code>piwik_data</code> and <code>mariadb_data</code>.
+  The volumes store all of the user and database data, including user file uploads, etc. These folders are then used by Volumerize whenever creating backups. As Volumerize saves the backups into the Outer Container, it is important to add a volume from the container to the root server.
+  5. All the dind container images are available on [Docker Hub](https://hub.docker.com/u/tuitu/). The specific containers mentioned in this documentation are: [Wordpress](https://hub.docker.com/r/tuitu/dind-wordpress/), [Mediawiki](https://hub.docker.com/r/tuitu/dind-mediawiki/), [Piwik](https://hub.docker.com/r/tuitu/dind-piwik/)
 
-http://118.190.96.120/saved_tensor_cloud_dind_mariadb_wordpress_basic.tar.gz
+## 1 Wordpress
 
-http://118.190.96.120/saved_tensor_cloud_dind_mariadb_mediawiki_basic.tar.gz
+### 1.1 Pull the Container
 
-http://118.190.96.120/saved_tensor_cloud_dind_mariadb_piwik_basic.tar.gz
-
-http://118.190.96.120/saved_tensor_cloud_dind_mariadb_wordpress_remix.tar.gz
-
-http://118.190.96.120/saved_tensor_cloud_dind_mariadb_wordpress_spacegambit.tar.gz
-
-6.all docker image tags:
-
-https://hub.docker.com/r/smartkit/tensor-cloud-dind/tags/
-
-## 1.Wordpress
-
-tags:basic,remix
-
-### 1.0 Wget
+First, get the empty dind-container image setup from Dockerhub.
 ```
-wget http://118.190.96.120/saved_tensor_cloud_dind_mariadb_wordpress_basic.tar.gz
-```
-### 1.1 Docker load
-```
-docker load < saved_tensor_cloud_dind_mariadb_wordpress_basic.tar.gz 
-```
-or
-```
-docker pull smartkit/tensor-cloud-dind:mariadb_wordpress_basic
-```
-### 1.2 Docker run
-```
-docker run --name tensor-cloud-dind-mariadb-wordpress -e DOCKER_DAEMON_ARGS="-D" --privileged -d -p 4445:4445 -e PORT=4445  smartkit/tensor-cloud-dind:mariadb_wordpress_basic
-```
-### 1.3 Docker exec in Dind
-```
-docker exec -it  tensor-cloud-dind-mariadb-wordpress  bash /TensorCloud/DockerInDocker/mariadb_wordpress_4445.sh
-```
-## 2.Mediawiki
-
-tags:basic,toyhouse
-
-### 2.0 Wget
-```
-wget http://118.190.96.120/saved_tensor_cloud_dind_mariadb_mediawiki_basic.tar.gz
-```
-### 2.1 Docker load
-
-```
-docker load < saved_tensor_cloud_dind_mariadb_mediawiki_basic.tar.gz
-```
-or
-```
-docker pull smartkit/tensor-cloud-dind:mariadb_mediawiki_basic
-```
-### 2.2 Docker run
-
-```
-docker run --rm --name tensor-cloud-dind-mariadb-mediawiki -e DOCKER_DAEMON_ARGS="-D" --privileged -d -p 4444:4444 -e PORT=4444 smartkit/tensor-cloud-dind:mariadb_mediawiki_basic
+docker pull tuitu/dind-wordpress:latest
 ```
 
-#### 2.3 Docker exec 
-```
-docker exec -it  tensor-cloud-dind-mariadb-mediawiki  bash /TensorCloud/DockerInDocker/mariadb_mediawiki_4444.sh
-```
-## 3.Piwik
+### 1.2 Activate the empty DinD container
 
-tags:basic,remix
-
-### 3.0 Wget
+Second, use this command to launch the container. NOTE: should change the following in line 2:
+- Change <code>your_wordpress_container_name</code> to any name you want to give the container.
+- Change the first port number in <code>-p 4445:4445</code> to whichever port you want to use. (ex: 80:4445, 888:4445, etc.)
 ```
-wget http://118.190.96.120/saved_tensor_cloud_dind_mariadb_piwik_basic.tar.gz
-```
-### 3.1 Docker load
-
-```
-docker load < saved_tensor_cloud_dind_mariadb_piwik_basic.tar.gz
-```
-or
-```
-docker pull smartkit/tensor-cloud-dind:mariadb_piwik_basic
-```
-### 3.2 Docker run
-
-```
-docker run --rm --name tensor-cloud-dind-mariadb-piwik -e DOCKER_DAEMON_ARGS="-D" --privileged -d -p 4446:4446 -e PORT=4446 smartkit/tensor-cloud-dind:mariadb_piwik_basic
+docker run \
+--name your_wordpress_container_name -p 4445:4445 \
+-e DOCKER_DAEMON_ARGS="-D" -e PORT=4445 -e APP_NAME="wordpress" \
+--privileged -d tuitu/dind-wordpress:latest
 ```
 
-#### 3.3 Docker exec 
+### 1.3 Activate the inner containers
+
+Next, use the following command to activate the inner containers. (Remember to change <code>your_wordpress_container_name</code>) to the same container name from step 1.2
 ```
-docker exec -it  tensor-cloud-dind-mariadb-piwik  bash /TensorCloud/DockerInDocker/mariadb_piwik_4446.sh
+docker exec -it  your_wordpress_container_name \
+bash /TensorCloud/DockerInDocker/mariadb_wordpress_4445.sh
 ```
 
+## 2 Mediawiki
 
-## Save your container?
+### 2.1 Pull the Container
+
+First, get the empty dind-container image setup from Dockerhub.
 ```
-docker save tensor-cloud-dind-mariadb-mediawiki | gzip > your_saved_tensor-cloud-dind_mariadb_mediawiki_modified.tar.gz
+docker pull tuitu/dind-mediawiki:latest
 ```
 
-## 1.0 Dind volumerize backup
+### 2.2 Activate the empty DinD container
+
+Second, use this command to launch the container. NOTE: should change the following in line 2:
+- Change <code>your_mediawiki_container_name</code> to any name you want to give the container.
+- Change the first port number in <code>-p 4444:4444</code> to whichever port you want to use. (ex: 80:4444, 888:4444, etc.)
+```
+docker run \
+--name your_mediawiki_container_name -p 4444:4444 \
+-e DOCKER_DAEMON_ARGS="-D" -e PORT=4444 -e APP_NAME="mediawiki" \
+--privileged -d tuitu/dind-mediawiki:latest
+```
+
+### 2.3 Activate the inner containers
+
+Next, use the following command to activate the inner containers. (Remember to change <code>your_mediawiki_container_name</code>) to the same container name from step 1.2
+```
+docker exec -it  your_mediawiki_container_name \
+bash /TensorCloud/DockerInDocker/mariadb_mediawiki_4444.sh
+```
+
+## 3 Piwik
+
+### 3.1 Pull the Container
+
+First, get the empty dind-container image setup from Dockerhub.
+```
+docker pull tuitu/dind-piwik:latest
+```
+
+### 3.2 Activate the empty DinD container
+
+Second, use this command to launch the container. NOTE: should change the following in line 2:
+- Change <code>your_piwik_container_name</code> to any name you want to give the container.
+- Change the first port number in <code>-p 4446:4446</code> to whichever port you want to use. (ex: 80:4446, 888:4446, etc.)
+```
+docker run \
+--name your_piwik_container_name -p 4446:4446 \
+-e DOCKER_DAEMON_ARGS="-D" -e PORT=4446 -e APP_NAME="piwik" \
+--privileged -d tuitu/dind-piwik:latest
+```
+
+### 3.3 Activate the inner containers
+
+Next, use the following command to activate the inner containers. (Remember to change <code>your_piwik_container_name</code>) to the same container name from step 1.2
+```
+docker exec -it  your_piwik_container_name \
+bash /TensorCloud/DockerInDocker/mariadb_piwik_4446.sh
+```
+
+---
+
+## Volumerize Backup
+
+### 1. Launch the Backup-Software Container
+
+NOTE:  Must change "SOFTWARE" in *line 3* to <code>wordpress</code> <code>piwik</code> or <code>mediawiki</code>
+
 ```
 docker run -d \
     --name volumerize_backup \
-    -v $PWD/piwik_data:/source/application_data_piwik:ro \
+    -v $PWD/SOFTWARE_data:/source/application_data_SOFTWARE:ro \
     -v $PWD/mariadb_data:/source/application_database_data_mariadb:ro \
     -v $PWD/backup_volume:/backup \
     -v cache_volume:/volumerize-cache \
@@ -132,68 +144,92 @@ docker run -d \
     blacklabelops/volumerize
 ```
 
+### 2. Backup Your Data
+
 ```
 docker exec volumerize_backup backup
 ```
 
-```
-zip -r backup_volume_piwik.zip backup_volumue
-```
-Finally, copy out of Dind container.
-
-## 2.0 Dind volumerize restore
-
-Copy to inside of Dind container,
+### 3. Save the Backup as a ZIP file
 
 ```
-docker cp backup_volume_piwik.zip YourDindContainerID:/TensorCloud/DockerInDocker/
-```
-Unzip it,
-```
-apt-get install zip & unzip backup_volume_piwik.zip
+zip -r new_backup_file_name.zip backup_volume
 ```
 
-Stop existed piwik docker service,
+### 4. Copy out of Dind container.
 
+Remember to change: <code>your_container_name</code>, <code>new_backup_file_name</code>, and <code>/path/to/save/file</code>
+```
+docker cp your_container_name:/TensorCloud/DockerInDocker/new_backup_file_name.zip /path/to/save/file
+```
+
+## Volumerize Restore
+
+### Copy Backup INTO DinD container
+Copy your backup into the Dind container. Remember to change <code>your_backup</code> & <code>your_container_name</code>
+
+```
+docker cp your_backup.zip your_container_name:/TensorCloud/DockerInDocker/
+```
+
+
+### Unzip Backup
+
+First enter the DinD Container:
+```
+docker exec -it your_container_name bash
+cd /TensorCloud/DockerInDocker/
+```
+
+Then unzip the backup:
+```
+unzip your_backup.zip
+```
+
+
+### Restore Backup
+
+First, stop all the inner-containers.
 ```
 docker stop $(docker ps -aq)
 ```
 
-Run up the volumerize_restore docker service,
+
+Then Launch the volumerize_restore docker service,
+NOTE: Must change "SOFTWARE" in *line 3* to <code>wordpress</code> <code>piwik</code> or <code>mediawiki</code>
 ```
   docker run -d \
    --name volumerize_restore \
-   -v $PWD/piwik_data:/source/application_data_mediawiki \
+   -v $PWD/SOFTWARE_data:/source/application_data_SOFTWARE \
    -v $PWD/mariadb_data:/source/application_database_data_mariadb \
    -v $PWD/backup_volume:/backup:ro \
    -v cache_volume:/volumerize-cache \
    -e "VOLUMERIZE_SOURCE=/source" \
    -e "VOLUMERIZE_TARGET=file:///backup" \
-   blacklabelops/volumerize   
+   blacklabelops/volumerize
 ```
 
 Execute restore task,
-
 ```
 docker exec volumerize_restore restore
 ```
 
-Finally, verify it
-
+Finally, verify it.
+NOTE: Must change "SOFTWARE" to <code>wordpress</code> <code>piwik</code> or <code>mediawiki</code>
 ```
-docker-compose -f mariadb_piwik.yml up -d
+docker-compose -f mariadb_SOFTWARE.yml up -d
 ```
 
 
 ## References
 
-https://github.com/jpetazzo/dind
+[Docker In Docker](https://github.com/jpetazzo/dind)
 
-https://blog.giantswarm.io/moving-docker-container-images-around/
+[Moving Docker Container Images Around](https://blog.giantswarm.io/moving-docker-container-images-around/)
 
-https://www.cyberciti.biz/faq/linux-port-redirection-with-iptables/
+[Linux Port Redirects via IP Tables](https://www.cyberciti.biz/faq/linux-port-redirection-with-iptables/)
 
-ADJUST IMAGE SIZE OF DOCKER QCOW2 FILE: https://www.itsfullofstars.de/2017/12/adjust-the-image-size-of-docker/
+[Adjust Image Size of Docker QCOW2 File](https://www.itsfullofstars.de/2017/12/adjust-the-image-size-of-docker/)
 
 In Ubuntu:
 ```
