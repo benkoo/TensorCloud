@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Makuba"
+		]
+	},
+	"openiderror": "OpenID-erra",
+	"openid-error-openid-consumer-mode-disabled": "Tu ne posse inregistrar per OpenID in ti wiki, proque li OpenID-mode de consumers ha esset desactivat.",
+	"openid-provider-selection-button-login": "Inregistrar per OpenID",
+	"right-openid-create-account-with-openid": "Crear un conto per OpenID",
+	"action-openid-create-account-without-openid": "por manualmen crear un conto sin OpenID"
+}

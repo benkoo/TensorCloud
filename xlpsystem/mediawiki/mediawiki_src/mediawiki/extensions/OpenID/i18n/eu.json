@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kobazulo",
+			"Theklan",
+			"පසිඳු කාවින්ද",
+			"Subi"
+		]
+	},
+	"openidserver": "OpenID zerbitzaria",
+	"openidoptional": "Aukerazkoa",
+	"openidrequired": "Nahitaezkoa",
+	"openidnickname": "Ezizena",
+	"openidfullname": "Benetako izena",
+	"openidemail": "E-posta helbidea",
+	"openidlanguage": "Hizkuntza",
+	"openidtimezone": "Ordu-eremua",
+	"openidchoosenick": "Zure ezizena ($1)",
+	"openidchoosefull": "Zure benetako izena ($1)",
+	"openidchooseusername": "Erabiltzaile izena:",
+	"openidchoosepassword": "Pasahitza:",
+	"openid-urls-action": "Ekintza",
+	"openid-urls-delete": "Ezabatu",
+	"openid-trusted-sites-delete-link-action-text": "Ezabatu"
+}

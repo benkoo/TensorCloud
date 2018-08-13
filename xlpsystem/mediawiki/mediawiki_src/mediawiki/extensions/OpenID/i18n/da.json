@@ -1,0 +1,30 @@
+{
+	"@metadata": {
+		"authors": [
+			"Christian List",
+			"Froztbyte",
+			"Jon Harald Søby"
+		]
+	},
+	"openidserver": "OpenID-server",
+	"openidxrds": "Yadis-fil",
+	"openiderror": "OpenID fejl",
+	"openidcancel": "Bekræftelse annulleret",
+	"openidusernameprefix": "OpenID-bruger",
+	"openidrequired": "Påkrævet",
+	"openidnickname": "Kaldenavn",
+	"openidlanguage": "Sprog",
+	"openidchooseinstructions": "Alle brugere skal have et brugernavn;\ndu kan vælge et fra nedenstående muligheder.",
+	"openidchooseusername": "Brugernavn:",
+	"openidchoosepassword": "Adgangskode:",
+	"openidnousername": "Intet brugernavn angivet.",
+	"openidbadusername": "Ugyldigt brugernavn angivet.",
+	"openidloginlabel": "OpenID-adresse",
+	"openiddelete": "Slet OpenID",
+	"openiddelete-button": "Bekræft",
+	"openiddelete-success": "OpenID er blevet fjernet fra din konto.",
+	"openid-urls-action": "Handling",
+	"openid-urls-delete": "Slet",
+	"openid-add-url": "Tilføj en ny OpenID til din konto",
+	"openid-provider-label-aol": "Indtast dit AOL-brugernavn"
+}

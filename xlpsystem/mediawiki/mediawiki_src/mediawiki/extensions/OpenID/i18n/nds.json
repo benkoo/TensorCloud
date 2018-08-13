@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Joachim Mos"
+		]
+	},
+	"openid-urls-action": "Akschoon",
+	"openid-urls-delete": "Wegdoon",
+	"openid-trusted-sites-table-header-column-action": "Akschoon",
+	"openid-trusted-sites-delete-link-action-text": "Wegdoon"
+}
