@@ -1,5 +1,5 @@
 #!/bin/sh
 
-tar -xvf data.tar ./data
+# Replace bitnami data
 rm -rf /bitnami/
-mv data /bitnami
+mv mediawiki_src /bitnami

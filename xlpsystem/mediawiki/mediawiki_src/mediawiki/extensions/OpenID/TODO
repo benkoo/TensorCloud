@@ -1,0 +1,54 @@
+TO-DO LIST
+Status: 3.43 20131103
+
+Bugs and suggestions should not be listed here but should be filed in the
+bugzilla bugtracker http://preview.tinyurl.com/openid-bugs
+
+
+? more details are needed to understand the "to do"
+* resolved, or partially resolved, wontfix
+- open
++ fixed
+
+? Dynamic HTML swap in of OpenID login form on Special:Userlogin
+? OpenID extension to share MW settings
+? Optionally redirect User: page to OpenID URL
+? AJAX login, rather than klutzy JS form
+? Provider-driven identifier selection (eh? do we care?)
+? Auto-login if you've logged in before with an OpenID,
+  and are logged into that account now
+
+- Configure some stuff through Special:Preferences or a dedicated
+  control panel
+- Auto-login if you've logged in before with an OpenID, and are logged
+  into that account now
+- $byEmail parameter of AddNewAccount hook: should this be false, or true ?
+- i18n of OpenIDDashboard.body.php
+- redesign MediaWiki extension and php-openid library paths to avoid
+  $path=array( dirname( __FILE__ ) );
+  set_include_path(implode(PATH_SEPARATOR,$path).PATH_SEPARATOR.get_include_path());
+  in OpenID.setup.php. I don't know, if it can be avoided.
+- keep user from mailing new password in OpenID account except case S/OO
+- keep user from setting password in OpenID account except case S/OO
+- OpenID-only enabled account owners cannot set their password when the account
+  lacks an e-mail address - which cannot be set up because they don't have a
+  password (race condition) 
+  https://bugzilla.wikimedia.org/show_bug.cgi?id=34357
+  This is a regression from implementation of
+  Changing your email address should require entering your password
+  https://bugzilla.wikimedia.org/show_bug.cgi?id=20185
+- participate in account-creation throttle
+- audit to prevent circumventing blocks/bans
+- share timezone when/if available
+- Manage allow-to-trust settings in User preferences
+- optimize trust storage
+- If user logs in with OpenID, add a cookie, and auto-login next time
+  with check_immediate
+- configurable regexps for finding a user ID from an OpenID.
+- deal with difference between canonical ID and "display ID" with XRIs
+- support RP discovery
+
+* warn if a user account has been used as a login before attaching an
+  OpenID (I think, this is solved; marked with * instead of +)
+* Configure some stuff through Special:Preferences or a dedicated control panel
+  (under construction, see Special:OpenIDDashboard)

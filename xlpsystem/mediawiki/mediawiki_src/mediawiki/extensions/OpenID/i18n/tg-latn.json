@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Liangent"
+		]
+	},
+	"openid-desc": "Ba viki bo [//openid.net/ OpenID] vurud kuned, va ba digar somonahoi OpenID bo hisobi korbariji viki vurud kuned",
+	"openidlogin": "Bo OpenID vurud kuned",
+	"openidserver": "Xidmatguzori OpenID",
+	"openidxrds": "Parvandai Yadis",
+	"openidconvert": "Tabdilkunandai OpenID",
+	"openiderror": "Xatoi tasdiq",
+	"openiderrortext": "Dar holati tasdiqi nişonai OpenID xatoe rux dod.",
+	"openidconfigerror": "Xatoi Tanzimoti OpenID",
+	"openidoptional": "Ixtijorī",
+	"openidemail": "Nişonai poctai elektronī",
+	"openidlanguage": "Zabon",
+	"openidchoosepassword": "Kalimai ubur:"
+}
