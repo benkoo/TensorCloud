@@ -1,3 +1,5 @@
 #!/bin/sh
 
 docker ps | grep xlpsystem | awk  '{print "docker kill " $1}' | sh
+
+docker container prune -f
