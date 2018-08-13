@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Умар"
+		]
+	},
+	"openidpermission": "OpenID тӀекхачарна бакъона гӀалат",
+	"openidlanguage": "Мотт",
+	"openidchooselegend": "Декъашхочун цӀе а, дӀаяздар а харжар",
+	"openidchoosemanual": "Ахьа хаьржина цӀе:",
+	"openidchooseusername": "декъашхочун цӀе:",
+	"openidchoosepassword": "Пароль:",
+	"openiddelete": "ДӀаяккха OpenID",
+	"openiddelete-button": "Бакъдан",
+	"openid-urls-action": "Дийраш",
+	"openid-urls-delete": "ДӀаяккха",
+	"openid-add-url": "ТӀетоха керла OpenID",
+	"openid-trusted-sites-delete-confirmation-page-title": "Тешаме сайташ дӀаяхар"
+}

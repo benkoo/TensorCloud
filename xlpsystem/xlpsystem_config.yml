@@ -9,7 +9,7 @@ services:
     volumes:
       - '/data/mariadb/:/bitnami'
   mediawiki:
-    image: daocloud.io/weimar/xlp_mediawiki:20180813151446
+    image: daocloud.io/weimar/xlp_mediawiki:20180813182014
     labels:
       kompose.service.type: nodeport
     environment:
@@ -22,7 +22,7 @@ services:
       - '50000:80'
       - '443:443'
     # volumes:
-      # - '/data/mediawiki:/bitnami'
+    #   - '/data/mediawiki:/bitnami'
     depends_on:
       - mariadb
   elasticsearch:

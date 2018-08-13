@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"M hamlet"
+		]
+	},
+	"openiderror": "OpenID սխալ",
+	"openid-provider-selection-button-login-or-create-account": "Մուտք գործել / ստեղծել հաշիվ OpenID֊ի միջոցով",
+	"openid-provider-selection-button-login": "Մուտք գործել OpenID֊ի միջոցով",
+	"openid-provider-selection-button-create-account": "Ստեղծել հաշիվ OpenID֊ի միջոցով",
+	"action-openid-login-with-openid": "մուտք գործել OpenID֊ի միջոցով",
+	"action-openid-create-account-with-openid": "ստեղծել հաշիվ OpenID֊ի միջոցով"
+}
