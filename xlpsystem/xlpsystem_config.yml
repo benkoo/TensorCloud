@@ -7,7 +7,7 @@ services:
       - MARIADB_USER=xlp_mediawiki
       - MARIADB_DATABASE=xlpsystem_mediawiki
     volumes:
-      - 'mariadb_data:/bitnami'
+      - '/data/mariadb/:/bitnami'
   mediawiki:
     image: daocloud.io/weimar/xlp_mediawiki:20180730201953
     labels:
@@ -22,7 +22,7 @@ services:
       - '50000:80'
       - '443:443'
     volumes:
-      - 'mediawiki_data:/bitnami'
+      - '/data/mediawiki:/bitnami'
     depends_on:
       - mariadb
   elasticsearch:
@@ -39,9 +39,5 @@ services:
     environment:
      WORDPRESS_DB_HOST: mariadb:3306
      WORDPRESS_DB_PASSWORD: wordpress
-volumes:
-  mariadb_data:
-    driver: local
-  mediawiki_data:
-    driver: local
+
 
