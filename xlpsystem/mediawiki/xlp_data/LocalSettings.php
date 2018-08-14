@@ -19,8 +19,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 ## Uncomment this to disable output compression
 # $wgDisableOutputCompression = true;
 
-$wgSitename = "XLP MediaWiki";
-$wgMetaNamespace = "XLP_MediaWiki";
+$wgSitename = "xlp_cd_system";
 
 ## The URL base path to the directory containing the wiki;
 ## defaults for all runtime URL paths are based off of this.
@@ -29,21 +28,23 @@ $wgMetaNamespace = "XLP_MediaWiki";
 ## https://www.mediawiki.org/wiki/Manual:Short_URL
 $wgScriptPath = "";
 
+## The protocol and server name to use in fully-qualified URLs
+$wgServer = "http://localhost:8080";
 
 ## The URL path to static resources (images, scripts, etc.)
 $wgResourceBasePath = $wgScriptPath;
 
 ## The URL path to the logo.  Make sure you change this from the default,
 ## or else you'll overwrite your logo when you upgrade!
-$wgLogo = "/images/4/41/Toyhouse.png";
+$wgLogo = "$wgResourceBasePath/resources/assets/toyhouse.png";
 
 ## UPO means: this is also a user preference option
 
 $wgEnableEmail = true;
 $wgEnableUserEmail = true; # UPO
 
-$wgEmergencyContact = "apache@60d257be4fe1";
-$wgPasswordSender = "apache@60d257be4fe1";
+$wgEmergencyContact = "liuyuan@localhost";
+$wgPasswordSender = "liuyuan@localhost";
 
 $wgEnotifUserTalk = false; # UPO
 $wgEnotifWatchlist = false; # UPO
@@ -52,9 +53,9 @@ $wgEmailAuthentication = true;
 ## Database settings
 $wgDBtype = "mysql";
 $wgDBserver = "mariadb";
-$wgDBname = "xlpsystem_mediawiki";
-$wgDBuser = "xlp_mediawiki";
-$wgDBpassword = "";
+$wgDBname = "xlp_wiki_db";
+$wgDBuser = "root";
+$wgDBpassword = "W2qgpsLtQt";
 
 # MySQL specific settings
 $wgDBprefix = "";
@@ -68,9 +69,9 @@ $wgMemCachedServers = [];
 
 ## To enable image uploads, make sure the 'images' directory
 ## is writable, then set this to true:
-$wgEnableUploads = true;
-#$wgUseImageMagick = true;
-#$wgImageMagickConvertCommand = "/usr/bin/convert";
+$wgEnableUploads = false;
+$wgUseImageMagick = true;
+$wgImageMagickConvertCommand = "/usr/bin/convert";
 
 # InstantCommons allows wiki to use images from https://commons.wikimedia.org
 $wgUseInstantCommons = false;
@@ -78,7 +79,7 @@ $wgUseInstantCommons = false;
 # Periodically send a pingback to https://www.mediawiki.org/ with basic data
 # about this MediaWiki instance. The Wikimedia Foundation shares this data
 # with MediaWiki developers to help guide future development efforts.
-$wgPingback = false;
+$wgPingback = true;
 
 ## If you use ImageMagick (or any other shell command) on a
 ## Linux server, this will need to be set to the name of an
@@ -93,14 +94,14 @@ $wgShellLocale = "C.UTF-8";
 # Site language code, should be one of the list in ./languages/data/Names.php
 $wgLanguageCode = "en";
 
-$wgSecretKey = "11bb41c003979c06abaa67d7e4a9e5030f35235d7b8fa8c5be80752da3892eb1";
+$wgSecretKey = "e1f8b1f7b13066b175f9aed9792e60e5cc310fb6026619bc15e471d256dcf87b";
 
 # Changing this will log out all existing sessions.
 $wgAuthenticationTokenVersion = "1";
 
 # Site upgrade key. Must be set to a string (default provided) to turn on the
 # web installer while LocalSettings.php is in place
-$wgUpgradeKey = "5c06d0af119b1b5c";
+$wgUpgradeKey = "b6456970b491951c";
 
 ## For attaching licensing metadata to pages, and displaying an
 ## appropriate copyright notice / icon. GNU Free Documentation
@@ -127,4 +128,3 @@ wfLoadSkin( 'Vector' );
 # End of automatically generated settings.
 # Add more configuration options below.
 
-require_once "$IP/extensions/OpenID/OpenID.php";

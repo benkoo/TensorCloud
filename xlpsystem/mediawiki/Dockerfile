@@ -1,13 +1,12 @@
-FROM bitnami/mediawiki:latest
+FROM mediawiki:1.31
 
-# Replace bitnami data
-COPY mediawiki_src /tmp/mediawiki_src
-COPY replace_data.sh /tmp/
+COPY xlp_dev /tmp/xlp_dev
+COPY xlp_init.sh /tmp/
 COPY xlp_start.sh /tmp/
 
 WORKDIR /tmp
-RUN ["/bin/bash", "-c", "./replace_data.sh"]
+RUN ["/bin/sh", "-c", "./xlp_init.sh"]
 
-EXPOSE 80 443
+EXPOSE 80
 
 CMD ["/bin/sh", "-c", "./xlp_start.sh"]
