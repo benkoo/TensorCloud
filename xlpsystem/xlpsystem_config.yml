@@ -1,4 +1,4 @@
-version: '3'
+version: "2"
 services:
   mariadb:
     image: 'mariadb:10.3'
@@ -8,7 +8,7 @@ services:
     volumes:
       - '/data/xlpsystem/mariadb/:/var/lib/mysql'
   mediawiki:
-    image: 'daocloud.io/weimar/xlp_mediawiki:20180815224342'
+    image: daocloud.io/weimar/xlp_mediawiki:20180815224342
     restart: always
     # environment:
     #   - MYSQL_USER=root
