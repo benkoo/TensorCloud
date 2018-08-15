@@ -1,0 +1,30 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ahmed-Najib-Biabani-Ibrahimkhel"
+		]
+	},
+	"openidoptional": "ستاسې په خوښه",
+	"openidrequired": "اړين مالومات",
+	"openidnickname": "کورنی نوم",
+	"openidfullname": "اصلي نوم",
+	"openidemail": "برېښليک پته",
+	"openidlanguage": "ژبه",
+	"openidtimezone": "د وخت سيمه",
+	"openidchooselegend": "د کارن نوم او گڼون خوښه",
+	"openidchooseinstructions": "ټولو کارنانو ته د يوه کورني نوم اړتيا شته؛\nتاسې يو نوم د لاندينيو خوښنو نه ځانته ټاکلی شی.",
+	"openidchoosenick": "ستاسې کورنی نوم ($1)",
+	"openidchoosefull": "ستاسې اصلي نوم ($1)",
+	"openidchoosemanual": "ستاسې د خوښې يو نوم:",
+	"openidchooseusername": "کارن-نوم:",
+	"openidchoosepassword": "پټنوم:",
+	"openidnousername": "هېڅ يو کارن-نوم نه دی ځانگړی شوی.",
+	"openidbadusername": "يو ناسم کارن-نوم مو ځانگړی کړی.",
+	"openiddelete-button": "تاييد",
+	"openid-urls-action": "چاره",
+	"openid-urls-delete": "ړنگول",
+	"openid-login-or-create-account": "ننوتل او يا يو نوی گڼون جوړول",
+	"openid-provider-label-google": "د گووگل د گڼون په مرسته ننوتل",
+	"openid-provider-label-yahoo": "د ياهو د گڼون په مرسته ننوتل",
+	"openid-provider-label-other-username": "تاسې خپل $1 کارن-نوم وليکۍ"
+}

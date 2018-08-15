@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"George Animal",
+			"Ghybu"
+		]
+	},
+	"openidlanguage": "Ziman",
+	"openidtimezone": "Navçeya demê",
+	"openidchooseusername": "Navê bikarhêner:",
+	"openidchoosepassword": "Şîfre:",
+	"openid-urls-delete": "Jê bibe",
+	"openid-trusted-sites-delete-link-action-text": "Jê bibe"
+}

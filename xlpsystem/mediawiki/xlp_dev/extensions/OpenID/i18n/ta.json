@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"Karthi.dr",
+			"Shanmugamp7"
+		]
+	},
+	"openidcancel": "சரிபார்ப்பு  இரத்து செய்யப்பட்டது",
+	"openidfailure": "சரிபார்ப்பு தோல்வியுற்றது",
+	"openidsuccess": "சரிபார்ப்பு  வெற்றியடைந்தது",
+	"openidoptional": "விருப்பத்தேர்வு",
+	"openidrequired": "தேவைபடுகிறது",
+	"openidnickname": "புனைப்பெயர்",
+	"openidfullname": "முழுப்பெயர்",
+	"openidemail": "மின்னஞ்சல் முகவரி",
+	"openidlanguage": "மொழி",
+	"openidtimezone": "நேர வலயம்",
+	"openidchooseinstructions": "எல்லாப் பயனர்களுக்கும் புனைப்பெயர் தேவை.\nபின்வரும் விருப்பத் தேர்வுகளுள் ஒன்றை நீங்கள் தேர்வு  செய்யலாம்.",
+	"openidchoosenick": "உங்கள் புனைப்பெயர் ($1)",
+	"openidchoosefull": "உங்கள் முழுப்பெயர் ($1)",
+	"openidchooseusername": "பயனர் பெயர்:",
+	"openidchoosepassword": "கடவுச்சொல்:",
+	"openid-convert-other-users-openid-text": "இது வேறு ஒருவரின் OpenID.",
+	"openidalreadyloggedin": "நீங்கள் ஏற்கனவே புகுபதிகை செய்துள்ளீர்கள்.",
+	"openidnousername": "ஒரு பயனர் பெயரும் குறிப்பிடப்படவில்லை.",
+	"openidbadusername": "மோசமான பயனர் பெயர் குறிப்பிடப்பட்டுள்ளது.",
+	"openiddelete-button": "உறுதிசெய்",
+	"openid-urls-url": "உரலி (URL)",
+	"openid-urls-action": "செயல்",
+	"openid-urls-registration": "பதிவு செய்யும் நேரம்",
+	"openid-urls-delete": "நீக்கு",
+	"openid-login-or-create-account": "புகுபதிகை செய்க அல்லது  புதிய கணக்கு ஒன்றை உருவாக்கவும்",
+	"openid-provider-label-google": "உங்கள் கூகுள் கணக்கைப் பயன்படுத்திப் புகுபதிகை செய்க",
+	"openid-provider-label-other-username": "உங்கள் $1 பயனர் பெயரை உள்ளிடவும்"
+}

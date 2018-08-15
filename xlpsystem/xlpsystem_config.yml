@@ -1,43 +1,79 @@
-version: '2'
+version: '3.6'
+
+volumes:
+  xlp_wordpress:
+
 services:
   mariadb:
-    image: 'bitnami/mariadb:latest'
-    environment:
-      - ALLOW_EMPTY_PASSWORD=yes
-      - MARIADB_USER=xlp_mediawiki
-      - MARIADB_DATABASE=xlpsystem_mediawiki
-    volumes:
-      - '/data/mariadb/:/bitnami'
-  mediawiki:
-    image: daocloud.io/weimar/xlp_mediawiki:20180813182014
-    labels:
-      kompose.service.type: nodeport
-    environment:
-      - MARIADB_HOST=mariadb
-      - MARIADB_PORT_NUMBER=3306
-      - MEDIAWIKI_DATABASE_USER=xlp_mediawiki
-      - MEDIAWIKI_DATABASE_NAME=xlpsystem_mediawiki
-      - ALLOW_EMPTY_PASSWORD=yes
-    ports:
-      - '50000:80'
-      - '443:443'
-    # volumes:
-    #   - '/data/mediawiki:/bitnami'
-    depends_on:
-      - mariadb
-  elasticsearch:
-    image: daocloud.io/weimar/xlp_elasticsearch:20180730213237
-    ports:
-      - '9200:9200'
-  wordpress:
-    depends_on:
-     - mariadb
-    image: daocloud.io/weimar/xlp_wordpress:20180730204207
-    ports:
-     - "8000:80"
+    image: 'mariadb:10.3'
     restart: always
     environment:
-     WORDPRESS_DB_HOST: mariadb:3306
-     WORDPRESS_DB_PASSWORD: wordpress
+      - MYSQL_ROOT_PASSWORD=W2qgpsLtQt
+    volumes:
+      - '/data/xlpsystem/mariadb/:/var/lib/mysql'
+    ports:
+      - 20000:3306
+    networks:
+      default:
+        aliases:
+          - mysql
 
+  mediawiki:
+    image: 'daocloud.io/weimar/xlp_mediawiki:20180814214736'
+    restart: always
+    environment:
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=W2qgpsLtQt
+    ports:
+      - 20001:80
+    volumes:
+      # - '/data/xlpsystem/mediawiki_dev:/xlp_dev'
+      - '/data/xlpsystem/mediawiki:/xlp_data'
+    depends_on:
+      - mariadb
 
+  wordpress:
+    image: daocloud.io/weimar/xlp_wordpress:20180815180110
+    restart: always
+    environment:
+      - WORDPRESS_DB_PASSWORD=W2qgpsLtQt
+    ports:
+      - 20002:80
+    volumes:
+      - type: volume
+        source: xlp_wordpress
+        target: /var/www/html/wp-content
+    depends_on:
+      - mariadb
+
+  # mediawiki:
+  #   image: daocloud.io/weimar/xlp_mediawiki:20180813182014
+  #   labels:
+  #     kompose.service.type: nodeport
+  #   environment:
+  #     - MARIADB_HOST=mariadb
+  #     - MARIADB_PORT_NUMBER=3306
+  #     - MEDIAWIKI_DATABASE_USER=xlp_mediawiki
+  #     - MEDIAWIKI_DATABASE_NAME=xlpsystem_mediawiki
+  #     - ALLOW_EMPTY_PASSWORD=yes
+  #   ports:
+  #     - '50000:80'
+  #     - '443:443'
+  #   # volumes:
+  #   #   - '/data/mediawiki:/bitnami'
+  #   depends_on:
+  #     - mariadb
+  # elasticsearch:
+  #   image: daocloud.io/weimar/xlp_elasticsearch:20180730213237
+  #   ports:
+  #     - '9200:9200'
+  # wordpress:
+  #   depends_on:
+  #    - mariadb
+  #   image: daocloud.io/weimar/xlp_wordpress:20180730204207
+  #   ports:
+  #    - "8000:80"
+  #   restart: always
+  #   environment:
+  #    WORDPRESS_DB_HOST: mariadb:3306
+  #    WORDPRESS_DB_PASSWORD: wordpress

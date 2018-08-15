@@ -1,0 +1,26 @@
+{
+	"@metadata": {
+		"authors": [
+			"Erdemaslancan",
+			"Gorizon",
+			"Mirzali",
+			"Gırd"
+		]
+	},
+	"openidoptional": "Opsiyonel",
+	"openidrequired": "Lazım",
+	"openidnickname": "Leqebe",
+	"openidfullname": "Nameyo tam",
+	"openidemail": "Adresa e-postey",
+	"openidlanguage": "Zıwan",
+	"openidtimezone": "Warey saete",
+	"openidchooseusername": "Nameyê karberi:",
+	"openidchoosepassword": "Parola:",
+	"openidloginlabel": "OpenID URL",
+	"openiddelete-button": "Tesdiq",
+	"prefs-openid-show-openid": "Grey OPENID perda karberda şımad",
+	"openid-urls-url": "URL",
+	"openid-urls-action": "Kerdış",
+	"openid-urls-delete": "Bestere",
+	"openid-trusted-sites-table-header-column-action": "Kerdış"
+}
