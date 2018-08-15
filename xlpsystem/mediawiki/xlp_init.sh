@@ -6,7 +6,7 @@ mkdir /xlp_data
 # add toyhouse logo
 mv /tmp/xlp_dev /
 
-# add links
+# add dev links
 rm -rf /var/www/html/extensions
 ln -s /xlp_dev/extensions /var/www/html/extensions
 
@@ -16,6 +16,14 @@ ln -s /xlp_dev/skins /var/www/html/skins
 # add toyhouse.png(logo)
 ln -s /xlp_dev/toyhouse.png /var/www/html/resources/assets/toyhouse.png
 
+# add php.ini place
+rm -rf /usr/local/etc/php
+ln -s /xlp_dev/php /usr/local/etc/php
+
+
 # add data links
 rm -rf /var/www/html/LocalSettings.php
 ln -s /xlp_data/LocalSettings.php /var/www/html/LocalSettings.php
+
+rm -rf /var/www/html/images
+ln -s /xlp_data/images /var/www/html/images

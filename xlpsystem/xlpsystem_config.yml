@@ -10,7 +10,7 @@ services:
     ports:
       - 20000:3306
   mediawiki:
-    image: 'daocloud.io/weimar/xlp_mediawiki:20180814214736'
+    image: 'daocloud.io/weimar/xlp_mediawiki:20180815195811'
     restart: always
     environment:
       - MYSQL_USER=root
