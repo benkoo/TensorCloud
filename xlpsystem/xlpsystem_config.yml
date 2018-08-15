@@ -10,11 +10,11 @@ services:
     ports:
       - 20000:3306
   mediawiki:
-    image: 'daocloud.io/weimar/xlp_mediawiki:20180815195811'
+    image: 'daocloud.io/weimar/xlp_mediawiki:20180815210533'
     restart: always
-    environment:
-      - MYSQL_USER=root
-      - MYSQL_PASSWORD=W2qgpsLtQt
+    # environment:
+    #   - MYSQL_USER=root
+    #   - MYSQL_PASSWORD=W2qgpsLtQt
     ports:
       - 20001:80       
     volumes:

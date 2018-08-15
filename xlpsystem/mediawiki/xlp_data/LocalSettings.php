@@ -53,9 +53,9 @@ $wgEmailAuthentication = true;
 ## Database settings
 $wgDBtype = "mysql";
 $wgDBserver = "mariadb";
-$wgDBname = "xlp_wiki_db";
-$wgDBuser = "root";
-$wgDBpassword = "W2qgpsLtQt";
+$wgDBname = "xlpsystem_mediawiki";
+$wgDBuser = "xlp_mediawiki";
+$wgDBpassword = "";
 
 # MySQL specific settings
 $wgDBprefix = "";
@@ -80,6 +80,8 @@ $wgFileExtensions = array_merge( $wgFileExtensions,
         'tiff', 'odt', 'odg', 'ods', 'odp', 'xmind', 'zip'
     )
 );
+
+$wgMaxUploadSize = 104857600;
 
 # InstantCommons allows wiki to use images from https://commons.wikimedia.org
 $wgUseInstantCommons = false;
@@ -136,3 +138,7 @@ wfLoadSkin( 'Vector' );
 # End of automatically generated settings.
 # Add more configuration options below.
 
+require_once "$IP/extensions/OpenID/OpenID.php";
+
+$wgOpenIDMode=array( 'provider' );
+$wgOpenIDIdentifiersURL="xlpuser:{ID}";
