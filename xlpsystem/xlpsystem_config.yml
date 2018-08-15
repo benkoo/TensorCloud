@@ -7,8 +7,6 @@ services:
       - MYSQL_ROOT_PASSWORD=W2qgpsLtQt
     volumes:
       - '/data/xlpsystem/mariadb/:/var/lib/mysql'
-    ports:
-      - 20000:3306
   mediawiki:
     image: 'daocloud.io/weimar/xlp_mediawiki:20180815224342'
     restart: always
