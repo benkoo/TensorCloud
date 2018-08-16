@@ -1,8 +1,5 @@
 version: "2"
 
-volumes:
-  wordpress:
-
 services:
   mariadb:
     image: 'mariadb:10.3'
@@ -11,10 +8,6 @@ services:
       - MYSQL_ROOT_PASSWORD=W2qgpsLtQt
     volumes:
       - '/data/xlpsystem/mariadb/:/var/lib/mysql'
-    networks:
-      default:
-        aliases:
-          - mysql
 
   mediawiki:
     image: daocloud.io/weimar/xlp_mediawiki:20180815224342
@@ -34,44 +27,10 @@ services:
     image: daocloud.io/weimar/xlp_wordpress:20180816122502
     restart: always
     environment:
-      - WORDPRESS_DB_PASSWORD=W2qgpsLtQt
+      - WORDPRESS_DB_HOST=mariadb
     ports:
       - 20002:80
     volumes:
-      - type: volume
-        source: wordpress
-        target: /xlp_data
+      - '/data/xlpsystem/wordpress:/xlp_data'
     depends_on:
       - mariadb
-
-  # mediawiki:
-  #   image: daocloud.io/weimar/xlp_mediawiki:20180813182014
-  #   labels:
-  #     kompose.service.type: nodeport
-  #   environment:
-  #     - MARIADB_HOST=mariadb
-  #     - MARIADB_PORT_NUMBER=3306
-  #     - MEDIAWIKI_DATABASE_USER=xlp_mediawiki
-  #     - MEDIAWIKI_DATABASE_NAME=xlpsystem_mediawiki
-  #     - ALLOW_EMPTY_PASSWORD=yes
-  #   ports:
-  #     - '50000:80'
-  #     - '443:443'
-  #   # volumes:
-  #   #   - '/data/mediawiki:/bitnami'
-  #   depends_on:
-  #     - mariadb
-  # elasticsearch:
-  #   image: daocloud.io/weimar/xlp_elasticsearch:20180730213237
-  #   ports:
-  #     - '9200:9200'
-  # wordpress:
-  #   depends_on:
-  #    - mariadb
-  #   image: daocloud.io/weimar/xlp_wordpress:20180730204207
-  #   ports:
-  #    - "8000:80"
-  #   restart: always
-  #   environment:
-  #    WORDPRESS_DB_HOST: mariadb:3306
-  #    WORDPRESS_DB_PASSWORD: wordpress
