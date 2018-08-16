@@ -1,10 +1,10 @@
 FROM wordpress:4.9.8-php7.1-apache
 
-# COPY xlp_dev /tmp/xlp_dev
-# COPY xlp_init.sh /tmp/
+COPY xlp_dev /tmp/xlp_dev
+COPY xlp_init.sh /tmp/
 COPY xlp_start.sh /tmp/
 
-# RUN ["/bin/sh", "-c", "./xlp_init.sh"]
+RUN ["/bin/sh", "-c", "/tmp/xlp_init.sh"]
 
 EXPOSE 80
 

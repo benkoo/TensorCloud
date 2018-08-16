@@ -24,13 +24,13 @@ services:
       - mariadb
 
   wordpress:
-    image: daocloud.io/weimar/xlp_wordpress:20180816153320
+    image: daocloud.io/weimar/xlp_wordpress:20180816154427
     restart: always
     environment:
       - WORDPRESS_DB_HOST=mariadb
     ports:
       - 20002:80
     volumes:
-      - '/data/xlpsystem/wordpress:/xlp_data'
+      - '/data/xlpsystem/wordpress:/var/www/html'
     depends_on:
       - mariadb
