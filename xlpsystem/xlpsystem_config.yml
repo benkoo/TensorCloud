@@ -1,4 +1,4 @@
-version: '3.6'
+version: "2"
 
 volumes:
   wordpress:
@@ -11,19 +11,17 @@ services:
       - MYSQL_ROOT_PASSWORD=W2qgpsLtQt
     volumes:
       - '/data/xlpsystem/mariadb/:/var/lib/mysql'
-    ports:
-      - 20000:3306
     networks:
       default:
         aliases:
           - mysql
 
   mediawiki:
-    image: 'daocloud.io/weimar/xlp_mediawiki:20180814214736'
+    image: daocloud.io/weimar/xlp_mediawiki:20180815224342
     restart: always
-    environment:
-      - MYSQL_USER=root
-      - MYSQL_PASSWORD=W2qgpsLtQt
+    # environment:
+    #   - MYSQL_USER=root
+    #   - MYSQL_PASSWORD=W2qgpsLtQt
     ports:
       - 20001:80
     volumes:

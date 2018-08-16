@@ -29,7 +29,7 @@ $wgSitename = "xlp_cd_system";
 $wgScriptPath = "";
 
 ## The protocol and server name to use in fully-qualified URLs
-$wgServer = "http://localhost:8080";
+## $wgServer = "";
 
 ## The URL path to static resources (images, scripts, etc.)
 $wgResourceBasePath = $wgScriptPath;
@@ -53,9 +53,9 @@ $wgEmailAuthentication = true;
 ## Database settings
 $wgDBtype = "mysql";
 $wgDBserver = "mariadb";
-$wgDBname = "xlp_wiki_db";
-$wgDBuser = "root";
-$wgDBpassword = "W2qgpsLtQt";
+$wgDBname = "xlpsystem_mediawiki";
+$wgDBuser = "xlp_mediawiki";
+$wgDBpassword = "";
 
 # MySQL specific settings
 $wgDBprefix = "";
@@ -69,9 +69,19 @@ $wgMemCachedServers = [];
 
 ## To enable image uploads, make sure the 'images' directory
 ## is writable, then set this to true:
-$wgEnableUploads = false;
+$wgEnableUploads = true;
 $wgUseImageMagick = true;
 $wgImageMagickConvertCommand = "/usr/bin/convert";
+
+
+## upload file extensions
+$wgFileExtensions = array_merge( $wgFileExtensions,
+    array( 'doc', 'xls', 'mpp', 'pdf', 'ppt', 'xlsx', 'jpg', 
+        'tiff', 'odt', 'odg', 'ods', 'odp', 'xmind', 'zip'
+    )
+);
+
+$wgMaxUploadSize = 104857600;
 
 # InstantCommons allows wiki to use images from https://commons.wikimedia.org
 $wgUseInstantCommons = false;
@@ -94,7 +104,7 @@ $wgShellLocale = "C.UTF-8";
 # Site language code, should be one of the list in ./languages/data/Names.php
 $wgLanguageCode = "en";
 
-$wgSecretKey = "e1f8b1f7b13066b175f9aed9792e60e5cc310fb6026619bc15e471d256dcf87b";
+$wgSecretKey = "3awu(BsL%7fbdnC8vh6pU?icBYJWKckhHXrwxr,BAt92ZuxVwFtTfb,QZn4wN3U2";
 
 # Changing this will log out all existing sessions.
 $wgAuthenticationTokenVersion = "1";
@@ -128,3 +138,7 @@ wfLoadSkin( 'Vector' );
 # End of automatically generated settings.
 # Add more configuration options below.
 
+require_once "$IP/extensions/OpenID/OpenID.php";
+
+$wgOpenIDMode=array( 'provider' );
+$wgOpenIDIdentifiersURL="xlpuser:{ID}";
