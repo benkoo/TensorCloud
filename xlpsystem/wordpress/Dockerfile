@@ -1,10 +1,11 @@
 FROM wordpress:4.9.8-php7.1-apache
 
-RUN rm -rf /usr/src/wordpress
-COPY xlp_dev /usr/src/wordpress
-RUN mkdir /usr/src/wordpress/wp-content/uploads && \
-    chmod a+w /usr/src/wordpress/wp-content/uploads
+# COPY xlp_dev /tmp/xlp_dev
+# COPY xlp_init.sh /tmp/
+COPY xlp_start.sh /tmp/
 
-RUN ln -s /var/www/html/wp-content /xlp_data
+# RUN ["/bin/sh", "-c", "./xlp_init.sh"]
 
 EXPOSE 80
+
+CMD ["/bin/sh", "-c", "/tmp/xlp_start.sh"]
