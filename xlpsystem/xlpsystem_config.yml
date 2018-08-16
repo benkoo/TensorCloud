@@ -1,7 +1,7 @@
 version: '3.6'
 
 volumes:
-  xlp_wordpress:
+  wordpress:
 
 services:
   mariadb:
@@ -33,7 +33,7 @@ services:
       - mariadb
 
   wordpress:
-    image: daocloud.io/weimar/xlp_wordpress:20180815180110
+    image: daocloud.io/weimar/xlp_wordpress:20180816122502
     restart: always
     environment:
       - WORDPRESS_DB_PASSWORD=W2qgpsLtQt
@@ -41,8 +41,8 @@ services:
       - 20002:80
     volumes:
       - type: volume
-        source: xlp_wordpress
-        target: /var/www/html/wp-content
+        source: wordpress
+        target: /xlp_data
     depends_on:
       - mariadb
 
