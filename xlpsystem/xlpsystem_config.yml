@@ -24,7 +24,7 @@ services:
       - mariadb
 
   wordpress:
-    image: daocloud.io/weimar/xlp_wordpress:20180816154427
+    image: daocloud.io/weimar/xlp_wordpress:20180816160849
     restart: always
     environment:
       - WORDPRESS_DB_HOST=mariadb
