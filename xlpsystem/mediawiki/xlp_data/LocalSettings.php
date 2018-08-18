@@ -29,7 +29,7 @@ $wgSitename = "xlp_cd_system";
 $wgScriptPath = "";
 
 ## The protocol and server name to use in fully-qualified URLs
-## $wgServer = "";
+$wgServer = "http://hotbackup.toyhouse.cc/";
 
 ## The URL path to static resources (images, scripts, etc.)
 $wgResourceBasePath = $wgScriptPath;
@@ -141,4 +141,4 @@ wfLoadSkin( 'Vector' );
 require_once "$IP/extensions/OpenID/OpenID.php";
 
 $wgOpenIDMode=array( 'provider' );
-$wgOpenIDIdentifiersURL="xlpuser:{ID}";
+# $wgOpenIDIdentifiersURL="xlpuser:{ID}";
