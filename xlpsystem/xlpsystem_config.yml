@@ -16,7 +16,7 @@ services:
     #   - MYSQL_USER=root
     #   - MYSQL_PASSWORD=W2qgpsLtQt
     ports:
-      - 20001:80
+      - 80:80
     volumes:
       # - '/data/xlpsystem/mediawiki_dev:/xlp_dev'
       - '/data/xlpsystem/mediawiki:/xlp_data'
@@ -29,7 +29,7 @@ services:
     environment:
       - WORDPRESS_DB_HOST=mariadb
     ports:
-      - 20002:80
+      - 81:80
     volumes:
       - '/data/xlpsystem/wordpress:/var/www/html'
     depends_on:
