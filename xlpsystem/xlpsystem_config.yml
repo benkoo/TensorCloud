@@ -25,7 +25,7 @@ services:
       - matomo
 
   wordpress:
-    image: daocloud.io/weimar/xlp_wordpress:20180819000938
+    image: daocloud.io/weimar/xlp_wordpress:20180820185725
     restart: always
     environment:
       - WORDPRESS_DB_HOST=mariadb
