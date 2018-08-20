@@ -36,7 +36,7 @@ services:
       - mariadb
 
   matomo:
-    image: daocloud.io/weimar/xlp_matomo:20180820154511
+    image: daocloud.io/weimar/xlp_matomo:20180820163542
     restart: always
     ports:
       - 82:80
