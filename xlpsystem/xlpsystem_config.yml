@@ -10,7 +10,7 @@ services:
       - '/data/xlpsystem/mariadb/:/var/lib/mysql'
 
   mediawiki:
-    image: daocloud.io/weimar/xlp_mediawiki:20180820171818
+    image: daocloud.io/weimar/xlp_mediawiki:20180820180437
     restart: always
     # environment:
     #   - MYSQL_USER=root
@@ -22,6 +22,7 @@ services:
       - '/data/xlpsystem/mediawiki:/xlp_data'
     depends_on:
       - mariadb
+      - matomo
 
   wordpress:
     image: daocloud.io/weimar/xlp_wordpress:20180819000938
@@ -34,6 +35,7 @@ services:
       - '/data/xlpsystem/wordpress:/var/www/html'
     depends_on:
       - mariadb
+      - matomo
 
   matomo:
     image: daocloud.io/weimar/xlp_matomo:20180820163542
