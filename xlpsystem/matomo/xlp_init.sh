@@ -7,5 +7,5 @@ mkdir /xlp_data
 mv /tmp/xlp_dev /
 
 # link xlp_dev/wordpress wordpres_src
-rm -rf /usr/src/wordpress
-ln -s /xlp_dev/wordpress /usr/src/wordpress
+rm -rf /usr/src/piwik
+ln -s /xlp_dev/piwik /usr/src/piwik
