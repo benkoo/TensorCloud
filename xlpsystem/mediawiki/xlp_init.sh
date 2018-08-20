@@ -20,6 +20,8 @@ ln -s /xlp_dev/toyhouse.png /var/www/html/resources/assets/toyhouse.png
 rm -rf /usr/local/etc/php
 ln -s /xlp_dev/php /usr/local/etc/php
 
+# add Piwik tracking code
+ln -s /xlp_dev/piwik.js /var/www/html/piwik.js
 
 # add data links
 rm -rf /var/www/html/LocalSettings.php

@@ -142,3 +142,8 @@ require_once "$IP/extensions/OpenID/OpenID.php";
 
 $wgOpenIDMode=array( 'provider' );
 # $wgOpenIDIdentifiersURL="xlpuser:{ID}";
+
+# Matomo
+wfLoadExtension( 'Piwik' );
+$wgPiwikURL = "hotbackup.toyhouse.cc:82";
+$wgPiwikIDSite = "1";
