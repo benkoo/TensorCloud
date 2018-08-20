@@ -10,7 +10,7 @@ services:
       - '/data/xlpsystem/mariadb/:/var/lib/mysql'
 
   mediawiki:
-    image: daocloud.io/weimar/xlp_mediawiki:20180820165646
+    image: daocloud.io/weimar/xlp_mediawiki:20180820171818
     restart: always
     # environment:
     #   - MYSQL_USER=root
