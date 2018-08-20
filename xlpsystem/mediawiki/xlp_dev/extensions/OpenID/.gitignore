@@ -1,7 +1,7 @@
 *~
 *.kate-swp
 .*.swp
-Auth/
+# Auth/
 php-openid/
 vendor/**
 node_modules/**
