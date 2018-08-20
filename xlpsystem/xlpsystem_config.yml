@@ -34,3 +34,13 @@ services:
       - '/data/xlpsystem/wordpress:/var/www/html'
     depends_on:
       - mariadb
+
+  matomo:
+    image: daocloud.io/weimar/xlp_matomo:20180820154511
+    restart: always
+    ports:
+      - 82:80
+    volumes:
+      - '/data/xlpsystem/matomo:/var/www/html'
+    depends_on:
+      - mariadb
