@@ -134,6 +134,22 @@ wfLoadSkin( 'MonoBook' );
 wfLoadSkin( 'Timeless' );
 wfLoadSkin( 'Vector' );
 
+# Prevent new user registrations except by sysops
+$wgGroupPermissions['*']['createaccount'] = false;
+
+# Forbid anonymous
+$wgGroupPermissions['*']['read'] = false;
+$wgGroupPermissions['*']['edit'] = false;
+
+# Define the 'editors' group
+$wgGroupPermissions['editors']['read'] = true;
+$wgGroupPermissions['editors']['edit'] = true;
+$wgGroupPermissions['editors']['createpage'] = true;
+$wgGroupPermissions['editors']['upload'] = true;
+
+#Define the 'addUsers' group
+$wgGroupPermissions['addUsers']['createaccount'] = true;
+
 
 # End of automatically generated settings.
 # Add more configuration options below.
@@ -141,7 +157,6 @@ wfLoadSkin( 'Vector' );
 require_once "$IP/extensions/OpenID/OpenID.php";
 
 $wgOpenIDMode=array( 'provider' );
-# $wgOpenIDIdentifiersURL="xlpuser:{ID}";
 
 # Matomo
 wfLoadExtension( 'Piwik' );
