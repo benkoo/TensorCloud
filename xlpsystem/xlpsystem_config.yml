@@ -48,7 +48,7 @@ services:
       - mariadb
 
   elasticsearch:
-    image: daocloud.io/weimar/xlp_elasticsearch:20180821232706
+    image: daocloud.io/weimar/xlp_elasticsearch:20180822101843
     restart: always
     ports:
       - 9200:9200
