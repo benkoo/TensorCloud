@@ -7,5 +7,5 @@ mkdir /xlp_data
 mv /tmp/xlp_dev /
 
 # link xlp_dev/ik plugin
-ln -s /xlp_dev/ik /usr/share/elasticsearch/plugins/ik
+cp -r /xlp_dev/ik /usr/share/elasticsearch/plugins/ik
 chown elasticsearch:elasticsearch /usr/share/elasticsearch/plugins/ik
