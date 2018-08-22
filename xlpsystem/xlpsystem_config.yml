@@ -48,8 +48,7 @@ services:
       - mariadb
 
   elasticsearch:
-    image: daocloud.io/weimar/xlp_elasticsearch:20180822101843
-    restart: always
+    image: daocloud.io/weimar/xlp_elasticsearch:20180822102938
     ports:
       - 9200:9200
       - 9300:9300
@@ -58,6 +57,5 @@ services:
 
   kibana:
     image: daocloud.io/weimar/xlp_kibana:20180821233221
-    restart: always
     ports:
       - 5601:5601
