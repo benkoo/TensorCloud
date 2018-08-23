@@ -165,3 +165,10 @@ $wgPiwikIDSite = "1";
 
 # Elastica
 wfLoadExtension( 'Elastica' );
+
+# CirrusSearch
+wfLoadExtension( 'Elastica' );
+require_once( "$IP/extensions/CirrusSearch/CirrusSearch.php" );
+$wgDisableSearchUpdate = true;
+
+$wgCirrusSearchServers = [ 'elasticsearch'];

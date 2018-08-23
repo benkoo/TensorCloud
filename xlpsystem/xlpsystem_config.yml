@@ -23,6 +23,7 @@ services:
     depends_on:
       - mariadb
       - matomo
+      - elasticsearch
 
   wordpress:
     image: daocloud.io/weimar/xlp_wordpress:20180820185725
