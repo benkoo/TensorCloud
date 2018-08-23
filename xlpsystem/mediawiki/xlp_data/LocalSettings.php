@@ -29,7 +29,7 @@ $wgSitename = "xlp_cd_system";
 $wgScriptPath = "";
 
 ## The protocol and server name to use in fully-qualified URLs
-$wgServer = "http://hotbackup.toyhouse.cc/";
+$wgServer = "http://main.toyhouse.cc/";
 
 ## The URL path to static resources (images, scripts, etc.)
 $wgResourceBasePath = $wgScriptPath;
@@ -160,7 +160,7 @@ $wgOpenIDMode=array( 'provider' );
 
 # Matomo
 wfLoadExtension( 'Piwik' );
-$wgPiwikURL = "hotbackup.toyhouse.cc:82";
+$wgPiwikURL = "main.toyhouse.cc:82";
 $wgPiwikIDSite = "1";
 
 # Elastica
