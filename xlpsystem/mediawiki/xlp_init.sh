@@ -21,7 +21,7 @@ rm -rf /usr/local/etc/php
 ln -s /xlp_dev/php /usr/local/etc/php
 
 # add Piwik tracking code
-ln -s /xlp_dev/piwik.js /var/www/html/piwik.js
+ln -s /xlp_data/piwik.js /var/www/html/piwik.js
 
 # add data links
 rm -rf /var/www/html/LocalSettings.php

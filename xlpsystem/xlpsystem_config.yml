@@ -10,19 +10,20 @@ services:
       - '/data/xlpsystem/mariadb/:/var/lib/mysql'
 
   mediawiki:
-    image: daocloud.io/weimar/xlp_mediawiki:20180820180437
+    image: daocloud.io/weimar/xlp_mediawiki:20180824173147
     restart: always
     # environment:
     #   - MYSQL_USER=root
     #   - MYSQL_PASSWORD=W2qgpsLtQt
     ports:
-      - 80:80
+      - 801:80
     volumes:
       # - '/data/xlpsystem/mediawiki_dev:/xlp_dev'
       - '/data/xlpsystem/mediawiki:/xlp_data'
     depends_on:
       - mariadb
       - matomo
+      - elasticsearch
 
   wordpress:
     image: daocloud.io/weimar/xlp_wordpress:20180820185725
@@ -68,3 +69,5 @@ services:
     image: daocloud.io/weimar/xlp_kibana:20180821233221
     ports:
       - 5601:5601
+    depends_on:
+      - elasticsearch

@@ -29,7 +29,7 @@ $wgSitename = "xlp_cd_system";
 $wgScriptPath = "";
 
 ## The protocol and server name to use in fully-qualified URLs
-$wgServer = "http://hotbackup.toyhouse.cc/";
+$wgServer = "http://main.toyhouse.cc/";
 
 ## The URL path to static resources (images, scripts, etc.)
 $wgResourceBasePath = $wgScriptPath;
@@ -154,11 +154,21 @@ $wgGroupPermissions['addUsers']['createaccount'] = true;
 # End of automatically generated settings.
 # Add more configuration options below.
 
+# OpenID
 require_once "$IP/extensions/OpenID/OpenID.php";
-
 $wgOpenIDMode=array( 'provider' );
 
 # Matomo
 wfLoadExtension( 'Piwik' );
-$wgPiwikURL = "hotbackup.toyhouse.cc:82";
+$wgPiwikURL = "main.toyhouse.cc:82";
 $wgPiwikIDSite = "1";
+
+# Elastica
+wfLoadExtension( 'Elastica' );
+
+# Show exception details
+$wgShowExceptionDetails = true;
+
+# CirrusSearch
+require_once( "$IP/extensions/CirrusSearch/CirrusSearch.php" );
+$wgCirrusSearchServers = [ 'elasticsearch'];
