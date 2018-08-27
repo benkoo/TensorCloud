@@ -1,25 +1,20 @@
-version: "2"
-
+version: '2'
 services:
   mariadb:
-    image: 'mariadb:10.3'
+    image: mariadb:10.3
     restart: always
     environment:
       - MYSQL_ROOT_PASSWORD=W2qgpsLtQt
     volumes:
-      - '/data/xlpsystem/mariadb/:/var/lib/mysql'
-
+      - /data/xlpsystem/mariadb/:/var/lib/mysql
   mediawiki:
     image: daocloud.io/weimar/xlp_mediawiki:20180827140844
     restart: always
-    # environment:
-    #   - MYSQL_USER=root
-    #   - MYSQL_PASSWORD=W2qgpsLtQt
     ports:
       - 801:80
     volumes:
-      # - '/data/xlpsystem/mediawiki_dev:/xlp_dev'
-      - '/data/xlpsystem/mediawiki:/xlp_data'
+      - /data/xlpsystem/mediawiki:/xlp_data
+      - /data/xlpsystem/mediawiki_dev:/xlp_dev
     depends_on:
       - mariadb
       - matomo
@@ -30,10 +25,11 @@ services:
     restart: always
     environment:
       - WORDPRESS_DB_HOST=mariadb
+      - WORDPRESS_DB_PASSWORD=W2qgpsLtQt
     ports:
       - 81:80
     volumes:
-      - '/data/xlpsystem/wordpress:/var/www/html'
+      - /data/xlpsystem/wordpress:/var/www/html
     depends_on:
       - mariadb
       - matomo
@@ -44,7 +40,7 @@ services:
     ports:
       - 82:80
     volumes:
-      - '/data/xlpsystem/matomo:/var/www/html'
+      - /data/xlpsystem/matomo:/var/www/html
     depends_on:
       - mariadb
 
@@ -54,7 +50,7 @@ services:
       - 9200:9200
       - 9300:9300
     volumes:
-      - '/data/xlpsystem/elasticsearch:/usr/share/elasticsearch/data'
+      - /data/xlpsystem/elasticsearch:/usr/share/elasticsearch/data
     environment:
       - discovery.type=single-node
       - bootstrap.memory_lock=true
