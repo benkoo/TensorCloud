@@ -1,0 +1,31 @@
+version: '2'
+services:
+  phabricator:
+    restart: always
+    ports:
+     - "10443:443"
+     - "82:80"
+     - "10022:22"
+    volumes:
+     - /phabricator/data/repos:/repos
+     - /phabricator/data/extensions:/data/phabricator/phabricator/src/extensions
+    depends_on:
+     - mysql
+    links:
+     - mysql
+    environment:
+     - MYSQL_HOST=mysql
+     - MYSQL_USER=root
+     - MYSQL_PASS=phabricator
+     - PHABRICATOR_REPOSITORY_PATH=/repos
+     - PHABRICATOR_HOST=cd.toyhouse.cc:82
+     - ENABLE_APCU=true
+    image: redpointgames/phabricator
+  mysql:
+    restart: always
+    volumes:
+     - /phabricator/data/mysql:/var/lib/mysql
+     - /phabricator/config/mysql:/etc/mysql
+    image: mysql:5.7.14
+    environment:
+     - MYSQL_ROOT_PASSWORD=phabricator

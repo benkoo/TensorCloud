@@ -1,0 +1,1 @@
+0 4 * * * /bin/sh -c /root/auto-backup-phabricator.sh
