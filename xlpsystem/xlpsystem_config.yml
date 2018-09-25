@@ -98,3 +98,16 @@ services:
      - PHABRICATOR_HOST=cd.toyhouse.cc:85
      - ENABLE_APCU=true
     image: redpointgames/phabricator
+
+  grafana:
+    restart: always
+    ports:
+     - "86:3000"
+    volumes:
+     - /data/xlpsystem/grafana:/var/lib/grafana
+    depends_on:
+     - elasticsearch
+    links:
+     - elasticsearch
+
+    image: "grafana/grafana"
