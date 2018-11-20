@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Liuxinyu970226",
+			"Cwlin0416"
+		]
+	},
+	"elastica-desc": "提供 [http://elastica.io/ Elastica] 函式庫以提供其他擴充套件基礎的 [http://www.elasticsearch.org/ Elasticsearch] 功能。"
+}
