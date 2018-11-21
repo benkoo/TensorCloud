@@ -1,6 +1,4 @@
-# 使用rsync从bak.toyhouse.cc同步数据
-
-描述如何使用rsync从toyhouse.cc定期同步数据。
+# 使用rsync从toyhouse.cc同步数据
 
 ## 步骤
 
