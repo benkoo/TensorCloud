@@ -2,9 +2,13 @@
 
 ## 步骤
 
-1. 在本地服务器创建 toyhouse.cc 的镜像
+1. 首先在本地服务器创建 toyhouse.cc 的镜像，确保服务能够正常运行
 
 2. 打开 rsyncd.passwd.conf ，将rsync同步密码写入，将文件改名为 rsyncd.passwd
+
+```
+mv rsyncd.passwd.conf rsyncd.passwd
+```
 
 3. 确保 rsync.passwd 权限为 600
 
