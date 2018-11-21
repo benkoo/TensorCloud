@@ -18,7 +18,7 @@ chmod 600 ./rsync.passwd
 
 4. 打开 sync.sh 检查如下参数
 
-* local_path: 本地存放数据文件的路径
+* local_path: 本地存放数据文件的路径 例如：/data/xlpsystem
 * remote_host: 远程服务器，当前配置为 root@toyhouse.cc
 * remote_name: 远程rsync名称，当前配置为 toyhousecc
 * password_file: 密码文件路径
