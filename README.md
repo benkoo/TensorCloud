@@ -7,8 +7,6 @@ Welcome to TensorCloud! This project is to allow everyone to own and operate the
 
 Any persons or organizations are all welcome to contribute to this project, please send pull request to us, whenever you feel that new ideas or features should be added.
 
-Toyhouse Team
-
 ## Mariadb
 
 Website: https://mariadb.org/
@@ -69,4 +67,8 @@ Website: https://matomo.org/
 docker-compose -f Wordpress/docker-compose.yml -f mediawiki.yml -f piwik.yml -f phabricator.yml up
 ```
 
-And more, http://toyhouse.cc:81/wiki/index.php/Get_Started_with_Remix#Using_Remix
+And more, http://toyhouse.cc:81/index.php/Get_Started_with_Remix
+
+Sincerely,
+
+Toyhouse Team
