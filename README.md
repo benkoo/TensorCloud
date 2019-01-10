@@ -6,7 +6,7 @@ Welcome to TensorCloud! This project is to allow everyone to own and operate the
 3. Configuration Data Asset.
 
 # Why do we separate data this way?
-Due to the varying cycle types of these different kinds of data assets, this data separation is to reduce the data payload for each kind of assets. It allows one to incrementally back-up and restore Content Data Asset independent from the other two kinds of digital asset. This organization also requires a set of accompanying tools to expedite and simplify the backup and restore processes. This will provide a mechanism to ensure better Qualities of Services (QoS), and data security properties. 
+Due to the varying cycle types of these different kinds of data assets, Content Data, Software Data, and Configuraiton Data, our data separation scheme is about reducing the size of data payload for each kind of assets. It allows one to separately and incrementally back-up and restore Content Data Asset independent from the other two kinds of digital asset. This organization also requires a set of accompanying tools to expedite and simplify the backup and restore processes. This will provide a mechanism to ensure better Qualities of Services (QoS), and data security properties. 
 
 Any persons or organizations are all welcome to contribute to this project, please send pull request to us, whenever you feel that new ideas or features should be added.
 
