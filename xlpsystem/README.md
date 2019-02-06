@@ -35,7 +35,7 @@ $ git cloen git@github.com:benkoo/TensorCloud.git
 $ cd ./TensorCloud/xlpsystem
 ```
 
-### Check and config xlpsystem_config.yml
+### Check xlpsystem_config.yml config file
 
 Before lift up services, we could open `xlpsystem_config.yml` and check those configs.
 
