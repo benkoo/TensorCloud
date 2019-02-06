@@ -26,7 +26,7 @@ services:
     - WORDPRESS_DB_HOST=mariadb
     - WORDPRESS_DB_PASSWORD=W2qgpsLtQt
     ports:
-    - 81:80
+    - 803:80
     volumes:
     - /data/xlpsystem/wordpress:/var/www/html
     depends_on:
@@ -36,7 +36,7 @@ services:
     image: daocloud.io/weimar/xlp_matomo:20180820163542
     restart: always
     ports:
-    - 82:80
+    - 802:80
     volumes:
     - /data/xlpsystem/matomo:/var/www/html
     depends_on:
