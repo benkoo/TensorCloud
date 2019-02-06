@@ -112,7 +112,7 @@ services:
 Tips
 
 * All volumes are stored at `/data/xlpsystem`
-* `ports` section define the http ports we use
+* `ports` section defines the http ports we use
 * Mariadb root password is "W2qgpsLtQt"
 * We can remove some services like "phabricator" or "grafana" if there's no need.
 
@@ -157,6 +157,14 @@ mediawiki admin: xlp / W2qgpsLtQt
 matomo admin: xlp / W2qgpsLtQt
 wordpress admin: xlp / W2qgpsLtQt
 ```
+
+and now services can be access
+
+* http://locahost:801 Mediawiki
+* http://locahost:802 Matomo
+* http://locahost:803 Wordpress
+* http://locahost:5601 Kibana
+
 
 ### Backup data
 Copy all data file under `/data/xlpsystem` for backup
