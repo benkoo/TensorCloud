@@ -21,7 +21,7 @@ Login Succeeded
 ```
 
 ## File Sharing whitelist (mac)
-If you are using Mac, `/data` directory(or any other) need to be add to the white list in order to have full access permission.
+If you are using Mac, `/data` directory(or any other) need to be added to the white list in order to have full access permission.
 Check https://docs.docker.com/docker-for-mac/
 
 ## Get Started
@@ -30,7 +30,7 @@ Check https://docs.docker.com/docker-for-mac/
 
 Clone this repo and goto `/xlpsystem` folder.
 ```
-$ git cloen git@github.com:benkoo/TensorCloud.git
+$ git clone git@github.com:benkoo/TensorCloud.git
 
 $ cd ./TensorCloud/xlpsystem
 ```
