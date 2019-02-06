@@ -139,6 +139,7 @@ Download a backup file from `https://github.com/benkoo/TensorCloud/blob/master/x
 Then let all service down, and cp those file to `/data/xlpsystem` and up all services again
 
 ```bash
+($cd ./TensorCloud/xlpsystem & wget https://github.com/benkoo/TensorCloud/blob/master/xlpsystem/backups/xlpsystem_empty_20190206.zip)
 $ ./down
 
 $ unzip xlpsystem_empty_20190206.zip
@@ -158,7 +159,7 @@ matomo admin: xlp / W2qgpsLtQt
 wordpress admin: xlp / W2qgpsLtQt
 ```
 
-and now services can be access
+and now services can be accessd by `locahost'
 
 * http://locahost:801 Mediawiki
 * http://locahost:802 Matomo
@@ -168,3 +169,4 @@ and now services can be access
 
 ### Backup data
 Copy all data file under `/data/xlpsystem` for backup
+
