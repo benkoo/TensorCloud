@@ -21,8 +21,9 @@ Login Succeeded
 ```
 
 ## File Sharing whitelist (mac)
-If you are using Mac, `/data` directory(or any other) need to be added to the white list in order to have full access permission.
-Check https://docs.docker.com/docker-for-mac/
+If you are using Mac, `/data` directory(or any other) need to be created manually under root directory and added to the white list in order to have full access permission. 
+
+Mac OS 10.14.2 & Docker Version 2.0.0.2 (30215):Menu->Preferences->File Sharing
 
 ## Get Started
 
@@ -117,7 +118,7 @@ Tips
 * We can remove some services like "phabricator" or "grafana" if there's no need.
 
 ### UP!
-
+before ./up command, you should log out your own account (in menu bar) to avoid conflict (see https://github.com/docker/hub-feedback/issues/935)
 ```bash
 $ ./up
 Creating xlpsystem_elasticsearch_1 ... done
@@ -131,20 +132,19 @@ Creating xlpsystem_mediawiki_1     ... done
 After doing this, open your browser and navgate to `localhost:801`, you should see an empty mediawiki.
 
 
-### Retore data (from initialization files)
+### Restore data (from initialization files)
 
-Now we can download a initialization data file and restore to the system, so that we can use some basic configurations and init data.
+Initialization data file has been uploaded to ./xlpsystem/backups in zip format (current version xlpsystem_empty_20190206.zip)
 
-Download a backup file from `https://github.com/benkoo/TensorCloud/blob/master/xlpsystem/backups/xlpsystem_empty_20190206.zip`
-Then let all service down, and cp those file to `/data/xlpsystem` and up all services again
+Now let all service down, and cp those file to `/data/xlpsystem` and up all services again
 
 ```bash
-($cd ./TensorCloud/xlpsystem & wget https://github.com/benkoo/TensorCloud/blob/master/xlpsystem/backups/xlpsystem_empty_20190206.zip)
+
 $ ./down
 
-$ unzip xlpsystem_empty_20190206.zip
+$ unzip xlpsystem_empty_20190206.zip //this could be done manually
 
-$ cp -R ./xlpsystem /data/xlpsystem
+$ cp -R ./xlpsystem /data/xlpsystem //this could be done manually
 
 $ ./up
 ```
@@ -161,10 +161,10 @@ wordpress admin: xlp / W2qgpsLtQt
 
 and now services can be accessd by `locahost'
 
-* http://locahost:801 Mediawiki
-* http://locahost:802 Matomo
-* http://locahost:803 Wordpress
-* http://locahost:5601 Kibana
+* http://localhost:801 Mediawiki
+* http://localhost:802 Matomo
+* http://localhost:803 Wordpress
+* http://localhost:5601 Kibana
 
 
 ### Backup data
