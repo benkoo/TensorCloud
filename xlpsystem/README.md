@@ -11,15 +11,6 @@ $ docker-compose -v
 docker-compose version 1.23.2, build 1110ad01
 ```
 
-## Docker login
-Since docker images were uploaded to DaoCloud, we need login to DaoCloud before pull docker images.(use the account below)
-
-```
-$docker login daocloud.io -u 'bobyuxinyang' -p '3NzWxp[hKATfv'
-WARNING! Using --password via the CLI is insecure. Use --password-stdin.
-Login Succeeded
-```
-
 ## File Sharing whitelist (mac)
 If you are using Mac, `/data` directory(or any other) need to be created manually under root directory and added to the white list in order to have full access permission. 
 

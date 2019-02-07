@@ -8,7 +8,7 @@ services:
     volumes:
     - /data/xlpsystem/mariadb/:/var/lib/mysql
   mediawiki:
-    image: xlpsystem/mediawiki:20180827140844
+    image: daocloud.io/weimar/xlp_mediawiki:20180827140844
     restart: always
     ports:
     - 801:80
@@ -20,7 +20,7 @@ services:
     - matomo
     - elasticsearch
   wordpress:
-    image: xlpsystem/wordpress:20180820185725
+    image: daocloud.io/weimar/xlp_wordpress:20180820185725
     restart: always
     environment:
     - WORDPRESS_DB_HOST=mariadb
@@ -33,7 +33,7 @@ services:
     - mariadb
     - matomo
   matomo:
-    image: xlpsystem/matomo:20180820163542
+    image: daocloud.io/weimar/xlp_matomo:20180820163542
     restart: always
     ports:
     - 802:80
@@ -42,7 +42,7 @@ services:
     depends_on:
     - mariadb
   elasticsearch:
-    image: xlpsystem/elasticsearch:20180822142218
+    image: daocloud.io/weimar/xlp_elasticsearch:20180822142218
     ports:
     - 9200:9200
     - 9300:9300
@@ -58,7 +58,7 @@ services:
         hard: -1
     mem_limit: 1g
   kibana:
-    image: xlpsystem/kibana:20180821233221
+    image: daocloud.io/weimar/xlp_kibana:20180821233221
     ports:
     - 5601:5601
     depends_on:
