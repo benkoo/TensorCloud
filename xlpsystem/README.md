@@ -12,7 +12,7 @@ docker-compose version 1.23.2, build 1110ad01
 ```
 
 ## File Sharing whitelist (mac)
-If you are using Mac, `/data` directory(or any other) need to be created manually under root directory and added to the white list in order to have full access permission. 
+If you are using Mac, `/data` directory(or any other) need to be created manually under root directory and added to the white list in order to have full access permission. One can use the GUI feature of Docker to do the following:
 
 Mac OS 10.14.2 & Docker Version 2.0.0.2 (30215):Menu->Preferences->File Sharing
 
@@ -20,7 +20,7 @@ Mac OS 10.14.2 & Docker Version 2.0.0.2 (30215):Menu->Preferences->File Sharing
 
 ### Clone this Repo
 
-Clone this repo and goto `/xlpsystem` folder.
+Clone this repo, then goto `/xlpsystem` folder.
 ```
 $ git clone git@github.com:benkoo/TensorCloud.git
 
