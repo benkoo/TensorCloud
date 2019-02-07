@@ -109,7 +109,7 @@ Tips
 * We can remove some services like "phabricator" or "grafana" if there's no need.
 
 ### UP!
-before ./up command, you should log out your own account (in menu bar) to avoid conflict (see https://github.com/docker/hub-feedback/issues/935)
+before ./up command, you should log out your own DockerHub account (in case you created one and logged in earlier) to avoid conflict (see https://github.com/docker/hub-feedback/issues/935)
 ```bash
 $ ./up
 Creating xlpsystem_elasticsearch_1 ... done
