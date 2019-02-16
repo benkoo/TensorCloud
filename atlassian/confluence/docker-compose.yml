@@ -1,0 +1,8 @@
+version: '3'
+services:
+    confluence:
+      image: cptactionhank/atlassian-confluence:latest
+      container_name: confluence
+      ports:
+        - '8090:8090'
+
