@@ -1,0 +1,7 @@
+version: '3'
+services:
+    jira:
+      image: cptactionhank/atlassian-jira:latest
+      container_name: jira
+      ports:
+        - '8080:8080'
