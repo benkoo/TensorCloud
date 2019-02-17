@@ -1,8 +1,15 @@
 version: '3'
-services:
-    confluence:
-      image: cptactionhank/atlassian-confluence:latest
-      container_name: confluence
-      ports:
-        - '8090:8090'
 
+services:
+  confluence:
+    image: cptactionhank/atlassian-confluence:latest
+    container_name: confluence
+    restart: unless-stopped
+    volumes:
+      - confluencedata:/var/atlassian/confluence:rw
+    ports:
+      - '8090:8090'
+
+volumes:
+  confluencedata:
+    external: true
