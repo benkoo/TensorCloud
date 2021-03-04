@@ -11,7 +11,7 @@ services:
     image: xlpsystem/mediawiki:20180827140844
     restart: always
     ports:
-    - 801:80
+    - 81:80
     volumes:
     - /data/xlpsystem/mediawiki:/xlp_data
     - /data/xlpsystem/mediawiki_dev:/xlp_dev
@@ -26,7 +26,7 @@ services:
     - WORDPRESS_DB_HOST=mariadb
     - WORDPRESS_DB_PASSWORD=W2qgpsLtQt
     ports:
-    - 803:80
+    - 83:80
     volumes:
     - /data/xlpsystem/wordpress:/var/www/html
     depends_on:
@@ -36,16 +36,16 @@ services:
     image: xlpsystem/matomo:20180820163542
     restart: always
     ports:
-    - 802:80
+    - 82:80
     volumes:
     - /data/xlpsystem/matomo:/var/www/html
     depends_on:
     - mariadb
   elasticsearch:
     image: xlpsystem/elasticsearch:20180822142218
-    ports:
-    - 9200:9200
-    - 9300:9300
+    #ports:
+    #- 9200:9200
+    #- 9300:9300
     volumes:
     - /data/xlpsystem/elasticsearch:/usr/share/elasticsearch/data
     environment:
@@ -64,36 +64,36 @@ services:
     depends_on:
     - elasticsearch
 
-  # phabricator-mysql:
-  #   restart: always
-  #   volumes:
-  #    - /data/xlpsystem/phabricator/data/mysql:/var/lib/mysql
-  #    - /data/xlpsystem/phabricator/config/mysql:/etc/mysql
-  #   image: mysql:5.7.14
-  #   environment:
-  #    - MYSQL_ROOT_PASSWORD=phabricator
-
-  # phabricator:
-  #   restart: always
-  #   ports:
-  #    - "10443:443"
-  #    - "85:80"
-  #    - "10022:22"
-  #   volumes:
-  #    - /data/xlpsystem/phabricator/repos:/repos
-  #    - /data/xlpsystem/phabricator/extensions:/data/phabricator/phabricator/src/extensions
-  #   depends_on:
-  #    - phabricator-mysql
-  #   links:
-  #    - phabricator-mysql
-  #   environment:
-  #    - MYSQL_HOST=phabricator-mysql
-  #    - MYSQL_USER=root
-  #    - MYSQL_PASS=phabricator
-  #    - PHABRICATOR_REPOSITORY_PATH=/repos
-  #    - PHABRICATOR_HOST=cd.toyhouse.cc:85
-  #    - ENABLE_APCU=true
-  #   image: redpointgames/phabricator
+  phabricator-mysql:
+    restart: always
+    volumes:
+    - /data/xlpsystem/phabricator/data/mysql:/var/lib/mysql
+    - /data/xlpsystem/phabricator/config/mysql:/etc/mysql
+    image: mysql:5.7.14
+    environment:
+    - MYSQL_ROOT_PASSWORD=phabricator
+  
+  phabricator:
+    restart: always
+    ports:
+    - "10443:443"
+    - "85:80"
+    - "10022:22"
+    volumes:
+    - /data/xlpsystem/phabricator/repos:/repos
+    - /data/xlpsystem/phabricator/extensions:/data/phabricator/phabricator/src/extensions
+    depends_on:
+    - phabricator-mysql
+    links:
+    - phabricator-mysql
+    environment:
+    - MYSQL_HOST=phabricator-mysql
+    - MYSQL_USER=root
+    - MYSQL_PASS=phabricator
+    - PHABRICATOR_REPOSITORY_PATH=/repos
+    - PHABRICATOR_HOST=xlp.mit.edu:85
+    - ENABLE_APCU=true
+    image: redpointgames/phabricator
 
   # grafana:
   #   restart: always

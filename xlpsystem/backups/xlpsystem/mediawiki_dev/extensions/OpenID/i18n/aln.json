@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Mdupont"
+		]
+	},
+	"openiddelete-success": "OpenID u hoq me sukses nga llogaria juaj.",
+	"openiddelete-error": "Gabim gjatë heqjes OpenID nga llogaria juaj.",
+	"prefs-openid-show-openid": "Fshih URL OpenID tuaj në faqen tuaj të përdoruesit, nëse ju hyni në me OpenID.",
+	"openid-userinfo-update-on-login-label": "Update informacionin e mëposhtëm nga persona OpenID çdo herë që në hyrje:",
+	"openid-associated-openids-label": "OpenIDs lidhur me llogarinë tuaj:",
+	"openid-urls-action": "Veprim",
+	"openid-urls-delete": "Fshij",
+	"openid-add-url": "Shto një OpenID ri",
+	"openid-login-or-create-account": "Regjistrohu ose hapni një llogari të re",
+	"openid-provider-label-openid": "Shkruani URL OpenID tuaj",
+	"openid-provider-label-google": "Hyni në llogarinë tuaj duke përdorur Google",
+	"openid-provider-label-yahoo": "Hyni ose duke përdorur llogarinë tuaj Yahoo",
+	"openid-provider-label-aol": "Shkruani AOL screenname tuaj",
+	"openid-provider-label-other-username": "Fusni emrin e përdoruesit $1"
+}

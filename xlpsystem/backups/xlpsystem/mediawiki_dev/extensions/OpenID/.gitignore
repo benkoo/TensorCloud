@@ -1,0 +1,12 @@
+*~
+*.kate-swp
+.*.swp
+<<<<<<< HEAD
+Auth/
+=======
+# Auth/
+>>>>>>> origin/feature-xlpsystem
+php-openid/
+vendor/**
+node_modules/**
+composer.lock

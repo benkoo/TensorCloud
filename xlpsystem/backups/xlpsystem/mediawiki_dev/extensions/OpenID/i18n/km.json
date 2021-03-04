@@ -1,0 +1,41 @@
+{
+	"@metadata": {
+		"authors": [
+			"Lovekhmer",
+			"T-Rithy",
+			"Thearith",
+			"គីមស៊្រុន",
+			"វ័ណថារិទ្ធ"
+		]
+	},
+	"openidconvert": "កម្មវិធីបម្លែងOpenID",
+	"openiderror": "កំហុស​ក្នុងការផ្ទៀងផ្ទាត់",
+	"openidcancel": "ការផ្ទៀងផ្ទាត់​ត្រូវបានលុបចោល",
+	"openidfailure": "ការផ្ទៀងផ្ទាត់បរាជ័យ",
+	"openidsuccess": "ផ្ទៀងផ្ទាត់ដោយជោគជ័យ",
+	"openidtrustinstructions": "ចូរ​ពិនិត្យ ប្រសិនបើ​អ្នក​ចង់​ចែករំលែក​ទិន្នន័យ​ជាមួយ $1​។",
+	"openidoptional": "ជាជម្រើស",
+	"openidrequired": "ត្រូវការជាចាំបាច់",
+	"openidnickname": "ឈ្មោះហៅក្រៅ",
+	"openidfullname": "ឈ្មោះពេញ",
+	"openidemail": "អាសយដ្ឋានអ៊ីមែល",
+	"openidlanguage": "ភាសា",
+	"openidtimezone": "ល្វែងម៉ោង",
+	"openidchooselegend": "ជំរើសអត្តនាមនិងគណនី",
+	"openidchooseinstructions": "អ្នកប្រើប្រាស់ទាំងត្រូវការឈ្មោះហៅក្រៅ\n\nអ្នកអាចជ្រើសរើសពីក្នុងជម្រើសខាងក្រោម។",
+	"openidchoosenick": "ឈ្មោះហៅក្រៅរបស់អ្នក ($1)",
+	"openidchoosefull": "ឈ្មោះពេញ​របស់អ្នក ($1)",
+	"openidchooseurl": "ឈ្មោះដែលយកពី OpenID របស់អ្នក ($1)",
+	"openidchooseauto": "ឈ្មោះបង្កើតស្វ័យប្រវត្តិ ($1)",
+	"openidchoosemanual": "ឈ្មោះសំរាប់អោយអ្នកជ្រើយយក៖",
+	"openidchooseexisting": "គណនីដែលមានរួចហើយនៅក្នុងវិគីនេះ",
+	"openidchooseusername": "អត្តនាម៖",
+	"openidchoosepassword": "ពាក្យសំងាត់៖",
+	"openidconvertsuccess": "បានបម្លែងទៅ OpenID ដោយជោគជ័យ",
+	"openid-convert-already-your-openid-text": "វាជាOpenIDរបស់អ្នករួចហើយ។",
+	"openid-convert-other-users-openid-text": "វាជាOpenIDរបស់អ្នកដទៃ។",
+	"openidalreadyloggedin": "'''អ្នកបានកត់ឈ្មោះចូលរួចហើយ $1!'''\nប្រសិនបើអ្នកចង់់ប្រើ OpenID ដើម្បីចុះឈ្មោះចូលនាពេលអនាគត អ្នកអាច[[Special:OpenIDConvert|បម្លែងគណនីរបស់អ្នកដើម្បីប្រើ OpenID]]។",
+	"openidnousername": "មិនមានអត្តនាមបានបញ្ជាក់ទេ។",
+	"openidbadusername": "ឈ្មោះមិនត្រឹមត្រូវត្រូវបានបញ្ជាក់",
+	"prefs-openid-show-openid": "អាសយដ្ឋាន URL នៃ OpenID របស់អ្នកនៅលើទំព័រអ្នកប្រើប្រាស់របស់អ្នក"
+}

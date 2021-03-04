@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Botuzhaleny-sodamo"
+		]
+	},
+	"openidoptional": "Мелень коряс",
+	"openidrequired": "Тентеме кодаяк",
+	"openidnickname": "Путонь лем",
+	"openidfullname": "Алкуксонь леметь",
+	"openidemail": "Е-сёрма парго",
+	"openidlanguage": "Кель",
+	"openidtimezone": "Шкань каркс",
+	"openidchooseusername": "Совицянь леметь:",
+	"openidchoosepassword": "Совамо валот:",
+	"openiddelete-button": "Кемекстамс"
+}

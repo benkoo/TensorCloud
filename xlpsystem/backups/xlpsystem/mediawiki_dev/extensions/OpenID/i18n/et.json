@@ -1,0 +1,30 @@
+{
+	"@metadata": {
+		"authors": [
+			"Avjoska",
+			"Pikne"
+		]
+	},
+	"openidoptional": "Valikuline",
+	"openidrequired": "Nõutav",
+	"openidnickname": "Hüüdnimi",
+	"openidfullname": "Pärisnimi",
+	"openidemail": "E-posti aadress",
+	"openidlanguage": "Keel",
+	"openidtimezone": "Ajavöönd",
+	"openidchoosenick": "Sinu hüüdnimi ($1)",
+	"openidchoosefull": "Sinu pärisnimi ($1)",
+	"openidchoosemanual": "Sinu valitud nimi:",
+	"openidchooseexisting": "Olemasolev konto selles vikis",
+	"openidchooseusername": "Kasutajanimi:",
+	"openidchoosepassword": "Parool:",
+	"openid-convert-already-your-openid-text": "OpenID $1 on juba sinu kontoga seotud.",
+	"openid-convert-other-users-openid-text": "OpenID $1 kuulub kellelegi teisele. Sa ei saa kasutada teise kasutaja OpenID-d.",
+	"openidalreadyloggedin": "Oled juba sisse loginud.",
+	"openidnousername": "Kasutajanimi määratlemata.",
+	"openidbadusername": "Märgitud kasutajanimi on vigane.",
+	"openiddelete-button": "Kinnita",
+	"openid-urls-delete": "Kustuta",
+	"openid-provider-label-google": "Logi sisse oma Google'i konto kaudu",
+	"openid-provider-label-yahoo": "Logi sisse oma Yahoo konto kaudu"
+}
