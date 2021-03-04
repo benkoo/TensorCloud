@@ -1,0 +1,12 @@
+version: '3'
+services:
+    jira:
+      image: cptactionhank/atlassian-jira:latest
+      container_name: jira
+      volumes:
+      - jiradata:/var/atlassian/jira
+      ports:
+        - '8080:8080'
+volumes:
+  jiradata:
+    external: true
