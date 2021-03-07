@@ -1,8 +1,0 @@
-{
-	"@metadata": {
-		"authors": [
-			"Bjankuloski06"
-		]
-	},
-	"elastica-desc": "Основна функција на [http://www.elasticsearch.org/ Elasticsearch] што ја користат други додатоци, давајќи библиотека [http://elastica.io/ Elastica]."
-}

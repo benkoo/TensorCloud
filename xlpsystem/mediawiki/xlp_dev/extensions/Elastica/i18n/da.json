@@ -1,8 +1,0 @@
-{
-	"@metadata": {
-		"authors": [
-			"Christian List"
-		]
-	},
-	"elastica-desc": "Basis [http://www.elasticsearch.org/ Elasticsearch] funktionalitet der bruges af andre udvidelser"
-}

@@ -1,7 +1,0 @@
-{
-    "query": "should skip interleave",
-	"config": {
-		"wgCirrusSearchInterleaveConfig": {
-		}
-	}
-}

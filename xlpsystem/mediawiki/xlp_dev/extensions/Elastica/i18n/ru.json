@@ -1,8 +1,0 @@
-{
-	"@metadata": {
-		"authors": [
-			"Okras"
-		]
-	},
-	"elastica-desc": "Базовая функциональность [http://www.elasticsearch.org/ Elasticsearch] для других модулей, обеспечиваемая библиотекой [http://elastica.io/ Elastica]"
-}

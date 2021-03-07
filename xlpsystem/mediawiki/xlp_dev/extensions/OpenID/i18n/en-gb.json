@@ -1,8 +1,0 @@
-{
-	"@metadata": {
-		"authors": [
-			"Shirayuki"
-		]
-	},
-	"openidlogininstructions-passwordloginallowed": "If you already have an account on {{SITENAME}}, you can [[Special:UserLogin|log in]] with your username and password as usual.\nTo use OpenID in future, you can [[Special:OpenIDConvert|convert your account to OpenID]] after you have logged in normally."
-}

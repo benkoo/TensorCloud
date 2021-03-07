@@ -1,9 +1,0 @@
-{
-	"@metadata": {
-		"authors": [
-			"Hosseinblue"
-		]
-	},
-	"openidsuccesstext": "'''تأیید موفق و ورود به عنوان کاربر $1'''.\nحساب کاربری شما $2 است.\nاین و حساب‌های کاربری بیشتر اختیاری می‌تواند در [[Special:Preferences#mw-prefsection-openid|OpenID tab]] منابع شما اداره شود. <br /> رمز عبور حساب اختیاری می تواند در [[Special:Preferences#mw-prefsection-personal|User profile]] شما اضافه شود.",
-	"openidalreadyloggedintext": "'''شما قبلاً وارد شده‌اید، $1!'''\nشما می‌توانید (مشاهده،حذف،افزودن بیشتر) حساب‌های کاربری در [[Special:Preferences#mw-prefsection-openid|OpenID tab]] ترجیحات خود اداره کنید."
-}

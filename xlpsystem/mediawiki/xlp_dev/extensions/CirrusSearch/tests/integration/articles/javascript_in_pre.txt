@@ -1,3 +1,0 @@
-findme
-    <script>document.getElementById('firstHeading').remove();</script>
-findme
